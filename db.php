@@ -29,7 +29,7 @@ if(isset($_POST['file']))
 						}
 					}
 
-			/*	elseif(isset($_GET['page'])){
+				elseif(isset($_GET['page'])){
 				$i=$_GET['page'];
 						if($i='notes'){
 						$sql="select * from files";
@@ -38,7 +38,7 @@ if(isset($_POST['file']))
 						require 'notesindex.php';
 						}
 				}
-*/
+
 
 
 elseif (isset($_POST['compose'])) {
