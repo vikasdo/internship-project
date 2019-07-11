@@ -1,8 +1,7 @@
 <?php
 session_start();
 $con=mysqli_connect('localhost','root','','uploadf');
-if(isset($_POST['file']))
-                    {
+if(isset($_POST['file'])){    
 
 					$des='images/'.basename($_FILES['filew']['name']);
 					$imgtype = strtolower(pathinfo($des,PATHINFO_EXTENSION));
