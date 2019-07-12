@@ -15,6 +15,12 @@
 {
 	background-color:#000000;
 }
+.results_list
+{
+	text-decoration:none;
+	font-size:25px;
+	color:black;
+}
 .question
 {
 	color:#8a2be2;
