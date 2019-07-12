@@ -2,8 +2,8 @@
 $qu="SELECT * FROM articles where aid=$r";
 $exe=mysqli_query($con,$qu);
 $fire=mysqli_fetch_array($exe);
-
-
+$s="SELECT * FROM articles where category='".$fire['category']."' and aid !=$r";
+$er=mysqli_query($con,$s);
 ?>
 <html lang="en">
 <head>
@@ -50,9 +50,9 @@ color:white;
 	color:#FFF;
 	font-size:70px;
 }
-p
+h1,h4,h2,h3
 {
-	font-family: "Noto Serif","Times New Roman";
+	color: #8a2be2;
 }
 .x
 {
@@ -60,41 +60,79 @@ p
 }
 .cx
 {
-	width:900px;
+	width:600px;
 	height:300px;
 }
-
+.d
+{
+	width: 100px;
+	height: 100px;
+}
+.aa
+{
+	width: 50px;
+	height: 50px;
+}
 </style>
 </head>
-<body>
+<body style="background-color: #f8f8f8">
 	<br><br>
-<div class="col-lg-3 bg-success">
-	<!-- Profile -->islfsldjszdg
-</div>
-<div class="col-lg-6 col-lg-offset-1 bg-primary">
-	<img src="<?php echo $fire['articleimg'];?>" class="img-responsive thumbnail cx">
+
+
+
+<div class="col-lg-6 col-lg-offset-1" style="background-color: #ffff">
+	<img src="<?php echo $fire['articleimg'];?>" class="img-responsive img-rounded cx">
+	<br><br>
+	<section>
+	<h1 class="text-center"><strong><?php echo $fire['head'];?></strong></h1>
+	<br>
+	<h4 style="font-family: cursive;"><p><strong><span class="glyphicon glyphicon-tags"></span></strong> <?php echo $fire['category'];?></p></h4>
+	<br><br>
+	<p class="text-justify"><?php echo $fire['description'];?></p>
+
+	<br><br>
+	<h2><strong><span class="glyphicon glyphicon-comment"></span>    Leave your Comment....</strong></h2>
+	<br>
+	<form class="form-group" method="POST" action="">
+		<textarea class="form-control" rows="4" placeholder="Write Something...." name="tarea" > 	</textarea>
+<br>
+<a href="#" class="btn btn-lg">Comment</a>
+
+
+	</form>
+
+</section>
+
 	</div>
+	<div class="col-lg-4 " style="background-color:#fff; margin-left:10px">
+<blockquote><h3>Related Posts :</h3></blockquote>
+<br>
+<?php 
+foreach($er as $row)
+{?>
+<div class="col-lg-12">
 
-
-
-
-
+<div class="col-lg-2">
+	<img src="<?php echo $row['articleimg'];?>" class="img-responsive img-circle aa">
+</div>
+<div class="col-lg-8">
+	<a href="db.php?val=<?php echo $row['aid']; ?>"><h5 ><?php echo $row['head']?></h5></a>
 
 </div>
 
+</div>
+<br><hr>
+<?php
+}
+?>
+</div>
 
 
-
-
-
-
-
-
-
-
-
-
-
-
+	</div>
+</div>
+<br>
+<div class="col-lg-12">
+<?php include 'footer.php';?>
+</div>
 </body>
 </html>
