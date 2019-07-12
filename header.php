@@ -146,6 +146,7 @@
 	background-color: white;
 	color:#8a2be2;
 }
+
 </style>
 <body>
 	<nav class="navbar">
