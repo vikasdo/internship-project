@@ -34,7 +34,7 @@ color:white;
 }
  .bd
 {
-	background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url("images/bgimg.png");
+	background-image: url("images/listempty.png");
 	width: 100%;
 	height:70vh;
 	
@@ -44,14 +44,12 @@ color:white;
 .title
 {
 	position: absolute;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%,-50%);
+
 }
 .title h1
 {
-	color:#FFF;
-	font-size:70px;
+	color:#8a2be2;
+	font-size:50px;
 }
 p
 {
@@ -61,26 +59,42 @@ p
 {
 	padding-right: 10px;
 }
+.fg
+{
+	background-color: #fff;
+}
+.sda{
+	background-color: #f8f8f8;
+}
 
 </style>
 </head>
-<body>
+<body class="sda">
 		<?php
 	$qu="SELECT * FROM articles";
 	$fire=mysqli_query($con,$qu);
 ?>
 
-	<div class="bd">
-		<div class="title"> 
-
-		<h1><strong><?php $y=isset($_GET['val'])?$_GET['val']:'ARTICLES'; echo $y; ?></strong></h1>
-
-		</div> 
-
+	<div class="col-lg-6 col-lg-offset-3">
+		<img src="images/listempty.png" class="img-rounded img-responsive">
 	</div>
-<br><br><br><br><br>
-<div class="col-lg-6 col-lg-offset-3">
+
+	<div class="col-lg-12 title">
+		
+		<h1 class="text-center"><strong>ARTICLES</strong></h1>
+		<br>
+	</div>
+
+<div class="col-lg-6 col-lg-offset-3 fg">
 <?php
+if(mysqli_num_rows($fire)==0)
+{
+	echo '<img src="images/listempty.png">';
+}
+
+else{
+
+
 foreach($fire as $row )
 {?>
 			<br>
@@ -88,24 +102,21 @@ foreach($fire as $row )
 	<div class="col-lg-3 col-sm-6">	<h4>Category  :                         </h4></div>
 	<div class="col-lg-3 col-sm-6 col-lg-offset-6"> <input type="submit"  class="btn btn-sm" value="<?php	echo $row['category'];?>"></div>
 <br><br>
-<h1><strong><?php echo $row['head'];?></strong></h1>
+<a href="db.php?val=<?php echo $row['aid'];?>"><h1><strong><?php echo $row['head'];?></strong></h1></a>
 <br>
 <div class="col-lg-6 "><span class="glyphicon glyphicon-user "><strong><?php echo $row['posted'];?></strong></span></div><div class="col-lg-3"><strong><?php echo $row['date'];?></strong></div>
-<br><br>
+<br><br><br>
 <p class="text-justify">
 <?php $k=$row['description']; $str=substr($k,0,300); echo $str;?>
 </p>
 <br>
-<a href="db.php?val=<?php echo $row['aid'];?>" class="btn btn-lg">Read More</a>
-
-
 
 </section>
 <hr>
 <br>
 <?php
 }
-?>
+}?>
 </div>
 
 </body>
