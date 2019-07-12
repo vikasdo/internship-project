@@ -34,7 +34,7 @@ color:white;
 }
  .bd
 {
-	background-color: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6));
+	background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url("images/bgimg.png");
 	width: 100%;
 	height:70vh;
 	
