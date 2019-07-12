@@ -103,7 +103,7 @@ elseif (isset($_GET['show'])) {
 	$res=mysqli_query($con,$sql);
 	require 'categorywise.php';
 }
-elseif(isset($_GET['pageno']))
+elseif(isset($_GET['pageno'])||isset($_GET['view']))
 {
 
 

@@ -48,8 +48,9 @@ include 'header.php';
         </li>
         <li><a href="db.php?pageno=<?php echo $total_pages; ?>">Last</a></li>
     </ul></div>
+    <a href="?view=1">View notes</a>
 		<?php 
-
+        if(isset($_GET['view'])){
 		while($row=mysqli_fetch_array($res1)){
 		?>
 					  <div class="col-lg-6 well x">
@@ -72,7 +73,8 @@ include 'header.php';
 			  	 </a>
 			  	</div>
 			  </div>
-	<?php }?>
+	<?php
+	} }?>
 	</div>
 	
 <br>
