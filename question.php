@@ -16,5 +16,8 @@
 			<h1 class="text-center question"><?php echo $question;?></h1>
 			<h4 class="text-right"><?php echo 'Questioned by'.' '.'<a href="#" style="text-decoration:none; color:#8a2be2">'.$user.'</a>'.' | '.'Category:'.' '.'<a href="#" style="text-decoration:none; color:#8a2be2">'.$qcat.'</a>';?></h4>
 		</div>
+		<div class="well">
+			
+		</div>
 	</body>
 </html>

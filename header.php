@@ -13,12 +13,20 @@
 <style>
 .cont
 {
-	background-color:#000000;
+	background-image:url(images/footerback.jpg);
+	
+}
+.results_list
+{
+	text-decoration:none;
+	font-size:25px;
+	color:black;
 }
 .question
 {
 	color:#8a2be2;
 	font-size:50px;
+	font-family:Bahnschrift Light;
 }
 .text
 {
@@ -36,6 +44,7 @@
 }
 #news
 {
+	font-family:Bahnschrift Light;
 	text-align:center;
 	font-size:15px;
 	color:#ffffff;
@@ -164,7 +173,7 @@
 		<div class="nav navbar-right">
 		<form class="navbar-form" action="" method="">
 			<div class="input-group">
-				<input type="text" class="form-control" placeholder="Search">
+				<input type="text" class="form-control" placeholder="Search" required>
 					<div class="input-group-btn">
 						<button class="btn btn-default" type="submit" id="btn1">
 							<i class="glyphicon glyphicon-search"></i>
