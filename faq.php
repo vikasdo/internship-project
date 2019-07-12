@@ -70,7 +70,7 @@ include 'header.php';
 			<?php
 			if($i%3==0)
 			{
-				echo '<div class="row">';
+				echo '</div>';
 			}
 			$i++;
 		}
@@ -93,5 +93,8 @@ include 'header.php';
 		?>
 	</div>
 	<hr>
+<?php
+include 'footer.php';
+?>
 </body>
 </html>
