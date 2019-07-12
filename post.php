@@ -81,7 +81,6 @@ h1,h4,h2,h3
 
 
 <div class="col-lg-6 col-lg-offset-1" style="background-color: #ffff">
-	<br>
 	<img src="<?php echo $fire['articleimg'];?>" class="img-responsive img-rounded cx">
 	<br><br>
 	<section>
@@ -95,7 +94,7 @@ h1,h4,h2,h3
 	<h2><strong><span class="glyphicon glyphicon-comment"></span>    Leave your Comment....</strong></h2>
 	<br>
 	<form class="form-group" method="POST" action="">
-		<textarea class="form-control" rows="4" placeholder="Write Something...." name="tarea" ></textarea>
+		<textarea class="form-control" rows="4" placeholder="Write Something...." name="tarea" > 	</textarea>
 <br>
 <a href="#" class="btn btn-lg">Comment</a>
 
