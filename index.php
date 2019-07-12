@@ -65,7 +65,7 @@ echo '<h1 class="text-center" style="color:black"><strong>LOGIN</strong></h1>
 <hr>-->
 <div class="container">
 	<div class="col-lg-5">
-		<img src="images/connect1.gif" class="img-responsive img-rounded gif">
+		<img src="images/access.png" class="img-responsive img-rounded gif">
 	</div>
 	<div class="col-lg-6">
 		<p class="text-center home_p"><strong>"Get the required content anywhere, anytime!"</strong></p>
@@ -74,16 +74,16 @@ echo '<h1 class="text-center" style="color:black"><strong>LOGIN</strong></h1>
 <hr>
 <div class="container">
 	<div class="col-lg-6">
-		<p class="text-center home_p" style="color:skyblue"><strong>"Cloud based storage for easy access"</strong></p>
+		<p class="text-center home_p" style="color:purple"><strong>"Cloud based storage for easy access"</strong></p>
 	</div>
 	<div class="col-lg-5">
-		<img src="images/upload.gif" class="img-responsive img-rounded gif">
+		<img src="images/cs.jpg" class="img-responsive img-rounded gif">
 	</div>
 </div>
 <hr>
 <div class="container">
 	<div class="col-lg-5">
-		<img src="images/discussion.gif" class="img-responsive img-rounded gif">
+		<img src="images/discuss.png" class="img-responsive img-rounded gif">
 	</div>
 	<div class="col-lg-6">
 		<p class="text-center home_p" style="color:brown"><strong>"Share your ideas with people across world"</strong></p>
@@ -95,7 +95,7 @@ echo '<h1 class="text-center" style="color:black"><strong>LOGIN</strong></h1>
 		<p class="text-center home_p" style="color:grey"><strong>"Your data is safe with us"</strong></p>
 	</div>
 	<div class="col-lg-5">
-		<img src="images/lockunlock.gif" class="img-responsive img-rounded gif">
+		<img src="images/secure.png" class="img-responsive img-rounded gif">
 	</div>
 </div>
 <br>
