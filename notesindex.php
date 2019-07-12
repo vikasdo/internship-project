@@ -38,6 +38,11 @@ include 'header.php';
     transition: width 0.4s linear;
     }
 
+hr{
+	height:6px;background: black no-repeat scroll center;border:none;
+	border-radius: 2px;
+	box-shadow: 5px  10px cyan;
+}
     .searchbar:hover > .search_input{
     padding: 0 10px;
     width: 450px;
