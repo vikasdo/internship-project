@@ -11,6 +11,20 @@
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 </head>
 <style>
+.answer
+{
+	
+}
+.answerhead
+{
+	
+}
+.faq_image
+{
+	background-image:url(images/faq.svg);
+	background-size:cover;
+	background-position:center;
+}
 .cont
 {
 	background-image:url(images/footer.jpg);
