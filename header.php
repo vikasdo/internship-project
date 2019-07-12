@@ -13,8 +13,9 @@
 <style>
 .cont
 {
-	background-image:url(images/footerback.jpg);
-	
+	background-image:url(images/footer.jpg);
+	background-size:cover;
+	background-position:center;
 }
 .results_list
 {
