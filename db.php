@@ -31,8 +31,7 @@ if(isset($_POST['file'])){
 				elseif(isset($_GET['page'])){
 				$i=$_GET['page'];
 						if($i='notes'){
-						$sql="select * from files";
-						$res=mysqli_query($con,$sql);
+						
 
 						require 'notesindex.php';
 						}
