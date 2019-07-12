@@ -39,7 +39,6 @@ if(isset($_POST['file'])){
 				}
 */
 
-
 elseif (isset($_POST['compose'])) {
 
 
