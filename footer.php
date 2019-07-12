@@ -8,7 +8,7 @@
 			<div class="col-lg-3 subscribe">
 				<div class="col-lg-12">
 					<h2 id="news"><strong>Subscribe To Our Monthly News Letter</strong></h2>
-					<form class="form-vertical" action="" method="">
+					<form class="form-vertical" action="db.php" method="">
 						<input type="email" name="email" class="form-control" placeholder="Enter Your Email" required>
 						<br>
 						<button type="submit" class="btn btn_web form-control" name="subscribe">Subscribe</button>
