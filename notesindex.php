@@ -6,11 +6,11 @@ include 'header.php';
 
 	.a{
 		background-color: white;
-		margin: 5px;
+		margin: 0px;
 	}
 	</style>			<!--upload notes-->
 	<hr>
-<div class="container-fluid a">
+
 		<form class="form-group" action="db.php" method="post" enctype="multipart/form-data">
              	  <div class="form-group ml-3 ">
              	  	<div class="col-lg-6 col-lg-offset-3 ">
@@ -83,18 +83,20 @@ include 'header.php';
             <a href="<?php if($pageno >= $total_pages){ echo '#'; } else { echo "db.php?pageno=".($pageno + 1); } ?>">Next</a>
         </li>
         <li><a href="db.php?pageno=<?php echo $total_pages; ?>">Last</a></li>
-    </ul></div>
+    </ul>
+</div>
+
    
 <br>
 		<?php 
         if(isset($_GET['view'])||isset($_GET['pageno'])||isset($_POST['sort'])){
 		while($row=mysqli_fetch_array($res1)){
 		?>
-					  <div class="col-lg-6 well x">
+		 <div class="col-lg-6 well x">
 					  	<div class="col-lg-6 col-lg-offset-4 ">
-			  	<img src="https://img.icons8.com/dusk/64/000000/categorize.png" class="img-responsive thumbnail">
-			  </div>
-			  	<div class="col-lg-12">
+			  	      <img src="https://img.icons8.com/dusk/64/000000/categorize.png" class="img-responsive thumbnail">
+			           </div>
+			 <div class="col-lg-12">
 			  	<?php  
 			  	$v1=$row['name'];
 			  	$f=explode('/',$v1);
@@ -106,21 +108,24 @@ include 'header.php';
                    echo '<strong>Year,sem</strong>'.'  : '.$row['ys'].'<br />';
 
 			  	 ?>
-			  	<br>
+			  
 			  	 <a href="<?php echo $row['name']; ?>" class="btn btn-danger btn-sm" download>
 			  	 Download
 			  	 </a>
-			  	</div>
-			  </div>
+     	   </div>
+			 
+</div>
 
-</div>
-</div>
-</form>
-<br>
-</body>
-	<?php
+<?php
+
 	} }
      
 	?>
+
+
+</div>
+</form>
+</body>
+	
 
 </html>
