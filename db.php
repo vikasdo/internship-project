@@ -19,13 +19,10 @@ if(isset($_POST['file'])){
 						}
 					}
 
-				elseif(isset($_GET['page'])){
-				$i=$_GET['page'];
-						if($i='notes'){
+				elseif(isset($_GET['notes'])){
 						
 
 						require 'notesindex.php';
-						}
 				}
 
 
@@ -125,7 +122,7 @@ elseif(isset($_GET['pageno'])||isset($_GET['view']))
 	if($res1)
 		require 'notesindex.php';
 }
-elseif(isset($_GET['article']))
+elseif(isset($_GET['a']))
 {
 	require 'article.php';
 }
