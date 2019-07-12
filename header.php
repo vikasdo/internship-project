@@ -27,7 +27,7 @@
 }
 .cont
 {
-	background-image:url(images/footer.jpg);
+	background-image:url(images/footer1.jpg);
 	background-size:cover;
 	background-position:center;
 }
