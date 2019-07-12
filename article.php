@@ -93,7 +93,7 @@ foreach($fire as $row )
 <div class="col-lg-6 "><span class="glyphicon glyphicon-user "><strong><?php echo $row['posted'];?></strong></span></div><div class="col-lg-3"><strong><?php echo $row['date'];?></strong></div>
 <br><br>
 <p class="text-justify">
-<?php echo $row['description'];?>
+<?php $k=$row['description']; $str=substr($k,0,300); echo $str;?>
 </p>
 <br>
 <a href="db.php?val=<?php echo $row['aid'];?>" class="btn btn-lg">Read More</a>
