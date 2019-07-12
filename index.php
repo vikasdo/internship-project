@@ -31,8 +31,23 @@ if($x=='1')
 				</div>
 				<div class="col-lg-12">
 					<a href="index.php?signup=0" style="text-decoration:none" class="col-lg-offset-3">Already have an account?</a>
+					<a href="index.php?reset=1" style="text-decoration:none" class="col-lg-offset-3">Forgot password?</a>
+				</div>
+				<div class="col-lg-12">
+					
 				</div>
 				<br><br>
+			</form>';
+}
+elseif(isset($reset))
+{
+	echo '<h1 class="text-center" style="color:black"><strong>SIGN UP</strong></h1>
+			<form class="form-vertical" action="db.php" method="post">
+				
+				
+				<input type="text" class="form-control well1 if" name="email" placeholder="Enter Email" required>
+				<br><br>
+				<input type="submit" class="btn btn_web btn-lg" name="login" value="reset password">
 			</form>';
 }
 else
