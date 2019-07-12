@@ -46,7 +46,7 @@ include 'header.php';
 				      				<hr>
 				   </div>
 				</div>
-		 </form>
+		 
 
 
 				<div class="col-lg-12">
@@ -54,8 +54,15 @@ include 'header.php';
 					<hr>
 						<h2 class="text-center"><strong>All Notes</strong></h2>
 						<hr>
-						 <div class=" text-center">
-    <a href="?view=1"  class="btn btn-primary">View notes</a>
+						 <div class="col-lg-12 text-center">
+						 	<div class="col-lg-6"><a href="?view=1"  class="btn btn-primary">View notes</a></div>
+                      <div class="col-lg-6">
+
+					  
+				      <input class="form-control mr-sm-2" type="text" name="search" placeholder="Search" aria-label="Search">
+				      <input type="submit" name="sort" class="btn btn-outline-success my-2 my-sm-0" value="Search">
+				    </form>
+				</div>
     <br>
 </div>
 
@@ -73,7 +80,7 @@ include 'header.php';
    
 <br>
 		<?php 
-        if(isset($_GET['view'])||isset($_GET['pageno'])){
+        if(isset($_GET['view'])||isset($_GET['pageno'])||isset($_POST['sort'])){
 		while($row=mysqli_fetch_array($res1)){
 		?>
 					  <div class="col-lg-6 well x">

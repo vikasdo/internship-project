@@ -117,5 +117,14 @@ elseif(isset($_GET['pageno'])||isset($_GET['view']))
         $res1 = mysqli_query($con,$sql);
         require 'notesindex.php';
        }
+       elseif (isset($_POST['sort'])) {
+	$text=$_POST['search'];
+	echo $text;
+	$sql="select * from files where name like '%$text%'";
+	$res1=mysqli_query($con,$sql);
+	
+	if($res1)
+		require 'notesindex.php';
+}
 
 ?>
