@@ -60,7 +60,8 @@ include 'header.php';
 							while($rowq=mysqli_fetch_array($res1))
 							{
 								?>
-								<li><a class="faq_list" style="text-decoration:none" href="db.php?question=<?php echo $rowq['qid'];?>"><?php echo $rowq['question'];?></a></li>
+								<li><a class="faq_list" style="text-decoration:none" href="db.php?question=<?php echo $rowq['qid'];?>"><?php echo $rowq['question'];
+								?></a></li>
 								<?php
 							}
 							?>

@@ -43,6 +43,7 @@
 }
 #news
 {
+	font-family:Bahnschrift Light;
 	text-align:center;
 	font-size:15px;
 	color:#ffffff;
