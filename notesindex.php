@@ -4,10 +4,10 @@ include 'header.php';
 	<style>
 
 
-	.a{
+	body{
 		background-color: white;
 		margin: 0px;
-		background-image: url('images/notesbg.jpg');
+		background-color: #f8f8f9;
 	}
 	.form-control{
 		margin: 5px;
@@ -22,14 +22,18 @@ include 'header.php';
     border-radius: 30px;
     padding: 10px;
     }
+    .b{
+    	min-width: 100px;
+    }
 
     .search_input{
-    color: white;
+    color: black;
     border: 0;
     outline: 0;
-    background: none;
+    cursor:default;
+   border-radius: 2px;
     width: 0;
-    caret-color:transparent;
+  
     line-height: 40px;
     transition: width 0.4s linear;
     }
@@ -37,7 +41,7 @@ include 'header.php';
     .searchbar:hover > .search_input{
     padding: 0 10px;
     width: 450px;
-   
+   border-radius: 10px;
     transition: width 0.4s linear;
     }
 
@@ -109,7 +113,7 @@ include 'header.php';
 						<h2 class="text-center">All Notes</h2>
 						<hr>
 						
-						 	<div class="col-lg-6 s"><a href="?view=1"  class="btn btn-primary btn-block">View notes</a>
+						 	<div class="col-lg-6 " ><a href="?view=1"  class="btn btn-primary btn-block " style="height: 50px; width: 100px;">View notes</a>
 						    </div>
  <div class=" justify-content-center col-lg-6">
         <div class="searchbar">
