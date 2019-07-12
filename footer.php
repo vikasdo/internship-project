@@ -52,6 +52,6 @@
 			</div>
 		</div>
 		<hr>
-		<h4 align="center">Designed and Developed by Team Web.Copyright 2019.</h4>
+		<h4 align="center" style="color:white">Designed and Developed by Team Web. © Copyright 2019.</h4>
 	</div>
 </footer>

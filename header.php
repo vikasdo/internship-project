@@ -13,7 +13,8 @@
 <style>
 .cont
 {
-	background-color:#000000;
+	background-image:url(images/footerback.jpg);
+	
 }
 .results_list
 {

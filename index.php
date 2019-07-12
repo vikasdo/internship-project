@@ -74,7 +74,7 @@ echo '<h1 class="text-center" style="color:black"><strong>LOGIN</strong></h1>
 <hr>
 <div class="container">
 	<div class="col-lg-6">
-		<p class="text-center home_p" style="color:cyan"><strong>"Cloud based storage for easy access"</strong></p>
+		<p class="text-center home_p" style="color:skyblue"><strong>"Cloud based storage for easy access"</strong></p>
 	</div>
 	<div class="col-lg-5">
 		<img src="images/upload.gif" class="img-responsive img-rounded gif">
