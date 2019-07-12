@@ -137,5 +137,10 @@ elseif(isset($_GET['home']))
 {
 	require 'index.php';
 }
+elseif(isset($_GET['val']))
+{
+	$r=$_GET['val'];
+	require 'post.php';
+}
 
 ?>

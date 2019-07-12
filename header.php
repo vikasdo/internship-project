@@ -62,7 +62,7 @@ height:34px;
 		  <li class="<?php $t=isset($_GET['home'])?'active':''; echo $t;?>" ><a href="db.php?home=1" id="c">Home</a></li>
 		  <li class="<?php $t=isset($_GET['faq'])?'active':''; echo $t;?>"  ><a href="db.php?faq=1" id="c">FAQ'S</a></li>
 		  <li class="<?php $t=isset($_GET['article'])?'active':''; echo $t;?>"><a href="db.php?article=1" id="c">Articles</a></li>
-		  <li class="<?php $t=isset($_GET['page'])?'active':''; echo $t;?>" ><a href="db.php?page=1"  id="right">Notes</a></li>
+		  <li class="<?php $t=isset($_GET['page'])?'active':''; echo $t;?>" ><a href="db.php?page=1"  id="right" id="c">Notes</a></li>
 		</ul>
 		<form class="navbar-form navbar-left" action="/action_page.php">
 			<div class="input-group">
