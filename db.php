@@ -138,4 +138,11 @@ elseif(isset($_GET['home']))
 	require 'index.php';
 }
 
+
+if(isset($_GET['question']))
+{
+	$_SESSION['qid']=$_GET['question'];
+	require 'question.php';
+}
+
 ?>
