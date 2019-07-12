@@ -33,9 +33,7 @@ if($x=='1')
 					<a href="index.php?signup=0" style="text-decoration:none" class="col-lg-offset-3">Already have an account?</a>
 					<a href="index.php?reset=1" style="text-decoration:none" class="col-lg-offset-3">Forgot password?</a>
 				</div>
-				<div class="col-lg-12">
-					
-				</div>
+				
 				<br><br>
 			</form>';
 }
