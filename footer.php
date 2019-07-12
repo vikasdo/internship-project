@@ -8,19 +8,18 @@
 			<div class="col-lg-3 subscribe">
 				<div class="col-lg-12">
 					<h2 id="news"><strong>Subscribe To Our Monthly News Letter</strong></h2>
-					
 					<form class="form-vertical" action="db.php" method="post">
 						<input type="email" name="emails" class="form-control" placeholder="Enter Your Email" required>
 						<br>
 						<button type="submit" class="btn btn_web form-control" name="subscribe" value="1">Subscribe</button>
 					</form>
 					<div class="col-lg-12">
-						<h3 style="color:white">Follow Us On</h3>
-						<a href="#" style="color:white"><i class="fa fa-facebook icon"></i></a>
-						<a href="#" style="color:white"><i class="fa fa-youtube icon"></i></a>
-						<a href="#" style="color:white"><i class="fa fa-twitter icon"></i></a>
-						<a href="#" style="color:white"><i class="fa fa-instagram icon"></i></a>
-						<a href="#" style="color:white"><i class="fa fa-linkedin icon"></i></a>
+						<h3 style="color:black">Follow Us On</h3>
+						<a href="#" style="color:#8a2be2"><i class="fa fa-facebook icon"></i></a>
+						<a href="#" style="color:#8a2be2"><i class="fa fa-youtube icon"></i></a>
+						<a href="#" style="color:#8a2be2"><i class="fa fa-twitter icon"></i></a>
+						<a href="#" style="color:#8a2be2"><i class="fa fa-instagram icon"></i></a>
+						<a href="#" style="color:#8a2be2"><i class="fa fa-linkedin icon"></i></a>
 					</div>
 				</div>
 			</div>
@@ -49,6 +48,6 @@
 			</div>
 		</div>
 		<hr>
-		<h4 align="center" style="color:white">Designed and Developed by Team Web. © Copyright 2019.</h4>
+		<h4 align="center" style="color:black">Designed and Developed by Team Web. © Copyright 2019.</h4>
 	</div>
 </footer>
