@@ -1,7 +1,14 @@
 <?php
 include 'header.php';
 ?>
-				<!--upload notes-->
+	<style>
+
+
+	.a{
+		background-color: black;
+		margin: 5px;
+	}
+	</style>			<!--upload notes-->
 	<hr>
 
 		<form class="form-group" action="db.php" method="post" enctype="multipart/form-data">
@@ -49,12 +56,12 @@ include 'header.php';
 		 
 
 
-				<div class="col-lg-12">
+				<div class="col-lg-12 ">
 					<br>
 					<hr>
 						<h2 class="text-center"><strong>All Notes</strong></h2>
 						<hr>
-						 <div class="col-lg-12 ">
+						 <div class="col-lg-12 a">
 						 	<div class="col-lg-6"><a href="?view=1"  class="btn btn-primary">View notes</a></div>
                       <div class="col-lg-6">
 
