@@ -11,7 +11,7 @@ include 'header.php';
 			  	<?php echo $row['name']; 
 			  	$v1=$row['name'];
 			  	$v=substr($v1,0,5);
-			  	echo '<br>'
+			  	echo '<br>';
 			  	 echo $row['date'];?>
 			  	</ul>
 			  	 <a href="<?php echo $row['name']; ?>" download>Download</a>
