@@ -97,7 +97,7 @@ elseif (isset($_POST['subscribe'])) {
 						// 0 = off (for production use)
 						// 1 = client messages
 						// 2 = client and server messages
-						$mail->SMTPDebug = 1
+						$mail->SMTPDebug = 0
 						;
 						//Ask for HTML-friendly debug output
 						$mail->Debugoutput = 'html';
@@ -117,7 +117,6 @@ elseif (isset($_POST['subscribe'])) {
 						//Set an alternative reply-to address
 						//Set who the message is to be sent to
 						$rec=$_POST["emails"];
-						echo $rec;
 						$mail->addAddress($rec, 'user');
 						//Set the subject line
 						$h='Hello User
@@ -130,7 +129,8 @@ $subject = 'Website Change Request';
 						//Read an HTML message body from an external file, convert referenced images to embedded,
 						//convert HTML into a basic plain-text alternative body
 						 
-$message.= '<html>
+ 
+$mail->MsgHTML('<html>
 <head>
 <style>
 @import url(//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css);
@@ -220,9 +220,7 @@ $message.= '<html>
 </div>
 
 
-</body></html>';
- 
-$mail->MsgHTML($message);
+</body></html>');
 				
 	
 
@@ -230,8 +228,8 @@ $mail->MsgHTML($message);
 						if (!$mail->send()) {
 						    echo "Mailer Error: " . $mail->ErrorInfo;
 						} else {
-						     header("location:index.php?subscribed=1");
-						    echo "Message sent!";
+						    require'index.php';
+						    
                         }
 
 }
