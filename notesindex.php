@@ -18,7 +18,7 @@ include 'header.php';
     margin-bottom: auto;
     margin-top: auto;
     height: 60px;
-    background-color: #353b48;
+    
     border-radius: 30px;
     padding: 10px;
     }
@@ -30,10 +30,10 @@ include 'header.php';
     color: black;
     border: 0;
     outline: 0;
+     width: 450px;
     cursor:default;
    border-radius: 2px;
-    width: 0;
-  
+    width: 200px;
     line-height: 40px;
     transition: width 0.4s linear;
     }
@@ -47,7 +47,7 @@ hr{
     padding: 0 10px;
     width: 450px;
    border-radius: 10px;
-    transition: width 0.4s linear;
+    transition: width 0.2s linear;
     }
 
     .searchbar:hover > .search_icon{

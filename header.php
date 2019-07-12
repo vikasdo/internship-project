@@ -21,13 +21,13 @@
 }
 .faq_image
 {
-	background-image:url(images/faq.svg);
+	background-image:url(images/footer2.png);
 	background-size:cover;
 	background-position:center;
 }
 .cont
 {
-	background-image:url(images/footer.jpg);
+	background-color:#d9d9d9;
 	background-size:cover;
 	background-position:center;
 }
@@ -45,12 +45,12 @@
 }
 .text
 {
-	color:white;
+	color:black;
 	font-family:Bahnschrift Light;
 }
 .text_faq
 {
-	color:black;
+	color:white;
 	font-family:Bahnschrift Light;
 }
 .subscribe
@@ -62,7 +62,7 @@
 	font-family:Bahnschrift Light;
 	text-align:center;
 	font-size:15px;
-	color:#ffffff;
+	color:#000000;
 }
 .icon
 {

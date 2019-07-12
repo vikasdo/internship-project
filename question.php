@@ -19,10 +19,10 @@
 		</div>
 		<br>
 		<div class="well container">
-			<form class="form-vertical col-lg-8">
+			<form class="form-vertical col-lg-8" action="db.php?answer=<?php echo $row['qid'];?>">
 				<h2 style="font-family:Bahnschrift Light; color:#8a2be2">Have an answer?</h2>
 				<textarea class="col-lg-8 form-control" style="resize:none; height:300px"></textarea>
-				<a href="#" class="btn btn_web form-control" style="margin-top:15px">Post My Answer</a>
+				<a href="db.php?answer=<?php echo $row['qid'];?>" class="btn btn_web form-control" style="margin-top:15px">Post My Answer</a>
 			</form>
 		</div>
 	</body>
