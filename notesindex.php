@@ -5,12 +5,12 @@ include 'header.php';
 
 
 	.a{
-		background-color: red;
+		background-color: white;
 		margin: 5px;
 	}
 	</style>			<!--upload notes-->
 	<hr>
-
+<div class="container-fluid a">
 		<form class="form-group" action="db.php" method="post" enctype="multipart/form-data">
              	  <div class="form-group ml-3 ">
              	  	<div class="col-lg-6 col-lg-offset-3 ">
@@ -112,10 +112,15 @@ include 'header.php';
 			  	 </a>
 			  	</div>
 			  </div>
-	<?php
-	} }?>
-	</div>
-	
+
+</div>
+</div>
+</form>
 <br>
 </body>
+	<?php
+	} }
+     
+	?>
+
 </html>
