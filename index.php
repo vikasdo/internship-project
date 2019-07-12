@@ -114,6 +114,15 @@ echo '<h1 class="text-center" style="color:black"><strong>LOGIN</strong></h1>
 		<img src="images/secure.png" class="img-responsive img-rounded gif">
 	</div>
 </div>
+<hr>
+<div class="container">
+	<div class="col-lg-5">
+		<img src="images/technical.jpg" class="img-responsive img-rounded gif">
+	</div>
+	<div class="col-lg-6">
+		<p class="text-center home_p" style="color:darkgreen"><strong>"Our support is online 24X7"</strong></p>
+	</div>
+</div>
 <br>
 <br>
 <!--footer-->
