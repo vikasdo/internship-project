@@ -26,6 +26,7 @@
 {
 	color:#8a2be2;
 	font-size:50px;
+	font-family:Bahnschrift Light;
 }
 .text
 {
@@ -172,7 +173,7 @@
 		<div class="nav navbar-right">
 		<form class="navbar-form" action="" method="">
 			<div class="input-group">
-				<input type="text" class="form-control" placeholder="Search">
+				<input type="text" class="form-control" placeholder="Search" required>
 					<div class="input-group-btn">
 						<button class="btn btn-default" type="submit" id="btn1">
 							<i class="glyphicon glyphicon-search"></i>
