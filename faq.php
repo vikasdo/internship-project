@@ -11,7 +11,7 @@ include 'header.php';
 <h1 class="text-center text_faq">Learn from the community!</h1>
 <br>
 <br>
-<form class="form-vertical col-lg-6" action="" method="get">
+<form class="form-vertical col-lg-6" action="faq.php" method="get">
 <input type="text" class="form-control keyword col-lg-offset-6" name="keyword" style="height:50px; font-size:25px" placeholder="Search by keyword" required align="center">
 </form>
 <br>
@@ -24,9 +24,24 @@ include 'header.php';
 </div>
 <br>
 <div class="container" style="background-color:white">
-<h2 style="font-family:Calibri Light; font-size:35px; opacity:0.7">Frequently Asked Questions</h2>
+
 
 <?php
+if(!isset($_GET['keyword']))
+{
+	
+	echo '<h2 style="font-family:Calibri Light; font-size:35px; opacity:0.7">Frequently Asked Questions</h2>';
+}
+else
+{
+	$text=$_GET['keyword'];
+	echo '<h2 style="font-family:Calibri Light; font-size:35px; opacity:0.7">'.'Showing Results For '.$text.'</h2>'.'<br>';
+}
+?>
+
+<?php
+if(!isset($_GET['keyword']))
+{
 $sql="SELECT distinct qcat FROM questions";
 $res=mysqli_query($con,$sql);
 while($row=mysqli_fetch_array($res))
@@ -50,10 +65,9 @@ while($row=mysqli_fetch_array($res))
 		</div>
 	<?php
 }
+}
 ?>
 
-</div>
-<hr>
 <?php
 if(isset($_GET['keyword']))
 {
@@ -62,9 +76,16 @@ if(isset($_GET['keyword']))
 	$res=mysqli_query($con,$results);
 	while($row=mysqli_fetch_array($res))
 	{
-		echo $row['question'];
+		$qid=$row['qid'];
+		echo '<ul class="list">';
+		echo '<li><a class="results_list" style="text-decoration:none" href="db.php?question='.$qid.'">'.$row['question'].'</a>'.'</li>'.'</ul>';
 	}
 }
 ?>
+
+</div>
+<hr>
+
+
 </body>
 </html>
