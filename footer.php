@@ -29,30 +29,26 @@
 				<div class="col-lg-4 col-md-4">
 					<div class="col-lg-12 col-md-12">
 						<img src="images/user.png" class="team img-responsive col-lg-4">
-					</div>
-					<div class="col-lg-12 col-md-12">
-						<h4 style="color:white">Akshay Pendyala</h4>
+						<h4 class="text-center" style="color:white">Vikas</h4>
 					</div>
 				</div>
 				<div class="col-lg-4 col-md-4">
 					<div class="col-lg-12 col-md-12">
 						<img src="images/user.png" class="team img-responsive col-lg-4">
-					</div>
-					<div class="col-lg-12 col-md-12">
-						<h4 style="color:white">Vamsi Mudaliar</h4>
+						<br>
+						<h4 class="text-center" style="color:white">Vamsi</h4>
 					</div>
 				</div>
 				<div class="col-lg-4 col-md-4">
 					<div class="col-lg-12 col-md-12">
 						<img src="images/user.png" class="team img-responsive col-lg-4">
-					</div>
-					<div class="col-lg-12 col-md-12">
-						<h4 style="color:white">Vikas Donthula</h4>
+						<br>
+						<h4 class="text-center" style="color:white">Akshay</h4>
 					</div>
 				</div>
 			</div>
 		</div>
 		<hr>
-		<h4 align="center">Designed and Developed by Team Web.Copyright 2019.</h4>
+		<h4 align="center" style="color:white">Designed and Developed by Team Web. © Copyright 2019.</h4>
 	</div>
 </footer>
