@@ -40,9 +40,10 @@ border-radius:0px;
 height:34px;
 }
 
-#right
+.active #c
 {
-	
+		color:#8a2be2;
+			background-color: white;
 }
 #search
 {
@@ -58,10 +59,10 @@ height:34px;
 		  <p class="navbar-brand">WebSiteName</p>
 		</div>
 		<ul class="nav navbar-nav">
-		  <li class="active"><a href="#">Home</a></li>
-		  <li class="active"><a href="#">FAQ'S</a></li>
-		  <li class="active"><a href="#">Articles</a></li>
-		  <li class="active"><a href="db.php?page=notes" id="right">Notes</a></li>
+		  <li class="<?php $t=isset($_GET['home'])?'active':''; echo $t;?>" ><a href="db.php?home=1" id="c">Home</a></li>
+		  <li class="<?php $t=isset($_GET['faq'])?'active':''; echo $t;?>"  ><a href="db.php?faq=1" id="c">FAQ'S</a></li>
+		  <li class="<?php $t=isset($_GET['article'])?'active':''; echo $t;?>"><a href="db.php?article=1" id="c">Articles</a></li>
+		  <li class="<?php $t=isset($_GET['page'])?'active':''; echo $t;?>" ><a href="db.php?page=1"  id="right">Notes</a></li>
 		</ul>
 		<form class="navbar-form navbar-left" action="/action_page.php">
 			<div class="input-group">

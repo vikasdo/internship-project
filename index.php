@@ -61,23 +61,23 @@ echo '<h1 class="text-center" style="color:black"><strong>LOGIN</strong></h1>
 ?>
 </div>
 </div>
-<br>
+<br><br>
 <h1 class="text-center c"><strong>Features</strong></h1>
 <hr>
 <div class="container">
 	<div class="col-lg-5">
-		<img src="images/connect1.gif" class="img-responsive img-rounded gif">
+		<img src="images/connect.gif" class="img-responsive img-rounded gif">
 	</div>
 	<div class="col-lg-6">
-		<p class="text-center home_p"><strong>"Get the required content anywhere, anytime!"</strong></p>
+		<h4 class="text-center home_p"><strong>Get the required content anywhere, anytime!</strong></h4>
 	</div>
 </div>
 <hr>
 <div class="container">
-	<div class="col-lg-6">
-		<p class="text-center home_p" style="color:cyan"><strong>"Cloud based storage for easy access"</strong></p>
-	</div>
 	<div class="col-lg-5">
+		<h4 class="text-center home_p" style="color:rgb(51, 196, 255 )"><strong>Cloud based storage for easy access</strong></h4>
+	</div>
+	<div class="col-lg-6">
 		<img src="images/upload.gif" class="img-responsive img-rounded gif">
 	</div>
 </div>
@@ -87,16 +87,16 @@ echo '<h1 class="text-center" style="color:black"><strong>LOGIN</strong></h1>
 		<img src="images/discussion.gif" class="img-responsive img-rounded gif">
 	</div>
 	<div class="col-lg-6">
-		<p class="text-center home_p" style="color:brown"><strong>"Share your ideas with people across world"</strong></p>
+		<h4 class="text-center home_p" style="color:brown"><blockquote><strong>Share your ideas with people across world</strong></blockquote></h4>
 	</div>
 </div>
 <hr>
 <div class="container">
 	<div class="col-lg-6">
-		<p class="text-center home_p" style="color:grey"><strong>"Your data is safe with us"</strong></p>
+		<h4 class="text-center home_p" style="color:grey"><blockquote><strong>Your data is safe with us</strong></blockquote></h4>
 	</div>
 	<div class="col-lg-5">
-		<img src="images/lockunlock.gif" class="img-responsive img-rounded gif">
+		<img src="images/lock.gif" style="height: 200px; width:300px;" class="img-responsive img-rounded gif">
 	</div>
 </div>
 <br>

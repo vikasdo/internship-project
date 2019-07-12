@@ -34,7 +34,7 @@ color:white;
 }
  .bd
 {
-	background-image: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)), url("images/about-bg.jpg");
+	background-color: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6));
 	width: 100%;
 	height:70vh;
 	
@@ -66,7 +66,6 @@ p
 </head>
 <body>
 		<?php
-	$con=mysqli_connect("localhost","root","","uploadf");
 	$qu="SELECT * FROM articles";
 	$fire=mysqli_query($con,$qu);
 ?>
@@ -91,7 +90,7 @@ foreach($fire as $row )
 <br><br>
 <h1><strong><?php echo $row['head'];?></strong></h1>
 <br>
-<div class="col-lg-9 "><span class="glyphicon glyphicon-user "><strong><?php echo $row['posted'];?></strong></span></div><div class="col-lg-3"><strong><?php echo $row['date'];?></strong></div>
+<div class="col-lg-6 "><span class="glyphicon glyphicon-user "><strong><?php echo $row['posted'];?></strong></span></div><div class="col-lg-3"><strong><?php echo $row['date'];?></strong></div>
 <br><br>
 <p class="text-justify">
 <?php echo $row['description'];?>

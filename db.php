@@ -125,5 +125,17 @@ elseif(isset($_GET['pageno'])||isset($_GET['view']))
 	if($res1)
 		require 'notesindex.php';
 }
+elseif(isset($_GET['article']))
+{
+	require 'article.php';
+}
+elseif(isset($_GET['faq']))
+{
+	require 'faq.php';
+}
+elseif(isset($_GET['home']))
+{
+	require 'index.php';
+}
 
 ?>
