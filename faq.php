@@ -11,7 +11,7 @@ include 'header.php';
 <h1 class="text-center text_faq">Learn from the community!</h1>
 <br>
 <br>
-<form class="form-vertical col-lg-6" action="" method="get">
+<form class="form-vertical col-lg-6" action="faq.php" method="get">
 <input type="text" class="form-control keyword col-lg-offset-6" name="keyword" style="height:50px; font-size:25px" placeholder="Search by keyword" required align="center">
 </form>
 <br>
@@ -54,6 +54,7 @@ while($row=mysqli_fetch_array($res))
 
 </div>
 <hr>
+
 <?php
 if(isset($_GET['keyword']))
 {
