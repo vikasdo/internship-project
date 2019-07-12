@@ -8,7 +8,7 @@ include 'header.php';
 <title>FAQ</title>
 <body style="background-color:#f8f8f9">
 	<div class="container-fluid faq_image">
-		<h1 class="text-center text_faq">Learn from the community!</h1>
+		<h1 class="text-center text_faq"><strong>Learn from the community!</strong></h1>
 		<br>
 		<br>
 		<form class="form-vertical col-lg-6" action="faq.php" method="get">
@@ -18,7 +18,7 @@ include 'header.php';
 		<br>
 		<br>
 		<br>
-		<h4 style="color:#000000; opacity:0.8" class="text-center">You can also browse the topics below to find what you are looking for.</h4>
+		<h4 style="color:#ffffff; opacity:0.8" class="text-center">You can also browse the topics below to find what you are looking for.</h4>
 		<br>
 		<br>
 	</div>

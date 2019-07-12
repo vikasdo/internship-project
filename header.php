@@ -21,7 +21,7 @@
 }
 .faq_image
 {
-	background-image:url(images/faq.svg);
+	background-image:url(images/faq.jpg);
 	background-size:cover;
 	background-position:center;
 }
@@ -50,7 +50,7 @@
 }
 .text_faq
 {
-	color:black;
+	color:white;
 	font-family:Bahnschrift Light;
 }
 .subscribe
