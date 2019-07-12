@@ -7,12 +7,60 @@ include 'header.php';
 	.a{
 		background-color: white;
 		margin: 0px;
+		background-image: url('images/notesbg.jpg');
 	}
-	</style>			<!--upload notes-->
-	<hr>
+	.form-control{
+		margin: 5px;
+		padding: 6px;
+	}
 
+    .searchbar{
+    margin-bottom: auto;
+    margin-top: auto;
+    height: 60px;
+    background-color: #353b48;
+    border-radius: 30px;
+    padding: 10px;
+    }
+
+    .search_input{
+    color: white;
+    border: 0;
+    outline: 0;
+    background: none;
+    width: 0;
+    caret-color:transparent;
+    line-height: 40px;
+    transition: width 0.4s linear;
+    }
+
+    .searchbar:hover > .search_input{
+    padding: 0 10px;
+    width: 450px;
+   
+    transition: width 0.4s linear;
+    }
+
+    .searchbar:hover > .search_icon{
+    background: white;
+    color: #e74c3c;
+    }
+
+    .search_icon{
+    height: 40px;
+    width: 40px;
+    float: right;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    color:white;
+    }
+	</style>			<!--upload notes-->
+	
+<div class="container-fluid a">
 		<form class="form-group" action="db.php" method="post" enctype="multipart/form-data">
-             	  <div class="form-group ml-3 ">
+             	  <div class="form-group ">
              	  	<div class="col-lg-6 col-lg-offset-3 ">
              	  	<h2 class="text-center"><mark><img src="https://img.icons8.com/color/48/000000/overview-pages-1.png"><strong> Notes Section</strong></mark></h2>
              	  	<img src="https://img.icons8.com/bubbles/50/000000/bar-chart.png">
@@ -50,30 +98,32 @@ include 'header.php';
 				      					<input type="submit" class="btn btn-lg btn-primary" name="file" value="Upload">
 				      					<br>
 				      				</div>
-				      				<hr>
-				   </div>
+				      						   </div>
 				</div>
 		 
 
 
-				<div class="col-lg-12 ">
-					<br>
+	
+					<div class="col-lg-12 ">   
 					<hr>
-						<h2 class="text-center"><strong>All Notes</strong></h2>
+						<h2 class="text-center">All Notes</h2>
 						<hr>
-						 <div class="col-lg-12 a">
-						 	<div class="col-lg-6"><a href="?view=1"  class="btn btn-primary">View notes</a></div>
-                      <div class="col-lg-6">
-
-					  
-				      <input class="form-control mr-sm-2" type="text" name="search" placeholder="Search" aria-label="Search">
-				      <input type="submit" name="sort" class="btn btn-outline-success my-2 my-sm-0" value="Search">
-				    </form>
-				</div>
+						
+						 	<div class="col-lg-6 s"><a href="?view=1"  class="btn btn-primary btn-block">View notes</a>
+						    </div>
+ <div class=" justify-content-center col-lg-6">
+        <div class="searchbar">
+          <input class="search_input" type="text" name="" placeholder="Search...">
+          <a href="#" class="search_icon"><span class="glyphicon glyphicon-search"></span></a>
+        </div>
+      </div>
+				      
     <br>
 </div>
+</form>
 
 						<div class="col-lg-6 col-lg-offset-3 text-center">
+<hr>
   <ul class="pagination">
         <li><a href="?pageno=1">First</a></li>
         <li class="<?php if($pageno <= 1){ echo 'disabled'; } ?>">
@@ -125,6 +175,9 @@ include 'header.php';
 
 </div>
 </form>
+<?php
+include 'footer.php';
+?>
 </body>
 	
 
