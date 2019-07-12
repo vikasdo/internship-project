@@ -11,7 +11,7 @@ include 'header.php';
              	  	<img src="https://img.icons8.com/bubbles/50/000000/bar-chart.png">
 		           <label class=""><h4><strong>Category Of Notes:</strong></h4></label>
 			        <select name="select" id="exampleFormControlSelect1" class="form-control">
-			          <option >Select Category type</option>
+			          <option  value="0" >Select Category type</option>
 			          <option value="studymaterial">studymaterial(ppts)</option>
 			          <option value="notes">Notes</option>
 			          <option value="assignment">Assignment</option>
@@ -23,7 +23,7 @@ include 'header.php';
 			          <option value="it">it</option>
 			         </select>
 			         <select name="select2" id="" class="form-control">
-			          <option >Select year and sem</option>
+			          <option value="0" >Select year and sem</option>
 			          <option value="1-1">1-1</option>
 			          <option value="1-2">1-2</option>
 			          <option value="2-1">2-1</option>
@@ -54,7 +54,7 @@ include 'header.php';
 					<hr>
 						<h2 class="text-center"><strong>All Notes</strong></h2>
 						<hr>
-						 <div class="col-lg-12 text-center">
+						 <div class="col-lg-12 ">
 						 	<div class="col-lg-6"><a href="?view=1"  class="btn btn-primary">View notes</a></div>
                       <div class="col-lg-6">
 
