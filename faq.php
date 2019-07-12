@@ -7,21 +7,21 @@ include 'header.php';
 
 <title>FAQ</title>
 <body style="background-color:#f8f8f9">
-	<div class="container-fluid" style="background-color:white">
+	<div class="container-fluid faq_image">
 		<h1 class="text-center text_faq">Learn from the community!</h1>
 		<br>
 		<br>
 		<form class="form-vertical col-lg-6" action="faq.php" method="get">
-		<input type="text" class="form-control keyword col-lg-offset-6" name="keyword" style="height:50px; font-size:25px" placeholder="Search by keyword" required align="center">
+			<input type="text" class="form-control keyword col-lg-offset-6" name="keyword" style="height:50px; font-size:25px" placeholder="Search by keyword" required align="center">
 		</form>
 		<br>
 		<br>
 		<br>
 		<br>
-		<h4 style="color:#8a2be2; opacity:0.8" class="text-center">You can also browse the topics below to find what you are looking for.</h4>
+		<h4 style="color:#000000; opacity:0.8" class="text-center">You can also browse the topics below to find what you are looking for.</h4>
 		<br>
 		<br>
-		</div>
+	</div>
 	<br>
 	<div class="container" style="background-color:white">
 		<?php

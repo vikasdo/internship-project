@@ -14,10 +14,19 @@
 	<body style="background-color:#f8f8f9">
 		<div class="container-fluid"  style="background-color:white">
 			<h1 class="text-center question"><?php echo $question;?></h1>
-			<h4 class="text-right"><?php echo 'Questioned by'.' '.'<a href="#" style="text-decoration:none; color:#8a2be2">'.$user.'</a>'.' | '.'Category:'.' '.'<a href="#" style="text-decoration:none; color:#8a2be2">'.$qcat.'</a>';?></h4>
+			<h4 class="text-right"><a href="#" style="text-decoration:none; color:#8a2be2"><i class="fa fa-user" style="color:grey"></i> <?php echo $user;?></a>
+			<a href="#" style="text-decoration:none; color:#8a2be2"><i class="fa fa-tag" style="color:grey"></i> <?php echo $qcat;?></a></h4>
 		</div>
-		<div class="well">
-			
+		<br>
+		<div class="well container">
+			<form class="form-vertical col-lg-8">
+				<h2 style="font-family:Bahnschrift Light; color:#8a2be2">Have an answer?</h2>
+				<textarea class="col-lg-8 form-control" style="resize:none; height:300px"></textarea>
+				<a href="#" class="btn btn_web form-control" style="margin-top:15px">Post My Answer</a>
+			</form>
 		</div>
 	</body>
+<?php
+include 'footer.php';
+?>
 </html>
