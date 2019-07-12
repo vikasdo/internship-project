@@ -122,8 +122,8 @@ hr{
 						    </div>
  <div class=" justify-content-center col-lg-6">
         <div class="searchbar">
-          <input class="search_input" type="text" name="" placeholder="Search...">
-          <a href="#" class="search_icon"><span class="glyphicon glyphicon-search"></span></a>
+          <input class="search_input" type="text" name="search" placeholder="Search...">
+        <input type="submit" name ="sort" class="search_icon" value="S">
         </div>
       </div>
 				      
