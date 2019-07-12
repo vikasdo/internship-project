@@ -79,7 +79,7 @@
 }
 .team
 {
-	height:110px;
+	height:90px;
 	width:150px;
 }
 .home_p

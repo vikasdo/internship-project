@@ -38,7 +38,7 @@
 						<img src="images/user.png" class="team img-responsive col-lg-4">
 					</div>
 					<div class="col-lg-12 col-md-12">
-						<h4 style="color:white"> &nbsp Vamsi Mudaliar</h4>
+						<h4 style="color:white">Vamsi Mudaliar</h4>
 					</div>
 				</div>
 				<div class="col-lg-4 col-md-4">
@@ -46,7 +46,7 @@
 						<img src="images/user.png" class="team img-responsive col-lg-4">
 					</div>
 					<div class="col-lg-12 col-md-12">
-						<h4 style="color:white"> &nbsp &nbsp Vikas Donthula</h4>
+						<h4 style="color:white">Vikas Donthula</h4>
 					</div>
 				</div>
 			</div>
