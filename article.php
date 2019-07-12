@@ -74,9 +74,9 @@ p
 	$qu="SELECT * FROM articles";
 	$fire=mysqli_query($con,$qu);
 ?>
-
+<div class=" fg">
 	<div class="col-lg-6 col-lg-offset-3">
-		<img src="images/listempty.png" class="img-rounded img-responsive">
+		<img src="images/listempty.png" class="img-rounded img-responsive ">
 	</div>
 
 	<div class="col-lg-12 title">
@@ -84,12 +84,14 @@ p
 		<h1 class="text-center"><strong>ARTICLES</strong></h1>
 		<br>
 	</div>
+</div>
 
 <div class="col-lg-6 col-lg-offset-3 fg">
 <?php
 if(mysqli_num_rows($fire)==0)
 {
-	echo '<img src="images/listempty.png">';
+	echo '<img src="images/listempty.png" class-"img-responsive img-rounded"><h2>No Articles to show</h2>';
+
 }
 
 else{
@@ -98,20 +100,16 @@ else{
 foreach($fire as $row )
 {?>
 			<br>
-		<section>
+		<article>
 	<div class="col-lg-3 col-sm-6">	<h4>Category  :                         </h4></div>
 	<div class="col-lg-3 col-sm-6 col-lg-offset-6"> <input type="submit"  class="btn btn-sm" value="<?php	echo $row['category'];?>"></div>
 <br><br>
-<a href="db.php?val=<?php echo $row['aid'];?>"><h1><strong><?php echo $row['head'];?></strong></h1></a>
+<a href="db.php?val=<?php echo $row['aid'];?>" style="text-decoration: none;"><h1><strong><?php echo $row['head'];?></strong></h1></a>
 <br>
 <div class="col-lg-6 "><span class="glyphicon glyphicon-user "><strong><?php echo $row['posted'];?></strong></span></div><div class="col-lg-3"><strong><?php echo $row['date'];?></strong></div>
-<br><br><br>
-<p class="text-justify">
-<?php $k=$row['description']; $str=substr($k,0,300); echo $str;?>
-</p>
 <br>
 
-</section>
+</article>
 <hr>
 <br>
 <?php

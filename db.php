@@ -295,7 +295,19 @@ elseif(isset($_GET['question']))
 	$_SESSION['qid']=$_GET['question'];
 	require 'question.php';
 }
+elseif(isset($_GET['sv']))
+{
+$ta=$_POST['tarea'];
+$es=$_GET['sv'];
+$query="INSERT INTO comments(uid,comment,aid) VALUES(17,'WHAT A WONDERFUL DAY !',$es)";
+$tire=mysqli_query($con,$query);
+		if($tire)
+		{
+		header('Location:db.php?val='.$es);
+		exit;
+		}
 
+}
 
 elseif (isset($_POST['resetpass'])) {
 

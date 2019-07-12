@@ -4,6 +4,8 @@ $exe=mysqli_query($con,$qu);
 $fire=mysqli_fetch_array($exe);
 $s="SELECT * FROM articles where category='".$fire['category']."' and aid !=$r";
 $er=mysqli_query($con,$s);
+$comm="SELECT * FROM comments c inner join articles a on c.uid=a.uid and a.aid=$r";
+$res=mysqli_query($con,$comm);
 ?>
 <html lang="en">
 <head>
@@ -84,7 +86,7 @@ h1,h4,h2,h3
 	<br>
 	<img src="<?php echo $fire['articleimg'];?>" class="img-responsive img-rounded cx">
 	<br><br>
-	<section>
+	<article>
 	<h1 class="text-center"><strong><?php echo $fire['head'];?></strong></h1>
 	<br>
 	<h4 style="font-family: cursive;"><p><strong><span class="glyphicon glyphicon-tags"></span></strong> <?php echo $fire['category'];?></p></h4>
@@ -94,15 +96,32 @@ h1,h4,h2,h3
 	<br><br>
 	<h2><strong><span class="glyphicon glyphicon-comment"></span>    Leave your Comment....</strong></h2>
 	<br>
-	<form class="form-group" method="POST" action="">
+	<form class="form-group" method="POST" action="db.php">
 		<textarea class="form-control" rows="4" placeholder="Write Something...." name="tarea" ></textarea>
 <br>
-<a href="#" class="btn btn-lg">Comment</a>
+<a href="db.php?sv=<?php echo $fire['aid'];?>" class="btn btn-lg">Comment</a>
 
 
 	</form>
-
-</section>
+<br><hr>
+<h3>Comments  :</h3>
+<br>
+<?php 
+foreach($res as $row)
+{?>
+<div class="row">
+	<div class="col-lg-3">
+	<p><strong><?php  echo $row['posted']; ?></strong></p>
+	</div>
+	<div class="col-lg-9">
+	<p><strong><?php  echo $row['comment']; ?></strong></p>
+	
+	</div>
+</div>
+<?php
+}
+?>
+</article>
 
 	</div>
 	<div class="col-lg-4 " style="background-color:#fff; margin-left:10px">
@@ -126,11 +145,10 @@ foreach($er as $row)
 <?php
 }
 ?>
+<br>
+
 </div>
 
-
-	</div>
-</div>
 <br>
 <div class="col-lg-12">
 <?php include 'footer.php';?>
