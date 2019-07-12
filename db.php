@@ -6,38 +6,28 @@ if(isset($_POST['file'])){
 					$des='images/'.basename($_FILES['filew']['name']);
 					$imgtype = strtolower(pathinfo($des,PATHINFO_EXTENSION));
 					$cat=$_POST['select'];
-					echo $imgtype;
-					if (file_exists($des)) 
-							{
-							    echo "Sorry, file already exists.";
-							    $uploadOk = 0;
-							}
-					// Check file size
-					elseif ($_FILES["filew"]["size"] > 5000000000) 
-							{
-
-							    $uploadOk = 0;
-							}
-						else{
+										$cat1=$_POST['select1'];
+										$cat2=$_POST['select2'];
+					
+					
+						if(1){
 						move_uploaded_file($_FILES['filew']['tmp_name'], $des);
-						$sql1="insert into files(name,type,uid,category) values('$des','$imgtype',1,'$cat')";
+						$sql1="insert into files(name,type,uid,category,ys,branch) values('$des','$imgtype',1,'$cat','$cat2','$cat1')";
 						$res1=mysqli_query($con,$sql1);
-						$sql="select * from files";
-						$res=mysqli_query($con,$sql);
+						
 						require 'notesindex.php';
 						}
 					}
 
-			/*	elseif(isset($_GET['page'])){
+				elseif(isset($_GET['page'])){
 				$i=$_GET['page'];
 						if($i='notes'){
-						$sql="select * from files";
-						$res=mysqli_query($con,$sql);
+						
 
 						require 'notesindex.php';
 						}
 				}
-*/
+
 
 elseif (isset($_POST['compose'])) {
 
@@ -103,7 +93,7 @@ elseif (isset($_GET['show'])) {
 	$res=mysqli_query($con,$sql);
 	require 'categorywise.php';
 }
-elseif(isset($_GET['pageno']))
+elseif(isset($_GET['pageno'])||isset($_GET['view']))
 {
 
 
@@ -126,5 +116,14 @@ elseif(isset($_GET['pageno']))
         $res1 = mysqli_query($con,$sql);
         require 'notesindex.php';
        }
+       elseif (isset($_POST['sort'])) {
+	$text=$_POST['search'];
+	echo $text;
+	$sql="select * from files where name like '%$text%'";
+	$res1=mysqli_query($con,$sql);
+	
+	if($res1)
+		require 'notesindex.php';
+}
 
 ?>

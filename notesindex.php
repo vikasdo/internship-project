@@ -10,16 +10,33 @@ include 'header.php';
              	  	<h2 class="text-center"><mark><img src="https://img.icons8.com/color/48/000000/overview-pages-1.png"><strong> Notes Section</strong></mark></h2>
              	  	<img src="https://img.icons8.com/bubbles/50/000000/bar-chart.png">
 		           <label class=""><h4><strong>Category Of Notes:</strong></h4></label>
-			        <select name="select             	  	" id="exampleFormControlSelect1" class="form-control">
-			          <option >Select Category</option>
+			        <select name="select" id="exampleFormControlSelect1" class="form-control">
+			          <option >Select Category type</option>
 			          <option value="studymaterial">studymaterial(ppts)</option>
 			          <option value="notes">Notes</option>
 			          <option value="assignment">Assignment</option>
 			         </select>
+			         <select name="select1" id="exampleFormControlSelect1" class="form-control">
+			          <option >Select Branch</option>
+			          <option value="cse">cse</option>
+			          <option value="ece">ece</option>
+			          <option value="it">it</option>
+			         </select>
+			         <select name="select2" id="" class="form-control">
+			          <option >Select year and sem</option>
+			          <option value="1-1">1-1</option>
+			          <option value="1-2">1-2</option>
+			          <option value="2-1">2-1</option>
+			          <option value="2-2">2-2</option>
+                      <option value="1-1">3-1</option>
+			          <option value="1-2">3-2</option>
+			          <option value="2-1">4-1</option>
+			          <option value="2-2">4-2</option>
+			         </select>
 			                  <br><br>
 			                  <div class="col-lg-6">
 			                  <label>Upload Your File</label> 
-					   <input type="file" name="filew">
+					   <input type="file" name="filew" >
 					</div>
 				              <br><br><br>
 				              <div class="col-lg-6 col-lg-offset-5">
@@ -29,7 +46,7 @@ include 'header.php';
 				      				<hr>
 				   </div>
 				</div>
-		 </form>
+		 
 
 
 				<div class="col-lg-12">
@@ -37,6 +54,18 @@ include 'header.php';
 					<hr>
 						<h2 class="text-center"><strong>All Notes</strong></h2>
 						<hr>
+						 <div class="col-lg-12 text-center">
+						 	<div class="col-lg-6"><a href="?view=1"  class="btn btn-primary">View notes</a></div>
+                      <div class="col-lg-6">
+
+					  
+				      <input class="form-control mr-sm-2" type="text" name="search" placeholder="Search" aria-label="Search">
+				      <input type="submit" name="sort" class="btn btn-outline-success my-2 my-sm-0" value="Search">
+				    </form>
+				</div>
+    <br>
+</div>
+
 						<div class="col-lg-6 col-lg-offset-3 text-center">
   <ul class="pagination">
         <li><a href="?pageno=1">First</a></li>
@@ -48,8 +77,10 @@ include 'header.php';
         </li>
         <li><a href="db.php?pageno=<?php echo $total_pages; ?>">Last</a></li>
     </ul></div>
+   
+<br>
 		<?php 
-
+        if(isset($_GET['view'])||isset($_GET['pageno'])||isset($_POST['sort'])){
 		while($row=mysqli_fetch_array($res1)){
 		?>
 					  <div class="col-lg-6 well x">
@@ -64,6 +95,8 @@ include 'header.php';
 	
 			  	 echo '<strong>Uploaded on</strong>'.'  : '.$row['date'].'<br />';
                  echo '<strong>Category</strong>'.'  : '.$row['category'].'<br />';
+                  echo '<strong>Branch</strong>'.'  : '.$row['branch'].'<br />';
+                   echo '<strong>Year,sem</strong>'.'  : '.$row['ys'].'<br />';
 
 			  	 ?>
 			  	<br>
@@ -72,7 +105,8 @@ include 'header.php';
 			  	 </a>
 			  	</div>
 			  </div>
-	<?php }?>
+	<?php
+	} }?>
 	</div>
 	
 <br>

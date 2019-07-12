@@ -62,25 +62,23 @@ echo '<h1 class="text-center" style="color:black"><strong>LOGIN</strong></h1>
 </div>
 </div>
 <br>
-<h1 class="text-center c"><strong>Services</strong></h1>
+<h1 class="text-center c"><strong>Features</strong></h1>
 <hr>
 <div class="container">
 	<div class="col-lg-5">
-		<img src="images/connect.gif" class="img-responsive img-rounded gif">
+		<img src="images/connect1.gif" class="img-responsive img-rounded gif">
 	</div>
 	<div class="col-lg-6">
-		<h2>Connect</h2>
-		<p class="text-justify">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
+		<p class="text-center home_p"><strong>"Get the required content anywhere, anytime!"</strong></p>
 	</div>
 </div>
 <hr>
 <div class="container">
+	<div class="col-lg-6">
+		<p class="text-center home_p" style="color:cyan"><strong>"Cloud based storage for easy access"</strong></p>
+	</div>
 	<div class="col-lg-5">
 		<img src="images/upload.gif" class="img-responsive img-rounded gif">
-	</div>
-	<div class="col-lg-6">
-		<h2>Upload</h2>
-		<p class="text-justify">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
 	</div>
 </div>
 <hr>
@@ -89,11 +87,20 @@ echo '<h1 class="text-center" style="color:black"><strong>LOGIN</strong></h1>
 		<img src="images/discussion.gif" class="img-responsive img-rounded gif">
 	</div>
 	<div class="col-lg-6">
-		<h2>Discuss</h2>
-		<p class="text-justify">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
+		<p class="text-center home_p" style="color:brown"><strong>"Share your ideas with people across world"</strong></p>
 	</div>
 </div>
 <hr>
+<div class="container">
+	<div class="col-lg-6">
+		<p class="text-center home_p" style="color:grey"><strong>"Your data is safe with us"</strong></p>
+	</div>
+	<div class="col-lg-5">
+		<img src="images/lockunlock.gif" class="img-responsive img-rounded gif">
+	</div>
+</div>
+<br>
+<br>
 <!--footer-->
 <?php
 include 'footer.php';
