@@ -47,7 +47,7 @@ include 'header.php';
 		{
 			if($i%3==0)
 			{
-				echo '<div class="row">';
+				echo '<div class="row container-fluid">';
 			}
 			?>
 				<div class="col-lg-4">
