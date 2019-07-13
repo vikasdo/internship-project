@@ -297,9 +297,10 @@ elseif(isset($_GET['question']))
 }
 elseif(isset($_GET['sv']))
 {
-$ta=$_POST['tarea'];
+
 $es=$_GET['sv'];
-$query="INSERT INTO comments(uid,comment,aid) VALUES(17,'WHAT A WONDERFUL DAY !',$es)";
+$ta=$_POST['abc'];
+$query="INSERT INTO comments(uid,comment,aid) VALUES(17,'$ta',$es)";
 $tire=mysqli_query($con,$query);
 		if($tire)
 		{
