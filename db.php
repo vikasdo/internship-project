@@ -28,7 +28,6 @@ if(isset($_POST['file'])){
 /* php mailer */
 elseif (isset($_POST['compose'])) {
 
-
 						require 'PHPMailer /PHPMailerAutoload.php';
 
 						//Create a new PHPMailer instance
@@ -64,12 +63,10 @@ elseif (isset($_POST['compose'])) {
 						//Set the subject line
 						$h=$_POST['heading'];
 						$mail->Subject = $h;
-						//Read an HTML message body from an external file, convert referenced images to embedded,
-						//convert HTML into a basic plain-text alternative body
 						$body = "http://localhost/uploadingtodrive/resetpass.php?token=123
 						";
-						$m=$_POST['msg'];
-						$mail->Body = $body.$m;
+				
+						$mail->Body  = file_get_contents("index.php");
 						//Replace the plain text body with one created manually
 						$mail->AltBody = 'This is a plain-text message body';
 						//Attach an image file
