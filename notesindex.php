@@ -15,7 +15,10 @@
     }
 
  
+.x{
+	  background-image: linear-gradient(-90deg, rgba(1,2,234,0.5),rgba(256,1,0,0.5)) ;
 
+}
 hr{
 	height:2px;background: blue no-repeat scroll center;border:none;
 	border-radius: 1px;
@@ -84,7 +87,6 @@ include 'header.php';
 				      	</div>
 				      	</div>					  
 				     </div>
-                  
                    <div class="container-fluid">  
 				<div class="col-lg-12 ">   
 					<hr>
@@ -125,9 +127,11 @@ include 'header.php';
 		while($row=mysqli_fetch_array($res1)){
 		?>
 		<div class="col-lg-6 well x">
-					  	<div class="col-lg-6 col-lg-offset-4 ">
-			  	      <img src="https://img.icons8.com/dusk/64/000000/categorize.png" class="img-responsive thumbnail">
-			           </div>
+		
+					 <div class="col-lg-6 col-lg-offset-4 ">
+			  	      <img src="https://img.icons8.com/cute-clipart/64/000000/file.png" class="img-responsive thumbnail" style="min-width: 100px;">
+			           </div>';
+			      
 			 <div class="col-lg-12">
 			  	<?php  
 			  	$v1=$row['name'];
