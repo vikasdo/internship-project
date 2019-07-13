@@ -91,6 +91,7 @@ if(mysqli_num_rows($fire)==0)
 }
 
 else{
+	?>
 =======
 
 	<div class="bd">
@@ -102,8 +103,10 @@ else{
 		</div> 
 
 	</div>
+<?php } ?>
 <br><br><br><br><br>
 <div class="col-lg-6 col-lg-offset-3">
+
 <?php
 foreach($fire as $row )
 {?>

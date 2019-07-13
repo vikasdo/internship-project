@@ -39,9 +39,9 @@ include 'header.php';
     }
 
 hr{
-	height:6px;background: black no-repeat scroll center;border:none;
-	border-radius: 2px;
-	box-shadow: 5px  10px cyan;
+	height:2px;background: blue no-repeat scroll center;border:none;
+	border-radius: 1px;
+	
 }
     .searchbar:hover > .search_input{
     padding: 0 10px;
@@ -119,13 +119,13 @@ hr{
 						<hr>
 						
 						 	<div class="col-lg-6 " ><a href="?view=1"  class="btn btn-primary btn-block " style="height: 50px; width: 100px;">View notes</a>
-						    </div>
- <div class=" justify-content-center col-lg-6">
-        <div class="searchbar">
-          <input class="search_input" type="text" name="search" placeholder="Search...">
-        <input type="submit" name ="sort" class="search_icon" value="S">
-        </div>
-      </div>
+											    </div>
+					 <div class=" justify-content-center col-lg-6" >
+					        <div class="searchbar">
+					          <input class="search_input" type="text" name="search" placeholder="Search...">
+					        <input type="submit" name ="sort" class="search_icon" value="S">
+					        </div>
+					      </div>
 				      
     <br>
 </div>
