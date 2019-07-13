@@ -48,6 +48,6 @@
 			</div>
 		</div>
 		<hr>
-		<h4 align="center" style="color:black">Designed and Developed by Team Web. © Copyright 2019.</h4>
+		<h4 align="center" style="color:black">Designed and Developed by TeamWeb. © Copyright 2019.</h4>
 	</div>
 </footer>
