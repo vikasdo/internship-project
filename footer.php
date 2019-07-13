@@ -11,10 +11,9 @@
 				<h3 style="font-family:Bahnschrift Light; text-align:center"><strong>Contact</strong></h3>
 				<hr>
 				<div style="font-size:18px">
-				<i class="fa fa-home contact"> Hyderabad India</i><br>
-				<i class="fa fa-envelope contact"> teamweb@gmail.com</i><br>
-				<i class="fa fa-phone contact"> +91 1234567890</i><br>
-				<i class="fa fa-home contact"> Hyderabad,India.</i>
+					<i class="fa fa-home contact"> Hyderabad India</i><br>
+					<i class="fa fa-envelope contact"> teamweb@gmail.com</i><br>
+					<i class="fa fa-phone contact"> +91 1234567890</i><br>
 				</div>
 			</div>
 			<div class="col-lg-3">
@@ -23,9 +22,9 @@
 				<hr>
 				<h4 class="footer_list"><a href="#">TeamWeb Crew</a></h4>
 				<h4 class="footer_list"><a href="#">Have a project?</a></h4>
-				<h4 class="footer_list"><a href="#">TeamWeb Crew</a></h4>
-				<h4 class="footer_list"><a href="#">TeamWeb Crew</a></h4>
-				<h4 class="footer_list"><a href="#">TeamWeb Crew</a></h4>
+				<h4 class="footer_list"><a href="#">TED X Event</a></h4>
+				<h4 class="footer_list"><a href="#">Trending News</a></h4>
+				<h4 class="footer_list"><a href="#">Guest Lecture</a></h4>
 			</div>
 			<div class="col-lg-3 subscribe">
 				<div class="col-lg-12">

@@ -95,13 +95,14 @@ h1,h4,h2,h3
 	<br><br>
 	<h2><strong><span class="glyphicon glyphicon-comment"></span>    Leave your Comment....</strong></h2>
 	<br>
-	<form class="form-group" method="POST" action="db.php">
-		<textarea class="form-control" rows="4" placeholder="Write Something...." name="tarea" ></textarea>
+	<form class="form-group" method="POST" action="db.php?sv=<?php echo $fire['aid'];?>">
+	
+	<textarea class="form-control" name="abc" rows=4 placeholder="Write Something Here"></textarea>
 <br>
-<a href="db.php?sv=<?php echo $fire['aid'];?>" class="btn btn-lg">Comment</a>
+<input type="submit" class="btn btn-lg" value="Comment">
+</form>
 
-
-	</form>
+	
 <br><hr>
 <h3>Comments  :</h3>
 <br>
@@ -129,13 +130,13 @@ foreach($res as $row)
 <?php 
 foreach($er as $row)
 {?>
-<div class="col-lg-12">
+<div class="col-lg-12 well">
 
-<div class="col-lg-2">
-	<img src="<?php echo $row['articleimg'];?>" class="img-responsive img-circle aa">
+<div class="col-lg-3">
+	<img src="<?php echo $row['articleimg'];?>" class="img-responsive img-rounded aa">
 </div>
-<div class="col-lg-8">
-	<a href="db.php?val=<?php echo $row['aid']; ?>"><h5 ><?php echo $row['head']?></h5></a>
+<div class="col-lg-6">
+	<a href="db.php?val=<?php echo $row['aid']; ?>"><h5 ><strong><?php echo $row['head']?></h5></strong></a>
 
 </div>
 
@@ -145,7 +146,6 @@ foreach($er as $row)
 }
 ?>
 <br>
-
 </div>
 
 <br>
