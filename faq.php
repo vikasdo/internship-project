@@ -40,40 +40,40 @@ include 'header.php';
 		<?php
 		if(!isset($_GET['keyword']))
 		{
-		$sql="SELECT distinct qcat FROM questions";
-		$res=mysqli_query($con,$sql);
-		$i=0;
-		while($row=mysqli_fetch_array($res))
-		{
-			if($i%3==0)
+			$sql="SELECT distinct qcat FROM questions";
+			$res=mysqli_query($con,$sql);
+			$i=0;
+			while($row=mysqli_fetch_array($res))
 			{
-				echo '<div class="row container-fluid">';
-			}
-			?>
-				<div class="col-lg-4">
-					<ul class="list">
-						<h3 class="faq"><?php echo $row['qcat'];?></h3>
-							<?php
-							$qcat=$row['qcat'];
-							$data="SELECT * FROM questions WHERE qcat='$qcat' ORDER BY question";
-							$res1=mysqli_query($con,$data);
-							while($rowq=mysqli_fetch_array($res1))
-							{
-								?>
-								<li><a class="faq_list" style="text-decoration:none" href="db.php?question=<?php echo $rowq['qid'];?>"><?php echo $rowq['question'];
-								?></a></li>
+				if($i%3==0)
+				{
+					echo '<div class="row container-fluid">';
+				}
+				?>
+					<div class="col-lg-4">
+						<ul class="list">
+							<h3 class="faq"><?php echo $row['qcat'];?></h3>
 								<?php
-							}
-							?>
-					</ul>
-				</div>
-			<?php
-			if($i%3==0)
-			{
-				echo '</div>';
+								$qcat=$row['qcat'];
+								$data="SELECT * FROM questions WHERE qcat='$qcat' ORDER BY question";
+								$res1=mysqli_query($con,$data);
+								while($rowq=mysqli_fetch_array($res1))
+								{
+									?>
+									<li><a class="faq_list" style="text-decoration:none" href="db.php?question=<?php echo $rowq['qid'];?>"><?php echo $rowq['question'];
+									?></a></li>
+									<?php
+								}
+								?>
+						</ul>
+					</div>
+				<?php
+				if($i%3==0)
+				{
+					echo '</div>';
+				}
+				$i++;
 			}
-			$i++;
-		}
 		}
 		?>
 

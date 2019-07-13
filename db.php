@@ -324,24 +324,24 @@ elseif(isset($_POST['login']))
 							      }
 							       else
 							       {
-							header('location:index.php?msg=password invalid');
+							header('location:index.php?msg=Incorrect Password');
 							       }
 
 				        }
 				     else
 				     {
-				header('location:index.php?msg=email invalid');
+				header('location:index.php?msg=Incorrect Email');
 				     }
 				  }
 				  else{
 				     if(empty($email)){
-				      header('location:index.php?msg=dont leave email field empty');
+				      header('location:index.php?msg=Dont leave email field empty');
 				    }
 				   elseif(empty($password)){
-				header('location:index.php?msg=dont leave password field empty');
+				header('location:index.php?msg=Dont leave password field empty');
 				  }else{
 
-				       header('location:index.php?msg=dont leave all fields empty');
+				       header('location:index.php?msg=Dont leave all fields empty');
 				}
 				}
 				}
