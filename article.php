@@ -3,15 +3,14 @@
 <head>
 
 <style>
-.btn
-{
-border-radius:30px;	
-background-color:#8a2be2;
-color:white;
-}
 .c{
 	font-size:50px;
 	color:#8a2be2;
+}
+.ff
+{
+	border-radius: 20px;
+
 }
 .if
 {
@@ -44,6 +43,9 @@ p
 {
 	color:#8a2be2;
 }
+.col-lg-3 .g{
+	margin-right: 10px;
+}
 
 </style>
 </head>
@@ -65,25 +67,30 @@ p
 </div>
 <br>
 <div class="col-lg-6 col-lg-offset-3">
-
+<?php $arr=array('btn-success','btn-danger','btn-primary','btn-info' ,'btn-warning');
+	$i=0;
+?>
 <?php
 foreach($fire as $row )
-{?>
+{
+	$i++;
+	if($i==5)
+	{
+		$i=1;
+	}
+	?>
 			<br>
 		<article>
-	<div class="col-lg-3 col-sm-6">	<h4>Category  :                         </h4></div>
-	<div class="col-lg-3 col-sm-6 col-lg-offset-6"> <input type="submit"  class="btn btn-sm" value="<?php	echo $row['category'];?>"></div>
+	
 <br><br>
 <a href="db.php?val=<?php echo $row['aid'];?>" style="text-decoration: none;"><h1><strong><?php echo $row['head'];?></strong></h1></a>
 <br>
-<div class="col-lg-6 "><span class="glyphicon glyphicon-user "><strong><?php echo $row['posted'];?></strong></span></div><div class="col-lg-3"><strong><?php echo $row['date'];?></strong></div>
-<br>
-
-
-
-</article>
+<div class="col-lg-3 "><i class="fa fa-user-circle g" aria-hidden="true"><strong><?php echo $row['posted'];?></strong></i></div><div class="col-lg-4"><strong><i class="fa fa-calendar" aria-hidden="true"><?php echo $row['date'];?></i></strong></div>
+<div class="col-lg-5"><input type="submit"  class="btn btn-sm <?php echo $arr[$i-1] ;?> ff" value="<?php	echo $row['category'];?>"></div>
+<br><br>
 <hr>
-<br>
+</article>
+
 <?php
 }
 ?>
