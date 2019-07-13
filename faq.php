@@ -92,7 +92,7 @@ include 'header.php';
 		}
 		?>
 	</div>
-	<hr>
+	<br><br><br>
 <?php
 include 'footer.php';
 ?>
