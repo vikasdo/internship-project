@@ -33,7 +33,7 @@ include 'header.php';
 		else
 		{
 			$text=$_GET['keyword'];
-			echo '<h2 style="font-family:Calibri Light; font-size:35px; opacity:0.7"><strong>'.'Showing Results For '.$text.'</strong></h2>'.'<br>';
+			echo '<h2 style="font-family:Calibri Light; font-size:35px; opacity:0.7"><strong>'.'Showing Results For "'.$text.'"'.'</strong></h2>'.'<br>';
 		}
 		?>
 		
