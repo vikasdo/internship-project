@@ -11,10 +11,9 @@
 				<h3 style="font-family:Bahnschrift Light; text-align:center"><strong>Contact</strong></h3>
 				<hr>
 				<div style="font-size:18px">
-				<i class="fa fa-home contact"> Hyderabad India</i><br>
-				<i class="fa fa-envelope contact"> teamweb@gmail.com</i><br>
-				<i class="fa fa-phone contact"> +91 1234567890</i><br>
-				<i class="fa fa-home contact"> Hyderabad,India.</i>
+					<i class="fa fa-home contact"> Hyderabad India</i><br>
+					<i class="fa fa-envelope contact"> teamweb@gmail.com</i><br>
+					<i class="fa fa-phone contact"> +91 1234567890</i><br>
 				</div>
 			</div>
 			<div class="col-lg-3">
