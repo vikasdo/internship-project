@@ -18,7 +18,7 @@ include 'header.php';
 		<br>
 		<br>
 		<br>
-		<h4 style="color:#ffffff; opacity:0.8" class="text-center">You can also browse the topics below to find what you are looking for.</h4>
+		<h4 style="color:#000000; opacity:0.8" class="text-center">You can also browse the topics below to find what you are looking for.</h4>
 		<br>
 		<br>
 	</div>
@@ -33,7 +33,7 @@ include 'header.php';
 		else
 		{
 			$text=$_GET['keyword'];
-			echo '<h2 style="font-family:Calibri Light; font-size:35px; opacity:0.7">'.'Showing Results For '.$text.'</h2>'.'<br>';
+			echo '<h2 style="font-family:Calibri Light; font-size:35px; opacity:0.7"><strong>'.'Showing Results For '.$text.'</strong></h2>'.'<br>';
 		}
 		?>
 		

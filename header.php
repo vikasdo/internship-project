@@ -27,7 +27,7 @@
 }
 .cont
 {
-	background-color:#d9d9d9;
+	background-color:#e6e6e6;
 	background-size:cover;
 	background-position:center;
 }
@@ -50,7 +50,7 @@
 }
 .text_faq
 {
-	color:white;
+	color:black;
 	font-family:Bahnschrift Light;
 }
 .subscribe
