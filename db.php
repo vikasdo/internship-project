@@ -255,7 +255,10 @@ elseif (isset($_POST['resetpass'])) {
 require 'PHPMailer /PHPMailerAutoload.php';
 include 'phpmail.php';
 $rec=$_POST["email"];
-
+$str="h12asq";
+$str1=str_shuffle($str);
+echo $str1;
+$token=$str1;
 $mail->addAddress($rec, 'weteam');
 //Set the subject line
 					$h='Please reset your password through the link';
@@ -267,7 +270,7 @@ $mail->addAddress($rec, 'weteam');
 				if (!$mail->send()) {
 				    echo "Mailer Error: " . $mail->ErrorInfo;
 				} else {
-					require 'resetpass.php';
+					
 				    
 				}
 
