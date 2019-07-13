@@ -21,7 +21,7 @@ if($x=='1')
 	else
 		$msg1='';
 	echo '<h1 class="text-center" style="color:black"><strong>SIGN UP</strong></h1>'.
-		  $msg1
+		  '<h4 class="text-center">'.$msg1.'</h4>'
 		 .'<form class="form-vertical" action="db.php" method="post">
 				<br>
 				<input type="text" class="form-control well1 if" name="name" placeholder="Enter Name" required>
@@ -71,12 +71,12 @@ else
 		else
 			$msg='';
 echo '<h1 class="text-center" style="color:black"><strong>LOGIN</strong></h1>'.
-		$msg
+		'<h4 class="text-center">'.$msg.'</h4>'
 	 .'<form class="form-vertical" action="db.php" method="post">
 	  <br>
-		<input type="text" class="form-control well1 if" name="email" placeholder="Enter Email" required>
+		<input type="text" class="form-control well1 if" name="email" title="Email is required" placeholder="Enter Email" required>
 		<br><br>
-		<input type="password" class="form-control well1 if" name="pass" placeholder="Enter Password" required>
+		<input type="password" class="form-control well1 if" name="pass" title="Password is required" placeholder="Enter Password" required>
 		<br>
 		<div class="col-lg-6 col-lg-offset-4">
 			<input type="submit" class="btn btn_web btn-lg" name="login" value="Login">
