@@ -31,10 +31,6 @@
 	height:200px;
 	width:300px;
 }
-p
-{
-	font-family: "Noto Serif","Times New Roman";
-}
 .x
 {
 	padding-right: 10px;
@@ -43,9 +39,18 @@ p
 {
 	color:#8a2be2;
 }
-.col-lg-3 .g{
-	margin-right: 10px;
+
+.hr
+{
+border:2px;
 }
+.article_img
+{
+	background-image: url("images/articlebg1.jpg");
+	background-size: cover;
+	background-position: center;
+}
+
 
 </style>
 </head>
@@ -54,19 +59,24 @@ p
 	$qu="SELECT * FROM articles";
 	$fire=mysqli_query($con,$qu);
 ?>
-<div class=" fg">
-	<div class="col-lg-12 s">
-		
-		<h1 class="text-center"><strong>ARTICLES</strong></h1>
+	<div class="container-fluid article_img">
+		<h1 class="text-center" style="color:#FFF"><strong>Articles</strong></h1>
+		<br>
+		<br>
+		<form class="form-vertical col-lg-6" action="faq.php" method="get">
+			<input type="text" class="form-control keyword col-lg-offset-6" name="keyword" style="height:50px; font-size:25px" placeholder="Search by keyword" required align="center">
+		</form>
+		<br>
+		<br>
+		<br>
+		<br>
+		<h4 style="color:#FFFF; opacity:0.8" class="text-center">Cant find Your Articles ? Search Here... </h4>
+		<br>
+		<br>
 	</div>
-
-	<div class="col-lg-6 col-lg-offset-3">
-		<img src="images/listempty.png" class="img-rounded img-responsive ">
-	</div>
-
-</div>
+	<br>
 <br>
-<div class="col-lg-6 col-lg-offset-3">
+<div class="col-lg-8 col-lg-offset-3 ">
 <?php $arr=array('btn-success','btn-danger','btn-primary','btn-info' ,'btn-warning');
 	$i=0;
 ?>
@@ -83,7 +93,7 @@ foreach($fire as $row )
 		<article>
 	
 <br><br>
-<a href="db.php?val=<?php echo $row['aid'];?>" style="text-decoration: none;"><h1><strong><?php echo $row['head'];?></strong></h1></a>
+<a href="db.php?val=<?php echo $row['aid'];?>" style="text-decoration: none;"><h4><strong><?php echo $row['head'];?></strong></h4></a>
 <br>
 <div class="col-lg-3 "><i class="fa fa-user-circle g" aria-hidden="true"><strong><?php echo $row['posted'];?></strong></i></div><div class="col-lg-4"><strong><i class="fa fa-calendar" aria-hidden="true"><?php echo $row['date'];?></i></strong></div>
 <div class="col-lg-5"><input type="submit"  class="btn btn-sm <?php echo $arr[$i-1] ;?> ff" value="<?php	echo $row['category'];?>"></div>

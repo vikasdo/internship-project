@@ -41,6 +41,13 @@
 	background-size:cover;
 	background-position:center;
 }
+.article_img
+{
+	background-image:url(images/articlebg.jpg);
+	background-size:cover;
+	background-position:center;
+
+}
 .cont
 {
 	background-color:#e6e6e6;
