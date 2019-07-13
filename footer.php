@@ -53,10 +53,23 @@
 				<div class="col-lg-12">
 					<h2 id="news"><strong>Subscribe To Our Monthly News Letter</strong></h2>
 					<br>
+					<?php
+					if(isset($_SESSION['subscribe'])){
+?>
+<script >
+	function r() {
+	
+                 document.getElementById("subscribe").disabled = true;
+             }
+</script>
+					<div class="alert" style="color:blue">
+						<p>You are subscibed Now</p>
+					</div>
+				<?php }?>
 					<form class="form-vertical" action="db.php" method="post">
 						<input type="email" name="emails" class="form-control" placeholder="Enter Your Email" required>
 						<br>
-						<button type="submit" class="btn btn_web form-control" name="subscribe" value="1">Subscribe</button>
+						<input type="submit" class="btn btn_web form-control" value="subscribe" name="subscribe" onclick="r()">
 					</form>
 					<div class="text-center col-lg-12">
 						<h3 style="color:black">Follow Us On</h3>
