@@ -11,9 +11,13 @@
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 </head>
 <style>
-.answer
+.answer_list_empty 
 {
-	
+    display:block;
+    margin-left:auto;
+    margin-right:auto;
+	heigth:500px;
+	width:470px;
 }
 .answerhead
 {
