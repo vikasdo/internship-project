@@ -65,8 +65,7 @@ echo '<h1 class="text-center" style="color:black"><strong>LOGIN</strong></h1>
 			<br>
 		</div>
 		<div class="col-lg-12">
-			<a href="index.php?signup=1" style="text-decoration:none" class="col-lg-offset-3">Dont have an account?</a>
-				<a href="index.php?reset=1" style="text-decoration:none" class="col-lg-offset-3">Forgot password?</a>
+			<a href="index.php?reset=1" style="text-decoration:none" class="col-lg-offset-3 text-center">Forgot password?</a>
 		</div>
 		<br><br>
 	  </form>';
