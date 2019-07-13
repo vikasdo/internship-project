@@ -22,9 +22,9 @@
 				<hr>
 				<h4 class="footer_list"><a href="#">TeamWeb Crew</a></h4>
 				<h4 class="footer_list"><a href="#">Have a project?</a></h4>
-				<h4 class="footer_list"><a href="#">TeamWeb Crew</a></h4>
-				<h4 class="footer_list"><a href="#">TeamWeb Crew</a></h4>
-				<h4 class="footer_list"><a href="#">TeamWeb Crew</a></h4>
+				<h4 class="footer_list"><a href="#">TED X Event</a></h4>
+				<h4 class="footer_list"><a href="#">Trending News</a></h4>
+				<h4 class="footer_list"><a href="#">Guest Lecture</a></h4>
 			</div>
 			<div class="col-lg-3 subscribe">
 				<div class="col-lg-12">
