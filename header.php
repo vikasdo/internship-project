@@ -19,9 +19,21 @@
 	heigth:500px;
 	width:470px;
 }
-.answerhead
+.footer_list
 {
-	
+	text-align:center;
+}	
+.footer_list a
+{
+	font-family:Bahnschrift Light;
+	color:#000000;
+	text-decoration:none;
+}
+.contact
+{
+	display:block;
+    margin-left:auto;
+    margin-right:auto;
 }
 .faq_image
 {
