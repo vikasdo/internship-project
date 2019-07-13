@@ -70,7 +70,7 @@ border:2px;
 		<br>
 		<br>
 		<form class="form-vertical col-lg-6" action="article.php" method="GET">
-			<input type="text" class="form-control keyword col-lg-offset-6" name="keyword" style="height:50px; font-size:25px" placeholder="Search by keyword..." required align="center">
+			<input type="text" class="form-control keyword col-lg-offset-6" name="keyword" style="height:50px; font-size:25px ;" placeholder="Search by keyword..." required align="center">
 		</form>
 		<br><br>
 		<br>
@@ -118,13 +118,20 @@ foreach($fire as $row )
 			$text=$_GET['keyword'];
 			$results="SELECT * FROM articles WHERE head LIKE '%$text%' ORDER BY head";
 			$result=mysqli_query($con,$results);
+			if(($re=mysqli_num_rows($result))==0)
+			{
+					echo'<div class="col-lg-6 col-lg-offset-3"><h2> No Results Found :</h2></div><div class="col-lg-6 col-lg-offset-4"><h4><strong>Sorry I Couldnt Find Anything Related to "'.$text.'"</strong></h4></div>
+					<div class="col-lg-6 col-lg-offset-4 bg-info><div class="col-lg-12"><img src="images/pnf.png" class="img-responsive img-rounded" style="height:500px; width:300px;"></div></div>';
+			}
+			else
+			{
 			foreach($result as $ww)
 			{
 									$i++;
 					if($i==5)
 					{
 						$i=1;
-}
+					}
 				$aid=$ww['aid'];
 				?>
 						<div class="col-lg-8 col-lg-offset-2 "style="background-color:white">
@@ -144,11 +151,15 @@ foreach($fire as $row )
 					</div>			<?php
 			}
 		}
-	
+	}
 
 
 ?>
 </div>
-
+<div class="col-lg-12" style="width: 100%">
+<?php
+include 'footer.php'
+?>
+</div>
 </body>
 </html>
