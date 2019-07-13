@@ -122,7 +122,7 @@ hr{
 											    </div>
 					 <div class=" justify-content-center col-lg-6" >
 					        <div class="searchbar">
-					          <input class="search_input" type="text" name="search" placeholder="Search...">
+					          <input class="search_input" type="text" name="search" placeholder="Search notes by branch,sem,name...">
 					        <input type="submit" name ="sort" class="search_icon" value="S">
 					        </div>
 					      </div>
