@@ -97,8 +97,6 @@ h1,h4,h2,h3
 	<br>
 	<form class="form-group" method="POST" action="db.php">
 		<textarea class="form-control" rows="4" placeholder="Write Something...." name="tarea" ></textarea>
-	<form class="form-group" method="POST" action="">
-		<textarea class="form-control" rows="4" placeholder="Write Something...." name="tarea" > 	</textarea>
 <br>
 <a href="db.php?sv=<?php echo $fire['aid'];?>" class="btn btn-lg">Comment</a>
 
