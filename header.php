@@ -181,9 +181,9 @@
 		</div>
 		<ul class="nav navbar-nav">
 		<li class="<?php $t=isset($_GET['home'])?'active':''; echo $t;?>"><a href="db.php?home=1" id='c'>Home</a></li>
-		  <li class="<?php $t=isset($_GET['faq'])?'active':''; echo $t;?>"><a href="db.php?faq=1" id='c'>FAQ'S</a></li>
 		  <li class="<?php $t=isset($_GET['a'])?'active':''; echo $t;?>"><a href="db.php?a=1" id='c'>Articles</a></li>
 		  <li class="<?php $t=isset($_GET['notes'])?'active right':'right'; echo $t;?>"><a href="db.php?notes=1" id="c">Notes</a></li>
+		  <li class="<?php $t=isset($_GET['faq'])?'active':''; echo $t;?>"><a href="db.php?faq=1" id='c'>FAQ'S</a></li>
 		  <li class="<?php $t=isset($_GET['signup'])?'active':''; echo $t;?>"><a href="index.php?signup=1" id="c">Sign Up</a></li>
 </ul>
 		<div class="nav navbar-right">
