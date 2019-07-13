@@ -1,4 +1,7 @@
-<html>
+<?php
+	include 'header.php';
+?>
+<title>Notes</title>
 <head>
 	<style>
 .a{
@@ -25,9 +28,6 @@ hr{
 	
 }
 
- .navbar{
- 	background-color: blue;
- }
  .s{
  	min-width: 400px;
      border-radius: 5px;
@@ -36,13 +36,8 @@ hr{
  .k{
  min-height: 37px;
 }
-	</style>			<!--upload notes-->
-	
-<div>
-	<?php
-include 'header.php';
-?>
-</div>
+</style>			
+	<!--upload notes-->
 <div class="mainn">
 		<form class="form-group" action="db.php" method="post" enctype="multipart/form-data">
              	

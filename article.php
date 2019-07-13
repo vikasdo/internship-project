@@ -2,7 +2,7 @@
 $con=mysqli_connect('localhost','root','','uploadf');
 
 include 'header.php'?>
-<html lang="en">
+<title>Articles</title>
 <head>
 
 <style>
