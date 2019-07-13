@@ -113,7 +113,7 @@ hr{
 				     </div>
 				</div>
 		 
-              <div class="container-fluid ">  
+              <div class="container-fluid">  
 				<div class="col-lg-12 ">   
 					<hr>
 						<h2 class="text-center">All Notes</h2>
