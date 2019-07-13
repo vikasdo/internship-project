@@ -67,10 +67,11 @@ hr{
     }
 	</style>			<!--upload notes-->
 	
-<div class="container-fluid a">
+<div class="container-fluid a" >
 		<form class="form-group" action="db.php" method="post" enctype="multipart/form-data">
-             	  <div class="form-group ">
-             	  	<div class="col-lg-6 col-lg-offset-3 ">
+             	  <div class="form-group " >
+             	  	<div class="col-lg-12" style="background-image: url('images/a.jpg');">
+             	  	<div class="col-lg-6 col-lg-offset-3 " >
              	  	<h2 class="text-center"><mark><img src="https://img.icons8.com/color/48/000000/overview-pages-1.png"><strong> Notes Section</strong></mark></h2>
              	  	<img src="https://img.icons8.com/bubbles/50/000000/bar-chart.png">
 		           <label class=""><h4><strong>Category Of Notes:</strong></h4></label>
@@ -107,13 +108,13 @@ hr{
 				      					<input type="submit" class="btn btn-lg btn-primary" name="file" value="Upload">
 				      					<br>
 				      				</div>
-				      						   </div>
+				      	
+				      	</div>					  
+				     </div>
 				</div>
 		 
-
-
-	
-					<div class="col-lg-12 ">   
+              <div class="container-fluid ">  
+				<div class="col-lg-12 ">   
 					<hr>
 						<h2 class="text-center">All Notes</h2>
 						<hr>
@@ -127,9 +128,9 @@ hr{
 					        </div>
 					      </div>
 				      
-    <br>
-</div>
-</form>
+				    <br>
+				</div>
+			</form>
 
 						<div class="col-lg-6 col-lg-offset-3 text-center">
 <hr>
@@ -151,7 +152,7 @@ hr{
         if(isset($_GET['view'])||isset($_GET['pageno'])||isset($_POST['sort'])){
 		while($row=mysqli_fetch_array($res1)){
 		?>
-		 <div class="col-lg-6 well x">
+		<div class="col-lg-6 well x">
 					  	<div class="col-lg-6 col-lg-offset-4 ">
 			  	      <img src="https://img.icons8.com/dusk/64/000000/categorize.png" class="img-responsive thumbnail">
 			           </div>
@@ -173,7 +174,7 @@ hr{
 			  	 </a>
      	   </div>
 			 
-</div>
+   </div>
 
 <?php
 
@@ -181,9 +182,8 @@ hr{
      
 	?>
 
+   </div>
 
-</div>
-</form>
 <?php
 include 'footer.php';
 ?>
