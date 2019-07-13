@@ -47,7 +47,13 @@ if($x=='1')
 }
 elseif(isset($_GET['reset']))
 {
-	echo '<h1 class="text-center" style="color:black"><strong>RESET PASSWORD</strong></h1>
+	if(isset($_GET['msg']))
+		{
+			$msg=$_GET['msg'];
+		}
+		else
+			$msg='';
+	echo '<h1 class="text-center" style="color:black"><strong>RESET PASSWORD</strong></h1>'.$msg.'
 			<form class="form-vertical"  action="db.php" method="post">
 				<input type="text" class="form-control well1 if" name="email" placeholder="Enter Email" required>
 				<br><br>

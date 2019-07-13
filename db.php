@@ -166,6 +166,7 @@ include 'phpmail.php';
 						if (!$mail->send()) {
 						    echo "Mailer Error: " . $mail->ErrorInfo;
 						} else {
+							$_SESSION['subscribe']=$rec;
 						    require'index.php';
 						    
                         }
@@ -251,27 +252,44 @@ $tire=mysqli_query($con,$query);
 elseif (isset($_POST['resetpass'])) {
 
 
-require 'PHPMailer /PHPMailerAutoload.php';
-include 'phpmail.php';
-$rec=$_POST["email"];
-$str="h12asq";
-$str1=str_shuffle($str);
-echo $str1;
-$token=$str1;
-$mail->addAddress($rec, 'weteam');
-//Set the subject line
-					$h='Please reset your password through the link';
-					$mail->Subject = $h;
-					$body=file_get_contents("PHPMailer/resetpage.html");
-			    $mail->Body=$body;
+				require 'PHPMailer /PHPMailerAutoload.php';
+				include 'phpmail.php';
+				$rec=$_POST["email"];
+				$str="h12asq";
+				$str1=str_shuffle($str);
+				echo $str1;
+				$token=$str1;
+				$mail->addAddress($rec, 'weteam');
+
+				$h='Please reset your password through the link';
+				$mail->Subject = $h;
+				
+			    $mail->Body=' <!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<div style="background-image: url("images/secure.png");">
+	<h1>You will be directed to Reset password Page</h1>
+
+	<br> to change password<br>
+</div>
+</body>
+</html>'.'Please click this link: http://localhost/internship-project/resetpass.php?token='.$token.'&email='.$rec;
 				//Replace the plain text body with one created manually
 				$mail->AltBody = 'This is a plain-text message body';
-				if (!$mail->send()) {
-				    echo "Mailer Error: " . $mail->ErrorInfo;
-				} else {
-					
-				    
-				}
+				if (!$mail->send())
+						 {
+						    echo "Mailer Error: " . $mail->ErrorInfo;
+						 }
+				  else 
+						  {
+                             $sql="update user set token='$token' where email='$rec';";
+                             $res=mysqli_query($con,$sql);
+							header("location:index.php?msg=we have a sent an email to you plese check it to verify");
+						    
+						  }
 
 }
 
@@ -337,6 +355,16 @@ elseif(isset($_POST['signup']))
 		echo 'You are successfully signed up';
 	else
 		header("Location:index.php?msg1=Email is already taken!");
+}
+elseif(isset($_POST['paschng']))
+{
+	$pas=$_POST['newpassword'];
+	$cpas=$_POST['confirmpassword'];
+		$email=$_GET['email'];
+
+	$sql1="update user set password='$pas' where email='$email'";
+	$res=mysqli_query($con,$sql1);
+		echo 'You Have successfully changed up';
 }
 
 
