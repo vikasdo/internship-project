@@ -95,13 +95,10 @@ h1,h4,h2,h3
 	<br><br>
 	<h2><strong><span class="glyphicon glyphicon-comment"></span>    Leave your Comment....</strong></h2>
 	<br>
-<<<<<<< HEAD
 	<form class="form-group" method="POST" action="db.php">
 		<textarea class="form-control" rows="4" placeholder="Write Something...." name="tarea" ></textarea>
-=======
 	<form class="form-group" method="POST" action="">
 		<textarea class="form-control" rows="4" placeholder="Write Something...." name="tarea" > 	</textarea>
->>>>>>> 6988e21423fb2a5adc97d86a499c6ea418dd8867
 <br>
 <a href="db.php?sv=<?php echo $fire['aid'];?>" class="btn btn-lg">Comment</a>
 
