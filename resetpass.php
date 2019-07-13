@@ -1,17 +1,16 @@
 <?php
 include 'header.php';
 ?>
-<style >
+<style>
   .controls{
     box-shadow: 2px  1px cyan;
     border-radius: 3px;
   }
- 
 </style>
 <body id="page-top " >
 
 <div class="container">
-  <form action="db1.php" method="post" enctype="multipart/form-data">
+  <form action="db.php" method="post" enctype="multipart/form-data">
     
    <div class="form-group ">
            
