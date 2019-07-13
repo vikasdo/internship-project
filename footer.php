@@ -11,9 +11,32 @@
 				<h3 style="font-family:Bahnschrift Light; text-align:center"><strong>Contact</strong></h3>
 				<hr>
 				<div style="font-size:18px">
-					<i class="fa fa-home contact"> Hyderabad India</i><br>
-					<i class="fa fa-envelope contact"> teamweb@gmail.com</i><br>
-					<i class="fa fa-phone contact"> +91 1234567890</i><br>
+					<div class="container-fluid">
+						<div class="col-lg-2">
+							<i class="fa fa-map-marker"></i>
+						</div>
+						<div class="col-lg-10">
+							<i style="font-family:Bahnschrift Light">Hyderabad India</i>
+						</div>
+					</div>
+				<br>
+					<div class="container-fluid">
+						<div class="col-lg-2">
+							<i class="fa fa-envelope"></i>
+						</div>
+						<div class="col-lg-10">
+							<i style="font-family:Bahnschrift Light">teamweb@gmail.com</i>
+						</div>
+					</div>
+				<br>
+					<div class="container-fluid">
+						<div class="col-lg-2">
+							<i class="fa fa-phone"></i>
+						</div>
+						<div class="col-lg-10">
+							<i style="font-family:Bahnschrift Light">+91 1234567890</i>
+						</div>
+					</div>
 				</div>
 			</div>
 			<div class="col-lg-3">
