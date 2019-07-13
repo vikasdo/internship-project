@@ -276,4 +276,28 @@ $mail->addAddress($rec, 'weteam');
 }
 
 
+elseif(isset($_POST['login']))
+{
+	$email=$_POST['email'];
+	$pass=$_POST['pass'];
+	$sql="SELECT * FROM user WHERE email=$email and password=$pass";
+	$res=mysqli_query($con,$sql);
+	if(mysqli_num_rows($res)==0)
+		header("Location:index.php?msg=Email and password incorrect");
+	else
+		echo 'Success';
+}
+
+elseif(isset($_POST['signup']))
+{
+	$email=$_POST['email'];
+	$sql="SELECT * FROM user WHERE email='$email'";
+	$res=mysqli_query($con,$sql);
+	if(mysqli_num_rows($res)==0)
+		echo 'You are successfully signed up';
+	else
+		header("Location:index.php?msg1=Email is already taken!");
+}
+
+
 ?>

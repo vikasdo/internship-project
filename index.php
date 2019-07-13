@@ -10,11 +10,19 @@ include 'header.php';
 <div class="col-lg-3">
 
 <?php
+
 $x=isset($_GET['signup'])?$_GET['signup']:'';
 if($x=='1')
 {
-	echo '<h1 class="text-center" style="color:black"><strong>SIGN UP</strong></h1>
-			<form class="form-vertical" action="db.php" method="post">
+	if(isset($_GET['msg1']))
+	{
+		$msg1=$_GET['msg1'];
+	}
+	else
+		$msg1='';
+	echo '<h1 class="text-center" style="color:black"><strong>SIGN UP</strong></h1>'.
+		  $msg1
+		 .'<form class="form-vertical" action="db.php" method="post">
 				<br>
 				<input type="text" class="form-control well1 if" name="name" placeholder="Enter Name" required>
 				<br><br>
@@ -41,8 +49,6 @@ elseif(isset($_GET['reset']))
 {
 	echo '<h1 class="text-center" style="color:black"><strong>RESET PASSWORD</strong></h1>
 			<form class="form-vertical"  action="db.php" method="post">
-				
-				
 				<input type="text" class="form-control well1 if" name="email" placeholder="Enter Email" required>
 				<br><br>
 				<div class="col-lg-6 col-lg-offset-2 ">
@@ -52,8 +58,15 @@ elseif(isset($_GET['reset']))
 }
 else
 {
-echo '<h1 class="text-center" style="color:black"><strong>LOGIN</strong></h1>
-	  <form class="form-vertical" action="db.php" method="post">
+		if(isset($_GET['msg']))
+		{
+			$msg=$_GET['msg'];
+		}
+		else
+			$msg='';
+echo '<h1 class="text-center" style="color:black"><strong>LOGIN</strong></h1>'.
+		$msg
+	 .'<form class="form-vertical" action="db.php" method="post">
 	  <br>
 		<input type="text" class="form-control well1 if" name="email" placeholder="Enter Email" required>
 		<br><br>
