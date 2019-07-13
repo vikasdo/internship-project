@@ -71,7 +71,7 @@ include 'header.php';
 			          <option value="2-1">4-1</option>
 			          <option value="2-2">4-2</option>
 			         </select>
-			                  <br><br>
+			           <br><br>
 			                  <div class="col-lg-6">
 			                  <label>Upload Your File</label> 
 					          <input type="file" name="filew" >
@@ -84,7 +84,8 @@ include 'header.php';
 				      	</div>
 				      	</div>					  
 				     </div>
-              <div class="container-fluid">  
+                  
+                   <div class="container-fluid">  
 				<div class="col-lg-12 ">   
 					<hr>
 					<h2 class="text-center">All Notes</h2>
