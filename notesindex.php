@@ -48,21 +48,38 @@ include 'header.php';
              	
          	<div class="col-lg-12" style="background-image: url('images/blue.jpg');">
              	 <div class="col-lg-6 col-lg-offset-3 " >
-             	  	<h2 class="text-center"><mark><img src="https://img.icons8.com/color/48/000000/overview-pages-1.png"><strong> Notes Section</strong></mark></h2>
-             	  	<img src="https://img.icons8.com/bubbles/50/000000/bar-chart.png">
-		           <label class=""><h4><strong>Category Of Notes:</strong></h4></label>
+             	  	<h2 class="text-center"><strong> Notes Section</strong></h2>
+             	  	<br>
+             	  	<div class="col-lg-6">
+             	   <label class=""><h4><strong>Category Of Notes     :</strong></h4></label>
+			        </div>
+			        <div class="col-lg-6">
 			        <select name="select" id="exampleFormControlSelect1" class="form-control a">
 			          <option  value="0" >Select Category type</option>
 			          <option value="studymaterial">studymaterial(ppts)</option>
 			          <option value="notes">Notes</option>
 			          <option value="assignment">Assignment</option>
 			         </select>
+			     </div>
+			         <br>
+			         <div class="col-lg-12">
+			       	<div class="col-lg-6">
+             	   <label class=""><h4><strong>Select Your Branch     :</strong></h4></label>
+			        </div>
+			         <div class="col-lg-6">
 			         <select name="select1" id="exampleFormControlSelect1" class="form-control a">
 			          <option >Select Branch</option>
 			          <option value="cse">cse</option>
 			          <option value="ece">ece</option>
 			          <option value="it">it</option>
 			         </select>
+			     </div></div>
+			         <br><br>
+			         <div class="col-lg-12">
+			         	<div class="col-lg-6">
+			         	<label><h4><strong>Select Your Year   :</strong></h4></label>
+			         	</div>
+					<div class="col-lg-6">
 			         <select name="select2" id="exampleFormControlSelect1" class="form-control a">
 			          <option value="0" >Select year and sem</option>
 			          <option value="1-1">1-1</option>
@@ -74,16 +91,22 @@ include 'header.php';
 			          <option value="2-1">4-1</option>
 			          <option value="2-2">4-2</option>
 			         </select>
-			           <br><br>
+			           <br></div>
+			       </div>
+			           <br>	
+			           	<div class="col-lg-12">
 			                  <div class="col-lg-6">
-			                  <label>Upload Your File</label> 
-					          <input type="file" name="filew" >
+			                  <label><h4><strong>Upload Notes  :</strong></h4></label> 
 				          	</div>
-				              <br><br><br>
-				              <div class="col-lg-6 col-lg-offset-5">
-				      					<input type="submit" class="btn btn-lg btn-primary" name="file" value="Upload">
+				              <div class="col-lg-6">
+				              	 <input type="file" name="filew" >
+				              </div>
+				              <br><br><br><br>
+				              <div class="col-lg-3 col-lg-offset-5">
+				      					<input type="submit" class="btn btn-block btn-primary" name="file" value="Upload">
 				      					<br>
 				      				</div>
+				      			</div>
 				      	</div>
 				      	</div>					  
 				     </div>
@@ -93,7 +116,7 @@ include 'header.php';
 					<h2 class="text-center">All Notes</h2>
 					<div class="col-lg-6">
 						
-						<hr><a href="?view=1"  class="btn btn-primary btn-block " >View notes</a>
+						<hr><a href="?view=1"  class="btn btn-primary btn-sm " >View notes</a>
 				         </div> 
 				
 					    <div class="col-lg-6 ">
@@ -145,7 +168,7 @@ include 'header.php';
 
 			  	 ?>
 			  
-			  	 <a href="<?php echo $row['name']; ?>" class="btn btn-danger btn-sm" download>
+			  	 <a href="<?php echo $row['name']; ?>" class="btn btn-info btn-sm" download>
 			  	 Download
 			  	 </a>
      	   </div>
