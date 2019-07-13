@@ -24,6 +24,7 @@ if(isset($_POST['file'])){
 				}
 
 /* php mailer */
+
 elseif (isset($_POST['compose'])) {
 
 						require 'PHPMailer /PHPMailerAutoload.php';
@@ -344,7 +345,6 @@ elseif(isset($_POST['login']))
 				}
 				}
 				}
-
 
 elseif(isset($_POST['signup']))
 {
