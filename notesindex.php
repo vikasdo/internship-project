@@ -9,56 +9,30 @@
 	.mainn{
 		margin-top: 0;color: white;
 	}
-    .searchbar{
-    margin-bottom: auto;
-    margin-top: auto;
-    height: 60px;
     
-    border-radius: 30px;
-    padding: 10px;
-    }
     .b{
     	min-width: 100px;
     }
 
-    .search_input{
-    color: black;
-    border: 0;
-    outline: 0;
-     width: 450px;
-    cursor:default;
-   border-radius: 2px;
-    width: 200px;
-    line-height: 40px;
-    transition: width 0.4s linear;
-    }
+ 
 
 hr{
 	height:2px;background: blue no-repeat scroll center;border:none;
 	border-radius: 1px;
 	
 }
-    .searchbar:hover > .search_input{
-    padding: 0 10px;
-    width: 450px;
-   border-radius: 10px;
-    transition: width 0.2s linear;
-    }
 
  .navbar{
  	background-color: blue;
  }
-
-    .search_icon{
-    height: 40px;
-    width: 40px;
-    float: right;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 50%;
-    color:white;
-    }
+ .s{
+ 	min-width: 400px;
+     border-radius: 5px;
+     min-height: 37px;
+ }
+ .k{
+ min-height: 37px;
+}
 	</style>			<!--upload notes-->
 	
 <div>
@@ -113,18 +87,19 @@ include 'header.php';
               <div class="container-fluid">  
 				<div class="col-lg-12 ">   
 					<hr>
-						<h2 class="text-center">All Notes</h2>
-						<hr>
-						 	<div class="col-lg-6 " ><a href="?view=1"  class="btn btn-primary btn-block " style="height: 50px; width: 100px;">View notes</a>
-											    </div>
-					 <div class=" justify-content-center col-lg-6" >
-					        <div class="searchbar">
-					          <input class="search_input" type="text" name="search" placeholder="Search notes by branch,sem,name...">
-					        <input type="submit" name ="sort" class="search_icon" value="S">
-					        </div>
-					      </div>
-				      
-				    <br>
+					<h2 class="text-center">All Notes</h2>
+					<div class="col-lg-6">
+						
+						<hr><a href="?view=1"  class="btn btn-primary btn-block " >View notes</a>
+				         </div> 
+				
+					    <div class="col-lg-6 ">
+					    	<hr>
+					      <input type="text " name="search" placeholder="Search notes by branch,sem,name..." class="s">
+					        <button class="btn btn-default k" name ="sort" type="submit" >
+							<i class="glyphicon glyphicon-search"></i>
+						    </button>
+					    </div>
 				</div>
 			</form>
 

@@ -8,8 +8,6 @@ if(isset($_POST['file'])){
 					$cat=$_POST['select'];
 										$cat1=$_POST['select1'];
 										$cat2=$_POST['select2'];
-					
-					
 						if(1){
 						move_uploaded_file($_FILES['filew']['tmp_name'], $des);
 						$sql1="insert into files(name,type,uid,category,ys,branch) values('$des','$imgtype',1,'$cat','$cat2','$cat1')";
