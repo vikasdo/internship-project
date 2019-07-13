@@ -278,15 +278,55 @@ $mail->addAddress($rec, 'weteam');
 
 elseif(isset($_POST['login']))
 {
-	$email=$_POST['email'];
-	$pass=$_POST['pass'];
-	$sql="SELECT * FROM user WHERE email=$email and password=$pass";
-	$res=mysqli_query($con,$sql);
-	if(mysqli_num_rows($res)==0)
-		header("Location:index.php?msg=Email and password incorrect");
-	else
-		echo 'Success';
-}
+	
+  $email=$_POST['email'];
+  $password=$_POST['pass'];
+   
+    
+				  if(!empty($email)&&!empty($password))
+				  {
+				   $sql="select * from user where email='$email'";
+				   $res=mysqli_query($con,$sql);
+				    $row=mysqli_fetch_array($res);
+				    $eml=$row['email'];
+				     if($eml==$email)
+				     {
+				      $sql="select * from user where email='$email' AND password='$password'";
+				      $res=mysqli_query($con,$sql);
+				      
+				       $row=mysqli_fetch_array($res);
+				       $pas=$row['password'];
+							       if($pas==$password)
+							       {
+							         $_SESSION['id']=$row['uid'];
+							        $_SESSION["email"]=$eml;
+							header('location:index.php?msg=Success');
+
+							      }
+							       else
+							       {
+							header('location:index.php?msg=password invalid');
+							       }
+
+				        }
+				     else
+				     {
+				header('location:index.php?msg=email invalid');
+				     }
+				  }
+				  else{
+				     if(empty($email)){
+				      header('location:index.php?msg=dont leave email field empty');
+				    }
+				   elseif(empty($password)){
+				header('location:index.php?msg=dont leave password field empty');
+				  }else{
+
+				       header('location:index.php?msg=dont leave all fields empty');
+				}
+				}
+				}
+
 
 elseif(isset($_POST['signup']))
 {
