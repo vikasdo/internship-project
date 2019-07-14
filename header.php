@@ -52,6 +52,14 @@
     margin-left:auto;
     margin-right:auto;
 }
+
+<!--to be put under test
+.side_list
+{
+	position:fixed;
+	top:auto;
+	margin-left:1220px; 
+}-->
 .faq_image
 {
 	background-image:url(images/faq_back.png);
