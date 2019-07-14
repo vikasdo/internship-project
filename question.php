@@ -56,8 +56,10 @@
 									echo '<h3 class="mt-0">'.$rowd['name'].'</h3>';
 									echo '<i class="fa fa-calendar">'.'&nbsp&nbsp&nbsp'.$rowd['date'].'</i>';
 									echo '<p class="answer_p">'.$rowd['answer'].'</p>';
-									echo '<form class="form-vertical col-lg-2 col-md-2" style="float:right; margin-right:10px">';
-										echo '<input class="btn btn_web form-control" value="Reply">'; 
+									echo '<form class="form-vertical col-lg-2 col-md-2" action="db.php?replyto='.$rowd['uid'].'" method="post" style="float:right; margin-right:10px">';
+										echo '<input type="text" class="hidden" name="replyby" value="'.$_SESSION['id'].'">';
+										echo '<input type="text" class="hidden" name="qid" value="'.$row['qid'].'">';
+										echo '<button name="replyto" class="btn btn_web form-control">Reply</button>'; 
 									echo '</form>';
 								echo '</div>';
 						echo '</div>';

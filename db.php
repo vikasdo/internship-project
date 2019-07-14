@@ -1,6 +1,9 @@
 <?php
 session_start();
 $con=mysqli_connect('localhost','root','','uploadf');
+
+$_SESSION['id']=10;
+
 if(isset($_POST['file'])){    
 
 					$des='images/'.basename($_FILES['filew']['name']);
@@ -366,6 +369,19 @@ elseif(isset($_POST['paschng']))
 	$res=mysqli_query($con,$sql1);
 		echo 'You Have successfully changed up';
 }
+
+if(isset($_POST['replyto']))
+{
+	$replyto=$_GET['replyto'];
+	$replyby=$_POST['replyby'];
+	$qid=$_POST['qid'];
+	echo 'Reply by : '.$replyby;
+	echo 'Reply to : '.$replyto;
+	echo 'Question : '.$qid;
+}
+
+
+
 
 
 ?>
