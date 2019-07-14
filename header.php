@@ -127,7 +127,8 @@
 {
 	color:white;
 }
-.c{
+.c
+{
 	font-size:50px;
 	color:#8a2be2;
 }
