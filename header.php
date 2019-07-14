@@ -52,9 +52,17 @@
     margin-left:auto;
     margin-right:auto;
 }
+
+<!--to be put under test
+.side_list
+{
+	position:fixed;
+	top:auto;
+	margin-left:1220px; 
+}-->
 .faq_image
 {
-	background-image:url(images/footer2.png);
+	background-image:url(images/faq_back.png);
 	background-size:cover;
 	background-position:center;
 }
@@ -119,7 +127,8 @@
 {
 	color:white;
 }
-.c{
+.c
+{
 	font-size:50px;
 	color:#8a2be2;
 }

@@ -138,7 +138,7 @@ echo '<h1 class="text-center" style="color:black"><strong>LOGIN</strong></h1>'.
 		<img src="images/technical.jpg" class="img-responsive img-rounded gif">
 	</div>
 	<div class="col-lg-6">
-		<p class="text-center home_p" style="color:darkgreen"><strong>"Our support is online 24X7"</strong></p>
+		<p class="text-center home_p" style="color:darkgreen"><strong>"Don't worry ,our support is online 24x7"</strong></p>
 	</div>
 </div>
 <br>

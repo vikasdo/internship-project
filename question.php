@@ -27,13 +27,11 @@
 			$res1=mysqli_query($con,$data);
 			if($rows==0)
 			{
-				echo '<div class="container">';
+					echo '<div style="float:center" class="col-lg-9">';
 					echo '<br>'.'<br>'.'<br>'.'<br>';
 					echo '<img class="answer_list_empty" src="images/ale.png">';
 					echo '<h2 style="font-family:Bahnschrift Light; opacity:0.6" class="text-center">There are no replies to this question,be the first to answer.</h2>';
 					echo '<br>'.'<br>'.'<br>'.'<br>'.'<br>'.'<br>'.'<br>'.'<br>'.'<br>'.'<br>'.'<br>';
-				echo '</div>';
-				echo '<div class="well container">';
 					echo '<form class="form-vertical col-lg-8" action="db.php?answer_submit='.$row['qid'].'" method="post">';
 						echo '<h2 style="font-family:Bahnschrift Light; color:#8a2be2">Have an answer?</h2>';
 						echo '<textarea name="answer" class="col-lg-8 form-control" style="resize:none; height:300px" required></textarea>';
@@ -43,14 +41,14 @@
 			}
 			else
 			{
-				echo '<div class="container">';
+				echo '<div style="float:left; margin-left:20px">';
 					echo '<div class="answer">';
 					while($rowd=mysqli_fetch_array($res1))
 					{
 						echo '<br>';
 						echo '<div class="container media">';
 								echo '<div class="media-left">';
-									echo '<img style="margin-right:3px" class="answer_img img-circle" src="images/blue.jpg" alt="Generic placeholder image">';
+									echo '<img style="margin-right:3px" class="answer_img img-circle" src="images/blue.jpg">';
 								echo '</div>';
 								echo '<div class="media-body">';
 									echo '<h3 class="mt-0">'.$rowd['name'].'</h3>';
@@ -76,9 +74,23 @@
 				echo '</div>';
 			}
 		?>
+		<div style="float:left; margin-left:30px">
+			<?php
+				$sql="SELECT * FROM questions WHERE qcat='$qcat' and qid!='$qid'";
+				$res=mysqli_query($con,$sql);
+				echo '<h2>'.'More from '.$qcat.'</h2>';
+				echo '<hr>';
+				while($row_faq=mysqli_fetch_array($res))
+				{
+					echo '<a href="http://localhost/internship-project/db.php?question='.$row_faq['qid'].'"'.'style="color:#8a2be2">'.'<h4>'.'<i class="fa fa-circle-o"></i> '.$row_faq['question'].'</h4>'.'</a>';
+				}
+			?>
+		</div>
 	</body>
 	<br><br><br><br>
 <?php
+echo '<div style="float:left; margin-top:30px">';
 include 'footer.php';
+echo '</div>';
 ?>
 </html>
