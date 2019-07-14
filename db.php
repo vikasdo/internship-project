@@ -323,7 +323,7 @@ elseif(isset($_POST['login']))
 							       {
 							         $_SESSION['id']=$row['uid'];
 							        $_SESSION["email"]=$eml;
-							header('location:index.php?msg=Success');
+									require 'profile.php';
 
 							      }
 							       else
