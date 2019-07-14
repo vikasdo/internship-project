@@ -17,7 +17,7 @@
 							<i class="fa fa-map-marker"></i>
 						</div>
 						<div class="col-lg-10">
-							<i style="font-family:Bahnschrift Light">Hyderabad India</i>
+							<i style="font-family:Bahnschrift Light">Hyderabad ,India-500074</i>
 						</div>
 					</div>
 				<br>
