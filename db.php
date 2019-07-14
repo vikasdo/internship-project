@@ -339,13 +339,13 @@ elseif(isset($_POST['login']))
 				  }
 				  else{
 				     if(empty($email)){
-				      header('location:index.php?msg=Dont leave email field empty');
+				      header('location:index.php?msg=email field is empty');
 				    }
 				   elseif(empty($password)){
-				header('location:index.php?msg=Dont leave password field empty');
+				header('location:index.php?msg=Password field is empty');
 				  }else{
 
-				       header('location:index.php?msg=Dont leave all fields empty');
+				       header('location:index.php?msg=fields are empty');
 				}
 				}
 				}
