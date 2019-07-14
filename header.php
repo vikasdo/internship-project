@@ -152,7 +152,7 @@
 }
 .navbar
 {
-		background-color:#8a2be2;
+	background-color:#8a2be2;
 }
 .navbar-brand
 {
