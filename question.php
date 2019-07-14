@@ -48,7 +48,7 @@
 						echo '<br>';
 						echo '<div class="container media">';
 								echo '<div class="media-left">';
-									echo '<img style="margin-right:3px" class="answer_img img-circle" src="images/blue.jpg" alt="Generic placeholder image">';
+									echo '<img style="margin-right:3px" class="answer_img img-circle" src="images/blue.jpg">';
 								echo '</div>';
 								echo '<div class="media-body">';
 									echo '<h3 class="mt-0">'.$rowd['name'].'</h3>';
