@@ -146,15 +146,15 @@ include 'phpmail.php';
 								    <div class="left-hole"></div>
 								    <div class="right-hole"></div>
 								    <div class="main-content">
-								      <h1>Success! You are Subscribed</h1>
+								      <h1 style="color:#8a2be2">Success! You are Subscribed</h1>
 								      <p>Thank you for subscribing, it means a lot to us, just like you do! We really appreciate you giving us a moment of your time.</p>
-								      <p class="strong">  welcome ...</p>
+								      <h2>  Welcome ...</h2>
 
 								      <h3>Next steps & what to expect:</h3>
 								      <ul>
-								        <li>daily Notes</li>
+								        <li>Daily Notes</li>
 								        <li>Articles</li>
-								        <li> daily Q&A</li>
+								        <li> Daily Q&A</li>
 								      </ul>
 								    </div>
 
@@ -195,8 +195,7 @@ elseif(isset($_GET['pageno'])||isset($_GET['view']))
         $no_of_records_per_page = 4;
         $offset = ($pageno-1) * $no_of_records_per_page;
 
-       
-
+      
         $total_pages_sql = "SELECT COUNT(*) FROM files";
         $result = mysqli_query($con,$total_pages_sql);
         $total_rows = mysqli_fetch_array($result)[0];
