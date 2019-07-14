@@ -61,7 +61,7 @@
 										echo '<br>';
 										echo '<input type="text" class="hidden" name="replyby" value="'.$_SESSION['id'].'">';
 										echo '<input type="text" class="hidden" name="qid" value="'.$row['qid'].'">';
-										echo '<button name="replyto" class="btn btn_web col-lg-2" style="float:right">Reply</button>'; 
+										echo '<button name="replyto" class="btn btn_web col-lg-1" style="float:right">Reply</button>'; 
 									echo '</form>';
 								echo '</div>';
 						echo '</div>';
