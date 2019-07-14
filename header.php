@@ -54,7 +54,7 @@
 }
 .faq_image
 {
-	background-image:url(images/footer2.png);
+	background-image:url(images/faq_back.png);
 	background-size:cover;
 	background-position:center;
 }
