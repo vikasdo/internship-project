@@ -2,10 +2,15 @@
 	<div class="col-lg-12 cont">
 		<div class="row">
 			<div class="col-lg-3">
+<<<<<<< HEAD
 				
 				<h3 class="text-center"><strong>About Us</strong></h3>
+=======
 				<br>
-				<p class="text-justify text">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam"</p>
+				<h3 class="text-center text"><strong>About Us</strong></h3>
+>>>>>>> 8140e8834328d5b229c0734d201b4caf20515b3c
+				<br>
+				<p class="text-justify text">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident"</p>
 			</div>
 			<div class="col-lg-3">
 				<br>
@@ -17,7 +22,7 @@
 							<i class="fa fa-map-marker"></i>
 						</div>
 						<div class="col-lg-10">
-							<i style="font-family:Bahnschrift Light">Hyderabad India</i>
+							<i style="font-family:Bahnschrift Light">Hyderabad ,India-500074</i>
 						</div>
 					</div>
 				<br>
