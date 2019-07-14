@@ -73,8 +73,8 @@
 					</form>
 					<div class="text-center col-lg-12">
 						<h3 style="color:black">Follow Us On</h3>
-						<a href="#" style="color:#8a2be2"><i class="fa fa-facebook icon"></i></a>
-						<a href="#" style="color:#8a2be2"><i class="fa fa-youtube icon"></i></a>
+						<a href="https://www.facebook.com" target="_blank" style="color:#8a2be2"><i class="fa fa-facebook icon"></i></a>
+						<a href="https://www.youtube.com/ElectronixGamer" target="_blank" style="color:#8a2be2"><i class="fa fa-youtube icon"></i></a>
 						<a href="#" style="color:#8a2be2"><i class="fa fa-twitter icon"></i></a>
 						<a href="#" style="color:#8a2be2"><i class="fa fa-instagram icon"></i></a>
 						<a href="#" style="color:#8a2be2"><i class="fa fa-linkedin icon"></i></a>

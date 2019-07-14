@@ -20,6 +20,22 @@
 	heigth:500px;
 	width:470px;
 }
+.answer
+{
+	background-color:white;
+}
+.answer_p
+{
+	font-size:15px;
+	text-align:justify;
+	margin-right:30px;
+	font-family:Bahnschrift Light;
+}
+.answer_img
+{
+	heigth:100px;
+	width:100px;
+}
 .footer_list
 {
 	text-align:center;
