@@ -62,9 +62,9 @@
                  document.getElementById("subscribe").disabled = true;
              }
 </script>
-					<div class="alert" style="color:blue">
+					<!--<div class="alert" style="color:blue">
 						<p>You are subscibed Now</p>
-					</div>
+					</div>-->
 				<?php }?>
 					<form class="form-vertical" action="db.php" method="post">
 						<input type="email" name="emails" class="form-control" placeholder="Enter Your Email" required>

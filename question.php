@@ -19,7 +19,7 @@
 		</div>
 		<br>
 		<?php
-			$sql="SELECT * FROM faq_comments";
+			$sql="SELECT * FROM faq_comments WHERE qid='$qid'";
 			$res=mysqli_query($con,$sql);
 			$rows=mysqli_num_rows($res);
 			$qid=$row['qid'];
