@@ -34,10 +34,10 @@
 					echo '<br>'.'<br>'.'<br>'.'<br>'.'<br>'.'<br>'.'<br>'.'<br>'.'<br>'.'<br>'.'<br>';
 				echo '</div>';
 				echo '<div class="well container">';
-					echo '<form class="form-vertical col-lg-8" action="db.php?answer='.$row['qid'].'">';
-						echo '<h1 style="font-family:Bahnschrift Light; color:#8a2be2">Have an answer?</h1>';
-						echo '<textarea class="col-lg-8 form-control" style="resize:none; height:300px"></textarea>';
-						echo '<a href="db.php?answer='.$row['qid'].'" class="btn btn_web form-control" style="margin-top:15px">Post My Answer</a>';
+					echo '<form class="form-vertical col-lg-8" action="db.php?answer_submit='.$row['qid'].'" method="post">';
+						echo '<h2 style="font-family:Bahnschrift Light; color:#8a2be2">Have an answer?</h2>';
+						echo '<textarea name="answer" class="col-lg-8 form-control" style="resize:none; height:300px" required></textarea>';
+						echo '<button name="answer_submit" class="btn btn_web form-control" style="margin-top:15px">Post My Answer</button>';
 					echo '</form>';
 				echo '</div>';
 			}
@@ -50,26 +50,28 @@
 						echo '<br>';
 						echo '<div class="container media">';
 								echo '<div class="media-left">';
-									echo '<img style="margin-right:3px" class="answer_img" src="images/admin.png" alt="Generic placeholder image">';
+									echo '<img style="margin-right:3px" class="answer_img img-circle" src="images/blue.jpg" alt="Generic placeholder image">';
 								echo '</div>';
 								echo '<div class="media-body">';
 									echo '<h3 class="mt-0">'.$rowd['name'].'</h3>';
 									echo '<i class="fa fa-calendar">'.'&nbsp&nbsp&nbsp'.$rowd['date'].'</i>';
 									echo '<p class="answer_p">'.$rowd['answer'].'</p>';
-									echo '<form class="form-vertical col-lg-2 col-md-2" action="db.php?replyto='.$rowd['uid'].'" method="post" style="float:right; margin-right:10px">';
+									echo '<form class="form-vertical col-lg-10 col-md-2" action="db.php?replyto='.$rowd['uid'].'" method="post" style="float:right; margin-right:10px">';
+										echo '<textarea class="form-control reply_box" name="reply" required></textarea>';
+										echo '<br>';
 										echo '<input type="text" class="hidden" name="replyby" value="'.$_SESSION['id'].'">';
 										echo '<input type="text" class="hidden" name="qid" value="'.$row['qid'].'">';
-										echo '<button name="replyto" class="btn btn_web form-control">Reply</button>'; 
+										echo '<button name="replyto" class="btn btn_web col-lg-2" style="float:right">Reply</button>'; 
 									echo '</form>';
 								echo '</div>';
 						echo '</div>';
 						echo '<hr>';
 					}
 					echo '</div>';
-					echo '<form class="form-vertical col-lg-8" action="db.php?answer='.$row['qid'].'">';
+					echo '<form class="form-vertical col-lg-8" action="db.php?answer_submit='.$row['qid'].'" method="post">';
 						echo '<h2 style="font-family:Bahnschrift Light; color:#8a2be2">Have an answer?</h2>';
-						echo '<textarea class="col-lg-8 form-control" style="resize:none; height:300px"></textarea>';
-						echo '<a href="db.php?answer='.$row['qid'].'" class="btn btn_web form-control" style="margin-top:15px">Post My Answer</a>';
+						echo '<textarea name="answer" class="col-lg-8 form-control" style="resize:none; height:300px" required></textarea>';
+						echo '<button name="answer_submit" class="btn btn_web form-control" style="margin-top:15px">Post My Answer</button>';
 					echo '</form>';
 				echo '</div>';
 			}

@@ -210,14 +210,17 @@
 	background-color: white;
 	color:#8a2be2;
 }
-
+.reply_box
+{
+	resize:none;
+}
 </style>
 <body>
 	<nav class="navbar">
 	  <div class="container-fluid">
 		<br>
 		<div class="navbar-header">
-		  <p class="navbar-brand">WebSiteName</p>
+		  <p class="navbar-brand">NotesVerse</p>
 		</div>
 		<ul class="nav navbar-nav">
 		<li class="<?php $t=isset($_GET['home'])?'active':''; echo $t;?>"><a href="db.php?home=1" id='c'>Home</a></li>

@@ -184,13 +184,14 @@ elseif (isset($_GET['show'])) {
 }
 elseif(isset($_GET['pageno'])||isset($_GET['view']))
 {
-
-
-	 if (isset($_GET['pageno'])) {
-            $pageno = $_GET['pageno'];
-        } else {
-            $pageno = 1;
-        }
+	if (isset($_GET['pageno']))
+	{
+        $pageno = $_GET['pageno'];
+    }
+	else 
+	{
+        $pageno = 1;
+    }
         $no_of_records_per_page = 4;
         $offset = ($pageno-1) * $no_of_records_per_page;
 
@@ -375,11 +376,19 @@ if(isset($_POST['replyto']))
 	$replyto=$_GET['replyto'];
 	$replyby=$_POST['replyby'];
 	$qid=$_POST['qid'];
-	echo 'Reply by : '.$replyby;
-	echo 'Reply to : '.$replyto;
-	echo 'Question : '.$qid;
+	$reply=$_POST['reply'];
+	$data="INSERT INTO replies (qid,uid,reply_uid,reply) VALUES ('$qid','$replyto','$replyby','$reply')";
+	$res=mysqli_query($con,$data);
+	require 'faq.php';
 }
-
+if(isset($_POST['answer_submit']))
+{
+	$qid=$_GET['answer_submit'];
+	$answer=$_POST['answer'];
+	$uid=$_SESSION['id'];
+	$data="INSERT INTO faq_comments (qid,uid,answer) VALUES ('$qid','$uid','$answer')";
+	$res=mysqli_query($con,$data);
+}
 
 
 
