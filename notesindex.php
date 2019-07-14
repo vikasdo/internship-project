@@ -39,17 +39,19 @@
              	<div class="col-lg-6 col-lg-offset-3 " >
              	  	<h2 class="text-center"><strong> Notes Section</strong></h2>
              	  	<br>
+<div class="col-lg-12">
              	  	<div class="col-lg-6">
 						<label class=""><h4><strong>Category Of Notes     :</strong></h4></label>
 			        </div>
 			        <div class="col-lg-6">
 						<select name="select" id="exampleFormControlSelect1" class="form-control a">
-						  <option  value="0" >Select Category type</option>
-						  <option value="studymaterial">studymaterial(ppts)</option>
+						  <option  value="0">Select Category type</option>
+		                  <option value="studymaterial">studymaterial(ppts)</option>
 						  <option value="notes">Notes</option>
 						  <option value="assignment">Assignment</option>
 						</select>
 			        </div>
+			    </div>
 			        <br>
 			        <div class="col-lg-12">
 						<div class="col-lg-6">
