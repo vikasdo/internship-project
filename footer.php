@@ -2,13 +2,7 @@
 	<div class="col-lg-12 cont">
 		<div class="row">
 			<div class="col-lg-3">
-<<<<<<< HEAD
-				
-				<h3 class="text-center"><strong>About Us</strong></h3>
-=======
-				<br>
 				<h3 class="text-center text"><strong>About Us</strong></h3>
->>>>>>> 8140e8834328d5b229c0734d201b4caf20515b3c
 				<br>
 				<p class="text-justify text">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident"</p>
 			</div>
