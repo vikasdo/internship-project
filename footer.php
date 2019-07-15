@@ -54,18 +54,21 @@
 					<h2 id="news"><strong>Subscribe To Our Monthly News Letter</strong></h2>
 					<br>
 					<?php
-					if(isset($_SESSION['subscribe'])){
-?>
-<script >
-	function r() {
-	
-                 document.getElementById("subscribe").disabled = true;
-             }
-</script>
-					<!--<div class="alert" style="color:blue">
-						<p>You are subscibed Now</p>
-					</div>-->
-				<?php }?>
+					if(isset($_SESSION['subscribe']))
+					{
+						?>
+							<script >
+								function r() 
+								{
+									document.getElementById("subscribe").disabled = true;
+								}
+							</script>
+							<!--<div class="alert" style="color:blue">
+								<p>You are subscibed Now</p>
+							</div>-->
+						<?php 
+					}
+				?>
 					<form class="form-vertical" action="db.php" method="post">
 						<input type="email" name="emails" class="form-control" placeholder="Enter Your Email" required>
 						<br>

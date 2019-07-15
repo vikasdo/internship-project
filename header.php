@@ -233,7 +233,7 @@
 				{
 				?>
 					<div id="main">
-						<span style="font-size:28px;cursor:pointer" onclick="openNav()">&#9776; </span>
+						<span style="font-size:25px;cursor:pointer" onclick="openNav()">&#9776; </span>
 						<?php include 'admin_header.php';?>
 					</div>
 				<?php
