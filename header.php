@@ -228,8 +228,19 @@
 	<nav class="navbar">
 	  <div class="container-fluid">
 		<br>
+					
 		<div class="navbar-header">
-		  <p class="navbar-brand">NotesVerse</p>
+		  <div class="navbar-brand">
+
+<div id="main">
+
+   <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; </span>
+<?php include 'admin_header.php';?>
+</div>
+
+		  </div>
+		  <p class="navbar-brand">
+		  NotesVerse</p>
 		</div>
 		<ul class="nav navbar-nav">
 		<li class="<?php $t=isset($_GET['home'])?'active':''; echo $t;?>"><a href="db.php?home=1" id='c'>Home</a></li>
@@ -246,10 +257,10 @@
 						<button class="btn btn-default" type="submit" id="btn1">
 							<i class="glyphicon glyphicon-search"></i>
 						</button>
-					</div>
 			</div>
 		</form>
 		</div>
 	  </div>
+	</div>
 	</nav>
 </body>
