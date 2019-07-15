@@ -136,10 +136,8 @@ foreach($er as $row)
 	<img src="<?php echo $row['articleimg'];?>" class="img-responsive img-rounded aa">
 </div>
 <div class="col-lg-6">
-	<a href="db.php?val=<?php echo $row['aid']; ?>"><h5 ><strong><?php echo $row['head']?></h5></strong></a>
-
+	<a href="db.php?val=<?php echo $row['aid']; ?>"><h5><strong><?php echo $row['head']?></h5></strong></a>
 </div>
-
 </div>
 <br><hr>
 <?php
@@ -149,8 +147,6 @@ foreach($er as $row)
 </div>
 
 <br>
-<div class="col-lg-12">
 <?php include 'footer.php';?>
-</div>
 </body>
 </html>
