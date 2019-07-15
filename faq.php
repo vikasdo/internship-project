@@ -12,7 +12,7 @@ include 'header.php';
 		<br>
 		<br>
 		<form class="form-vertical col-lg-6" action="faq.php" method="get">
-			<input type="text" class="form-control keyword col-lg-offset-6" name="keyword" style="height:50px; font-size:25px" placeholder="Search by keyword" required align="center">
+			<input type="text" class="form-control keyword col-lg-offset-6" name="keyword" style="height:50px; font-size:25px" autocomplete="off"placeholder="Search by keyword" required align="center">
 		</form>
 		<br>
 		<br>
@@ -55,7 +55,7 @@ include 'header.php';
 							<h3 class="faq"><?php echo $row['qcat'];?></h3>
 								<?php
 								$qcat=$row['qcat'];
-								$data="SELECT * FROM questions WHERE qcat='$qcat' ORDER BY question";
+								$data="SELECT * FROM questions WHERE qcat='$qcat' ORDER BY question LIMIT 3";
 								$res1=mysqli_query($con,$data);
 								while($rowq=mysqli_fetch_array($res1))
 								{
