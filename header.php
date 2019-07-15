@@ -231,14 +231,17 @@
 					
 		<div class="navbar-header">
 		  <div class="navbar-brand">
-
-<div id="main">
+<?php
+if(isset($_SESSION['id']))
+{?>
+		<div id="main">
 
    <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; </span>
 <?php include 'admin_header.php';?>
 </div>
-
-		  </div>
+<?php
+}
+?>		  </div>
 		  <p class="navbar-brand">
 		  NotesVerse</p>
 		</div>
