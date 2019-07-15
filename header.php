@@ -227,43 +227,42 @@
 <body>
 	<nav class="navbar">
 	  <div class="container-fluid">
+		<div class="navbar-brand navbar-header">
+			<?php
+				if(isset($_SESSION['id']))
+				{
+				?>
+					<div id="main">
+						<span style="font-size:28px;cursor:pointer" onclick="openNav()">&#9776; </span>
+						<?php include 'admin_header.php';?>
+					</div>
+				<?php
+				}
+			?>	
+		</div>
 		<br>
-					
 		<div class="navbar-header">
-		  <div class="navbar-brand">
-<?php
-if(isset($_SESSION['id']))
-{?>
-		<div id="main">
-
-   <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; </span>
-<?php include 'admin_header.php';?>
-</div>
-<?php
-}
-?>		  </div>
-		  <p class="navbar-brand">
-		  NotesVerse</p>
+			<p class="navbar-brand">NotesVerse</p>
 		</div>
 		<ul class="nav navbar-nav">
-		<li class="<?php $t=isset($_GET['home'])?'active':''; echo $t;?>"><a href="db.php?home=1" id='c'>Home</a></li>
+		  <li class="<?php $t=isset($_GET['home'])?'active':''; echo $t;?>"><a href="db.php?home=1" id='c'>Home</a></li>
 		  <li class="<?php $t=isset($_GET['a'])?'active':''; echo $t;?>"><a href="db.php?a=1" id='c'>Articles</a></li>
 		  <li class="<?php $t=isset($_GET['notes'])?'active right':'right'; echo $t;?>"><a href="db.php?notes=1" id="c">Notes</a></li>
 		  <li class="<?php $t=isset($_GET['faq'])?'active':''; echo $t;?>"><a href="db.php?faq=1" id='c'>FAQ'S</a></li>
 		  <li class="<?php $t=isset($_GET['signup'])?'active':''; echo $t;?>"><a href="index.php?signup=1" id="c">Sign Up</a></li>
-</ul>
+		</ul>
 		<div class="nav navbar-right">
 		<form class="navbar-form" action="" method="">
 			<div class="input-group">
-				<input type="text" class="form-control" placeholder="Search" required>
+					<input type="text" class="form-control" placeholder="Search" required>
 					<div class="input-group-btn">
 						<button class="btn btn-default" type="submit" id="btn1">
 							<i class="glyphicon glyphicon-search"></i>
 						</button>
+					</div>
 			</div>
 		</form>
 		</div>
 	  </div>
-	</div>
 	</nav>
 </body>
