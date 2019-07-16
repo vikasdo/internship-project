@@ -60,7 +60,6 @@
 	height:50px;
 	width:50px;
 }
-
 <!--to be put under test
 .side_list
 {
@@ -230,14 +229,21 @@
 }
 .ques
 {
-	width:10px;
-	overflow:hidden;
-	transition:width 10s;
+	transition:transform .2s;
+}
+.ques a i
+{
+	color:black;
+	transition:transform .2s;
 }
 .ques:hover
 {
 	color:#8a2be2;
-	width:200px;
+	transform:scale(1.1);
+}
+.ques a:hover
+{
+	color:#8a2be2;
 }
 .reply_box
 {
@@ -251,16 +257,12 @@
 			<?php
 				if(isset($_SESSION['id']))
 				{
-			echo		'<div id="main">
+			        echo '<div id="main">
 						<span style="font-size:25px;cursor:pointer" onclick="openNav()">&#9776; </span>';
-						 include 'admin_header.php';
-				echo'</div>';
+						include 'admin_header.php';
+				    echo'</div>';
 				}
-				else
-				{
-					//nothing
-				}
-			?>	
+			?>
 		</div>
 		<br>
 		<div class="navbar-header">

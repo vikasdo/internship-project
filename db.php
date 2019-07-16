@@ -1,5 +1,5 @@
 <?php
-session_start();
+
 $con=mysqli_connect('localhost','root','','uploadf');
 
 if(isset($_POST['file'])){    
@@ -323,6 +323,7 @@ elseif(isset($_POST['login']))
 				       $pas=$row['password'];
 							       if($pas==$password)
 							       {
+									   session_start();
 							         $_SESSION['id']=$row['uid'];
 							        $_SESSION["email"]=$eml;
 									require 'profile.php';
