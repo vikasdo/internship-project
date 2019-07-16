@@ -52,6 +52,14 @@
     margin-left:auto;
     margin-right:auto;
 }
+.profile_image
+{
+	display:block;
+	margin-top:auto;
+	margin-left:auto;
+	height:50px;
+	width:50px;
+}
 
 <!--to be put under test
 .side_list
@@ -60,6 +68,7 @@
 	top:auto;
 	margin-left:1220px; 
 }-->
+
 .faq_image
 {
 	background-image:url(images/faq_back.png);
@@ -215,8 +224,8 @@
 }
 .active
 {
-	border-radius: 30px;
-	background-color: white;
+	border-radius:30px;
+	background-color:white;
 	color:#8a2be2;
 }
 .reply_box
