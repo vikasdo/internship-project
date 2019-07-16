@@ -228,6 +228,17 @@
 	background-color:white;
 	color:#8a2be2;
 }
+.ques
+{
+	width:10px;
+	overflow:hidden;
+	transition:width 10s;
+}
+.ques:hover
+{
+	color:#8a2be2;
+	width:200px;
+}
 .reply_box
 {
 	resize:none;
