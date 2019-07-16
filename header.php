@@ -251,12 +251,14 @@
 			<?php
 				if(isset($_SESSION['id']))
 				{
-				?>
-					<div id="main">
-						<span style="font-size:25px;cursor:pointer" onclick="openNav()">&#9776; </span>
-						<?php include 'admin_header.php';?>
-					</div>
-				<?php
+			echo		'<div id="main">
+						<span style="font-size:25px;cursor:pointer" onclick="openNav()">&#9776; </span>';
+						 include 'admin_header.php';
+				echo'</div>';
+				}
+				else
+				{
+					//nothing
 				}
 			?>	
 		</div>
@@ -268,8 +270,21 @@
 		  <li class="<?php $t=isset($_GET['home'])?'active':''; echo $t;?>"><a href="db.php?home=1" id='c'>Home</a></li>
 		  <li class="<?php $t=isset($_GET['a'])?'active':''; echo $t;?>"><a href="db.php?a=1" id='c'>Articles</a></li>
 		  <li class="<?php $t=isset($_GET['notes'])?'active right':'right'; echo $t;?>"><a href="db.php?notes=1" id="c">Notes</a></li>
-		  <li class="<?php $t=isset($_GET['faq'])?'active':''; echo $t;?>"><a href="db.php?faq=1" id='c'>FAQ'S</a></li>
-		  <li class="<?php $t=isset($_GET['signup'])?'active':''; echo $t;?>"><a href="index.php?signup=1" id="c">Sign Up</a></li>
+		  <li class="<?php $t=isset($_GET['faq'])?'active':''; echo $t;?>"><a href="db.php?faq=1" id='c'>FAQ'S</a></li> 
+		  
+		  <?php
+		  if(!isset($_SESSION['id']))
+		  {
+		  
+		  $t=isset($_GET['signup'])?'active':'';
+		  echo '<li class="'. $t.'"><a href="index.php?signup=1" id="c">Sign Up</a></li>';	
+		  }
+			
+			else
+			{
+			//display none
+			}
+			?>		
 		</ul>
 		<div class="nav navbar-right">
 		<form class="navbar-form" action="" method="">

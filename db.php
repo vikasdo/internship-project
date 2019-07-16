@@ -2,8 +2,6 @@
 session_start();
 $con=mysqli_connect('localhost','root','','uploadf');
 
-$_SESSION['id']=10;
-
 if(isset($_POST['file'])){    
 
 					$des='images/'.basename($_FILES['filew']['name']);
@@ -231,7 +229,12 @@ elseif(isset($_GET['val']))
 	$r=$_GET['val'];
 	require 'post.php';
 }
-
+elseif(isset($_GET['log']))
+{
+	session_destroy();
+	unset($_SESSION['id']);
+	require 'index.php';
+}
 
 elseif(isset($_GET['question']))
 {
