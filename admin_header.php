@@ -33,7 +33,10 @@ body {
   display: block;
   color: #8a2be2;
 }
-
+.active
+{
+  color: #8a2be2;
+}
 .sidenav .closebtn {
   position: absolute; 
   top: 0;
@@ -65,25 +68,23 @@ body {
 <div id="mySidenav" class="sidenav">
   <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
  <br>
-  <a href="#" id="sa" ><strong> ADMIN</strong></a>
+  <a href="#" id="sa" ><h2><strong>ADMIN</strong></h2></a>
   <hr class="z">
+  <li class="<?php $t=isset($_GET['dash'])?'active':''; echo $t ?>"><a href="db.php?dash=1"><i class="fa fa-tachometer" aria-hidden="true"></i>Dashboard</a></li>
   <br>
+  <li class="<?php $t=isset($_GET['vs'])?'active':''; echo $t ?>"><a href="db.php?vs=1"><i class="fa fa-graduation-cap" aria-hidden="true"></i>Verified Students</a></li>
   <br>
-  <a href="db.php?dash=1"><i class="fa fa-tachometer" aria-hidden="true"></i>Dashboard</a>
+  <li class="<?php $t=isset($_GET['nvs'])?'active':''; echo $t ?>"> <a href="db.php?nvs=1"><i class="fa fa-graduation-cap" aria-hidden="true"></i>Non Verified Students</a></li>
   <br>
-  <a href="db.php?vs=1"><i class="fa fa-graduation-cap" aria-hidden="true"></i>Verified Students</a>
+  <li class="<?php $t=isset($_GET['vt'])?'active':''; echo $t ?>"><a href="db.php?vt=1"><i class="fa fa-user-o" aria-hidden="true"></i>Verified Teachers</a></li>
   <br>
-  <a href="db.php?nvs=1"><i class="fa fa-graduation-cap" aria-hidden="true"></i>Non Verified Students</a>
+  <li class="<?php $t=isset($_GET['nvt'])?'active':''; echo $t ?>"><a href="db.php?nvt=1"><i class="fa fa-user-o" aria-hidden="true"></i>Non Verified Teachers</a></li>
   <br>
-  <a href="db.php?vt=1"><i class="fa fa-user-o" aria-hidden="true"></i>Verified Teachers</a>
+  <li class="<?php $t=isset($_GET['chat'])?'active':''; echo $t ?>"><a href="db.php?chat=1"><i class="fa fa-comments" aria-hidden="true"></i>Chat</a></li>
   <br>
-  <a href="db.php?nvt=1"><i class="fa fa-user-o" aria-hidden="true"></i>Non Verified Teachers</a>
+  <li class="<?php $t=isset($_GET['acc'])?'active':''; echo $t ?>"><a href="db.php?acc=1"><i class="fa fa-id-card-o" aria-hidden="true"></i>My Account</a></li>
   <br>
- <a href="db.php?chat=1"><i class="fa fa-comments" aria-hidden="true"></i>Chat</a>
-  <br>
-  <a href="db.php?acc=1"><i class="fa fa-id-card-o" aria-hidden="true"></i>My Account</a>
-  <br>
-  <a href="db.php?log=1"><i class="fa fa-sign-out" aria-hidden="true"></i>Log out</a>
+  <li class="<?php $t=isset($_GET['log'])?'active':''; echo $t ?>"><a href="db.php?log=1"><i class="fa fa-sign-out" aria-hidden="true"></i>Log out</a></li>
   
 </div>
 

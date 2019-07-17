@@ -50,6 +50,10 @@ body {
   color: white;
   border:2px; 
 }
+.active
+{
+  color: #8a2be2;
+}
 #sa
 {
   color:#8a2be2;
@@ -65,27 +69,22 @@ body {
 <div id="mySidenav" class="sidenav">
   <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
  <br>
-  <a href="#" id="sa"><strong> ADMIN</strong></a>
+  <a href="#" id="sa"><strong> TEACHER</strong></a>
   <hr class="z">
   <br>
   <br>
-  <a href="#">Dashboard</a>
+   <li class="<?php $t=isset($_GET['dash'])?'active':''; echo $t ?>"><a href="db.php?dash=1"><i class="fa fa-tachometer" aria-hidden="true"></i>Dashboard</a></li>
   <br>
-  <a href="vs.php">Verified Students</a>
+  <li class="<?php $t=isset($_GET['vs'])?'active':''; echo $t ?>"><a href="db.php?vs=1"><i class="fa fa-graduation-cap" aria-hidden="true"></i>Verified Students</a></li>
   <br>
-  <a href="nvs.php">Non Verified Students</a>
+  <li class="<?php $t=isset($_GET['nvs'])?'active':''; echo $t ?>"> <a href="db.php?nvs=1"><i class="fa fa-graduation-cap" aria-hidden="true"></i>Non Verified Students</a></li>
   <br>
-  <a href="vt.php">Verified Teachers</a>
+  <li class="<?php $t=isset($_GET['chat'])?'active':''; echo $t ?>"><a href="db.php?chat=1"><i class="fa fa-comments" aria-hidden="true"></i>Chat</a></li>
   <br>
-  <a href="nvt.php">Non Verified Teachers</a>
+  <li class="<?php $t=isset($_GET['acc'])?'active':''; echo $t ?>"><a href="db.php?acc=1"><i class="fa fa-id-card-o" aria-hidden="true"></i>My Account</a></li>
   <br>
-  <a href="chat.php">Chat</a>
-  <br>
-  <a href="#">My Account</a>
-  <br>
-  <a href="#">Log out</a>
-  
-    
+  <li class="<?php $t=isset($_GET['log'])?'active':''; echo $t ?>"><a href="db.php?log=1"><i class="fa fa-sign-out" aria-hidden="true"></i>Log out</a></li>
+   
 
 </div>
 
