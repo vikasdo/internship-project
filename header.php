@@ -266,7 +266,18 @@
 				{
 			        echo '<div id="main">
 						<span style="font-size:25px;cursor:pointer" onclick="openNav()">&#9776; </span>';
+						if($_SESSION['role']=='admin')
+						{
 						include 'admin_header.php';
+				    	}
+				    	elseif($_SESSION['role']=='teacher')
+				    	{
+				    		include 'mem_head.php';
+				    	}
+				    	else
+				    	{
+				    		include 'stud_header.php';
+				    	}
 				    echo'</div>';
 				}
 			?>
@@ -295,18 +306,6 @@
 			}
 			?>		
 		</ul>
-		<div class="nav navbar-right">
-		<form class="navbar-form" action="" method="">
-			<div class="input-group">
-					<input type="text" class="form-control" placeholder="Search" required>
-					<div class="input-group-btn">
-						<button class="btn btn-default" type="submit" id="btn1">
-							<i class="glyphicon glyphicon-search"></i>
-						</button>
-					</div>
-			</div>
-		</form>
-		</div>
 	  </div>
 	</nav>
 </body>

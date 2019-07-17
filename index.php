@@ -32,6 +32,14 @@ if($x=='1')
 				<br><br>
 				<input type="password" class="form-control well1 if" name="pass" placeholder="Enter Password" required>
 				<br>
+				<label>Role :</label>
+				<br>
+				<label>Teacher  :</label>
+				<input type="radio" name="p" value="teacher">
+				<br>
+				<label>Student  :</label>
+				<input type="radio" name="p" value="student">
+				<br>
 				<div class="col-lg-6 col-lg-offset-4">
 					<input type="submit" class="btn btn_web btn-lg" name="signup" value="Register">
 					<br>

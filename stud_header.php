@@ -75,10 +75,6 @@ body {
   <br>
    <li class="<?php $t=isset($_GET['dash'])?'active':''; echo $t ?>"><a href="db.php?dash=1"><i class="fa fa-tachometer" aria-hidden="true"></i>Dashboard</a></li>
   <br>
-  <li class="<?php $t=isset($_GET['vs'])?'active':''; echo $t ?>"><a href="db.php?vs=1"><i class="fa fa-graduation-cap" aria-hidden="true"></i>Verified Students</a></li>
-  <br>
-  <li class="<?php $t=isset($_GET['nvs'])?'active':''; echo $t ?>"> <a href="db.php?nvs=1"><i class="fa fa-graduation-cap" aria-hidden="true"></i>Non Verified Students</a></li>
-  <br>
   <li class="<?php $t=isset($_GET['chat'])?'active':''; echo $t ?>"><a href="db.php?chat=1"><i class="fa fa-comments" aria-hidden="true"></i>Chat</a></li>
   <br>
   <li class="<?php $t=isset($_GET['acc'])?'active':''; echo $t ?>"><a href="db.php?acc=1"><i class="fa fa-id-card-o" aria-hidden="true"></i>My Account</a></li>
@@ -92,7 +88,7 @@ body {
 function openNav() {
   document.getElementById("mySidenav").style.width = "250px";
   document.getElementById("main").style.marginLeft = "250px";
-document.body.style.backgroundColor = "white";
+  document.body.style.backgroundColor = "white";
 
 }
 

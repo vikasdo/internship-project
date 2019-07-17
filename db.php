@@ -1,5 +1,5 @@
 <?php
-
+session_start();
 $con=mysqli_connect('localhost','root','','uploadf');
 
 if(isset($_POST['file'])){    
@@ -231,10 +231,40 @@ elseif(isset($_GET['val']))
 }
 elseif(isset($_GET['log']))
 {
+	if(isset($_SESSION['id']))
+	{
 	session_destroy();
 	unset($_SESSION['id']);
+	}
 	require 'index.php';
 }
+
+elseif(isset($_GET['vs']))
+{
+	require 'vs.php';
+}
+
+
+elseif(isset($_GET['nvs']))
+{
+	require 'nvs.php';
+}
+
+elseif(isset($_GET['vt']))
+{
+	require 'vt.php';
+}
+
+elseif(isset($_GET['nvt']))
+{
+	require 'nvt.php';
+}
+elseif(isset($_GET['acc']))
+{
+	require 'profile.php';
+}
+
+
 
 elseif(isset($_GET['question']))
 {
@@ -323,9 +353,9 @@ elseif(isset($_POST['login']))
 				       $pas=$row['password'];
 							       if($pas==$password)
 							       {
-									   session_start();
 							         $_SESSION['id']=$row['uid'];
 							        $_SESSION["email"]=$eml;
+							        $_SESSION['role']=$row['role'];
 									require 'profile.php';
 
 							      }
@@ -356,12 +386,25 @@ elseif(isset($_POST['login']))
 elseif(isset($_POST['signup']))
 {
 	$email=$_POST['email'];
+	$name=$_POST['name'];
+	$pass=$_POST['pass'];
+	$phone=$_POST['mobile'];
+	$role=$_POST['p'];
 	$sql="SELECT * FROM user WHERE email='$email'";
 	$res=mysqli_query($con,$sql);
 	if(mysqli_num_rows($res)==0)
-		echo 'You are successfully signed up';
+	{
+		$qu="INSERT INTO user(name,email,mobile,password,role) VALUES ('$name','$email','$phone','$pass','$role')";
+		$fire=mysqli_query($con,$qu);
+		if($fire)
+		{
+			require 'index.php';
+		}
+	}
 	else
+	{
 		header("Location:index.php?msg1=Email is already taken!");
+	}
 }
 elseif(isset($_POST['paschng']))
 {
