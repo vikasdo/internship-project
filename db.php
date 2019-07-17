@@ -263,6 +263,10 @@ elseif(isset($_GET['acc']))
 {
 	require 'profile.php';
 }
+elseif(isset($_GET['chat']))
+{
+	require 'chat.php';
+}
 
 
 
