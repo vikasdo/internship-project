@@ -75,6 +75,15 @@ h1,h4,h2,h3
 	width: 50px;
 	height: 50px;
 }
+	.za{
+		
+		transition: transform .2s;
+		
+	}
+	.za:hover
+	{
+		transform: scale(1.1); 
+	}
 </style>
 </head>
 <body style="background-color: #f8f8f8">
@@ -130,7 +139,7 @@ foreach($res as $row)
 <?php 
 foreach($er as $row)
 {?>
-<div class="col-lg-12 well">
+<div class="col-lg-12 za well">
 
 <div class="col-lg-3">
 	<img src="<?php echo $row['articleimg'];?>" class="img-responsive img-rounded aa">

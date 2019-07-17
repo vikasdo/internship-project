@@ -8,7 +8,7 @@ include 'header.php';
 
 <body>
 
-<div class="container-fluid faq_image">
+<div class="container-fluid faq_image ">
 
 <img src="images/user.png" class="profile_image">
 

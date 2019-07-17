@@ -51,6 +51,15 @@ include 'header.php'
 		background-size: cover;
 		background-position: center;
 	}
+	.x{
+		
+		transition: transform .2s;
+		
+	}
+	.x:hover
+	{
+		transform: scale(1.03); 
+	}
 </style>
 </head>
 <body style="background-color:#f8f8f8">
@@ -64,7 +73,7 @@ include 'header.php'
 		echo $t;?></strong></h1>
 		<br>
 		<br>
-		<form class="form-vertical col-lg-6" action="article.php" method="GET">
+		<form class="form-vertical col-lg-6 " action="article.php" method="GET">
 			<input type="text" class="form-control keyword col-lg-offset-6" name="keyword" style="height:50px; font-size:25px ;" placeholder="Search by keyword..." required align="center">
 		</form>
 		<br><br>
@@ -91,9 +100,9 @@ include 'header.php'
 			$i=1;
 		}
 		?>
-		<div class="container "style="background-color:white">
+		<div class="container x"style="background-color:white ">
 			<br>
-			<article>		
+			<article class="">		
 				<br><br>
 				<div class="col-lg-3 col-sm-12"><a href="db.php?val=<?php echo $row['aid'];?>" style="text-decoration: none;"><h4><strong><?php echo $row['head'];?></strong></h4></a></div>
 				<br>
@@ -128,7 +137,7 @@ include 'header.php'
 				}
 				$aid=$ww['aid'];
 				?>
-				<div class="col-lg-8 col-lg-offset-2 "style="background-color:white">
+				<div class="col-lg-8 col-lg-offset-2 x"style="background-color:white">
 					<br>
 					<article>	
 						<br><br>
@@ -140,6 +149,7 @@ include 'header.php'
 						<br><br>
 						<hr>
 					</article>
+
 				</div>			
 				<?php
 			}
