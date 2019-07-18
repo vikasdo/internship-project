@@ -102,6 +102,22 @@
 	background-size:cover;
 	background-position:center;
 }
+.x{
+		
+		transition: transform .2s;
+		
+	}
+	.x:hover
+	{
+		transform: scale(1.03); 
+	}	
+.faq_image
+{
+	background-image:url(images/faq_back.png);
+	background-size:cover;
+	background-position:center;
+}
+}
 .article_img
 {
 	background-image:url(images/articlebg.jpg);

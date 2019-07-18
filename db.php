@@ -267,6 +267,18 @@ elseif(isset($_GET['chat']))
 {
 	require 'chat.php';
 }
+elseif(isset($_GET['compose']))
+{
+	require 'compose.php';
+}
+elseif(isset($_GET['inbox']))
+{
+	require 'inbox.php';
+}
+elseif(isset($_GET['sent']))
+{
+	require 'sent.php';
+}
 
 
 
