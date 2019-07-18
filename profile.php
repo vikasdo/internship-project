@@ -18,7 +18,7 @@ $row=mysqli_fetch_array($res);
 
 <body>
 
-<div class="container-fluid ">
+<div class="container-fluid">
 
 
 	<div  style="background-image: url(images/profile_bg.jpg); background-position: center; background-size: cover">
@@ -54,6 +54,7 @@ $row=mysqli_fetch_array($res);
 	<hr>
 	<!--<button class="profile_button btn btn-info">Change</button>-->
 </div>
+
 
 <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 
