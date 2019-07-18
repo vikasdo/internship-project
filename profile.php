@@ -2,6 +2,11 @@
 
 include 'header.php';
 
+$uid=$_SESSION['id'];
+$data="SELECT * FROM user WHERE uid='$uid'";
+$res=mysqli_query($con,$data);
+$row=mysqli_fetch_array($res);
+
 ?>
 
 <title>Profile</title>
@@ -11,8 +16,38 @@ include 'header.php';
 <div class="container-fluid profile_cover">
 
  <br><br>
-	<img src="images/user.png" class="profile_image">
-	<button class="profile_button btn btn-info">Change</button>
+	<hr>
+	<div class="media">
+		<div class="media-left">
+			<img src="images/user.png" class="profile_image">
+		</div>
+		<div class="media-body">
+			<h2><?php echo $row['name'];?></h2>
+			<h4><?php echo $row['role'];?></h4>
+			<div class="media-right row container">
+				<div class="col-lg-2">
+					<h2>Questions</h2>
+				</div>
+				<div class="col-lg-2">
+					<h2>Community</h2>
+				</div>
+				<div class="col-lg-2">
+					<h2>My Notes</h2>
+				</div>
+				<div class="col-lg-2">
+					<h2>Followers</h2>
+				</div>
+				<div class="col-lg-2">
+					<h2>News</h2>
+				</div>
+				<div class="col-lg-2">
+					<h2>About Us</h2>
+				</div>
+			</div>
+		</div>
+	</div>
+	<hr>
+	<!--<button class="profile_button btn btn-info">Change</button>-->
 
 
 <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
