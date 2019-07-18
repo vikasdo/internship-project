@@ -17,7 +17,7 @@
     display:block;
     margin-left:auto;
     margin-right:auto;
-	heigth:500px;
+	height:500px;
 	width:470px;
 }
 .answer
