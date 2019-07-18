@@ -24,24 +24,24 @@ $row=mysqli_fetch_array($res);
 		<div class="media-body">
 			<h2><?php echo $row['name'];?></h2>
 			<h4><?php echo $row['role'];?></h4>
-			<div class="media-right row container">
+			<div class="row container" style="margin-left:20px">
 				<div class="col-lg-2">
-					<h2>Questions</h2>
+					<a href="db.php?name=questions"><h3>QUESTIONS</h3></a>
 				</div>
 				<div class="col-lg-2">
-					<h2>Community</h2>
+					<a href="db.php?name=community"><h3>COMMUNITY</h3></a>
 				</div>
 				<div class="col-lg-2">
-					<h2>My Notes</h2>
+					<a href="db.php?name=mynotes"><h3>MY NOTES</h3></a>
 				</div>
 				<div class="col-lg-2">
-					<h2>Followers</h2>
+					<a href="db.php?name=followers"><h3>FOLLOWERS</h3></a>
 				</div>
 				<div class="col-lg-2">
-					<h2>News</h2>
+					<a href="db.php?name=trends"><h3>TRENDS</h3></a>
 				</div>
 				<div class="col-lg-2">
-					<h2>About Us</h2>
+					<a href="db.php?name=aboutus"><h3>ABOUT US</h3></a>
 				</div>
 			</div>
 		</div>
@@ -56,13 +56,19 @@ $row=mysqli_fetch_array($res);
 
 </div>
 
-<br>
-
-<div class="container-fluid">
-
-<div class="well container-fluid col-lg-2" style="float:right">
-
 <?php
+
+if(isset($_SESSION['name']))
+{
+	$page=$_SESSION['name'];
+if($page=='questions')
+{
+echo '<br>';
+echo '<div class="container-fluid">';
+
+echo '<div class="well container-fluid col-lg-2" style="float:right">';
+
+
 
 $sql="SELECT * FROM questions WHERE questionedby='hello'";
 $res=mysqli_query($con,$sql);
@@ -79,10 +85,42 @@ while($row=mysqli_fetch_array($res))
 }
 
 
+echo '</div>'.'</div>';
+}
+
+elseif($page=='community')
+{
+	echo '<h1 style="text-align:center">COMMUNITY</h1>';
+}
+
+elseif($page=='mynotes')
+{
+	echo '<h1 style="text-align:center">MY NOTES</h1>';
+}
+
+elseif($page=='followers')
+{
+	echo '<h1 style="text-align:center">FOLLOWERS</h1>';
+}
+
+elseif($page=='trends')
+{
+	echo '<h1 style="text-align:center">TRENDS</h1>';
+}
+
+elseif($page=='aboutus')
+{
+	echo '<h1 style="text-align:center">ABOUT US</h1>';
+}
+
+
+
+
+}
+
 ?>
 
-</div>
-</div>
+
 
 <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 </body>
