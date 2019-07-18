@@ -8,9 +8,11 @@ include 'header.php';
 
 <body>
 
-<div class="container-fluid faq_image ">
+<div class="container-fluid profile_cover">
 
-<img src="images/user.png" class="profile_image">
+ <br><br>
+	<img src="images/user.png" class="profile_image">
+	<button class="profile_button btn btn-info">Change</button>
 
 
 <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>

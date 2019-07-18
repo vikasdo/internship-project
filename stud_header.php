@@ -69,7 +69,7 @@ body {
 <div id="mySidenav" class="sidenav">
   <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
  <br>
-  <a href="#" id="sa"><strong> TEACHER</strong></a>
+  <a href="#" id="sa" style="text-align:center"><strong> TEACHER</strong></a>
   <hr class="z">
   <br>
   <br>
