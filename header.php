@@ -59,14 +59,35 @@
 	left: 50%;
 	transform: translate(-50%,-50%);
 }
+
+<!-- This class is written for getting button on profile image on hover
+.profile_img_prop
+{
+	height:250px;
+	width:250px;
+	background-color:#8a2be2;
+	margin-top:auto;
+	margin-left:auto;
+	margin-right:auto;
+}-->
+
 .profile_image
 {
 	display:block;
 	margin-top:auto;
-	margin-left:auto;
-	height:50px;
-	width:50px;
+	margin-left:auto 30px;
+	margin-right:auto;
+	height:150px;
+	width:150px;
 }
+.profile_button
+{
+	margin-top:auto;
+	margin-left:auto;
+	margin-right:auto;
+	margin-bottom:auto;
+}
+
 <!--to be put under test
 .side_list
 {
@@ -226,6 +247,12 @@
 .list
 {
 	list-style-type:none;
+}
+.profile_cover
+{
+	background-image:url(images/profile_cover.jpg);
+	background-position:fit;
+	background-size:cover;
 }
 .faq
 {
