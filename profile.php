@@ -8,23 +8,28 @@ $res=mysqli_query($con,$data);
 $row=mysqli_fetch_array($res);
 
 ?>
-
+<style>
+	h3
+	{
+			color:white;
+	}
+</style>
 <title>Profile</title>
 
 <body>
 
-<div class="container-fluid profile_cover">
+<div class="container-fluid ">
 
- <br><br>
-	<hr>
+
+	<div  style="background-image: url(images/profile_bg.jpg); background-position: center; background-size: cover">
 	<div class="media">
 		<div class="media-left">
 			<img src="images/user.png" class="profile_image">
 		</div>
 		<div class="media-body">
-			<h2><?php echo $row['name'];?></h2>
-			<h4><?php echo $row['role'];?></h4>
-			<div class="row container" style="margin-left:20px">
+			<h2 style="text-transform: capitalize; color:white"><strong><?php echo $row['name'];?></strong></h2>
+			<h4 style="text-transform: capitalize; color: white"><?php echo $row['role'];?></h4>
+			<div class="row " style="margin-left:20px">
 				<div class="col-lg-2">
 					<a href="db.php?name=questions"><h3>QUESTIONS</h3></a>
 				</div>
@@ -48,7 +53,7 @@ $row=mysqli_fetch_array($res);
 	</div>
 	<hr>
 	<!--<button class="profile_button btn btn-info">Change</button>-->
-
+</div>
 
 <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 
