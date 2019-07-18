@@ -462,7 +462,11 @@ if(isset($_POST['answer_submit']))
 	$res=mysqli_query($con,$data);
 }
 
-
+if(isset($_GET['name']))
+{
+	$_SESSION['name']=$_GET['name'];
+	require 'profile.php';
+}
 
 
 ?>
