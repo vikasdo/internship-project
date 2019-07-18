@@ -1,9 +1,9 @@
 <?php include 'header.php' ?>
 <div class="col-lg-12">
 	<?php
-	if(isset($_GET['chat']))
+	if(isset($_GET['compose']))
 	{
-	echo '<h1 class="text-center" style="color:#8a2be2"><strong>Chat With Us</strong></h1>';
+	echo '<div class-"col-lg-6 col-lg-offset-4"><h1 class="text-center" style="color:#8a2be2"><strong>Compose Mail</strong></h1></div>';
 	}
 	
 	?>
@@ -28,22 +28,28 @@
 
 	</div>
 
-	<div class="col-lg-4 col-lg-offset-1">
+	<div class="col-lg-4  well">
 		<?php
 		if(isset($_GET['chat']))
 		{
 	echo	'<img src="images/chatimg.jpg" class="img-responsive img-rounded " style=
 		"height:400px;">';
         }
-        else
-        {
-
-
-
-
-        }
 
         ?>
+        <form method="POST" class="form-group" action="db.php">
+         <label>From :</label>
+		 <input type="text" class="form-control x">       	
+		<br>
+		 <label>To :</label>
+		 <input type="text" class="form-control x">       	
+		<br>
+		<label>Subject :</label>
+		 <textarea class="form-control x" rows="4" name="ta"></textarea>
+		 <br>
+		 <a href="#" class="btn btn-lg btn-info x">Send</a>
+
+        </form>
 	</div>
 		
 

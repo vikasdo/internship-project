@@ -41,7 +41,7 @@ if($x=='1')
 				<input type="radio" name="p" value="student">
 				<br>
 				<div class="col-lg-6 col-lg-offset-4">
-					<input type="submit" class="btn btn_web btn-lg" name="signup" value="Register">
+					<input type="submit" class="btn btn_web btn-lg x" name="signup" value="Register">
 					<br>
 					<br>
 				</div>
@@ -66,7 +66,7 @@ elseif(isset($_GET['reset']))
 				<input type="text" class="form-control well1 if" name="email" placeholder="Enter Email" required>
 				<br><br>
 				<div class="col-lg-6 col-lg-offset-2 ">
-				<input type="submit" class="btn btn_web btn-lg"  align="center" name="resetpass" value="Reset Password">
+				<input type="submit" class="btn btn_web btn-lg x"  align="center" name="resetpass" value="Reset Password">
 				</div>
 			</form>';
 }
