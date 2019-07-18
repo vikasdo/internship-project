@@ -1,9 +1,9 @@
 <?php include 'header.php' ?>
 <div class="col-lg-12">
 	<?php
-	if(isset($_GET['inbox']))
+	if(isset($_GET['sent']))
 	{
-	echo '<h1 class="text-center" style="color:#8a2be2"><strong>INBOX</strong></h1>';
+	echo '<h1 class="text-center" style="color:#8a2be2"><strong>SENT</strong></h1>';
 	}
 	
 	?>
@@ -38,7 +38,7 @@
 		"height:400px;">';
         }
         $user=$_SESSION['email'];
-        $qu="SELECT * FROM mail where to_email='$user'";
+        $qu="SELECT * FROM mail where from_email='$user'";
 $fire=mysqli_query($con,$qu);
         ?>
         <table class="table table-hovers x">

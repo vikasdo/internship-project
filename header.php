@@ -24,6 +24,9 @@
 {
 	background-color:white;
 }
+.z{
+	color:#8a2be2;
+}
 .answer_p
 {
 	font-size:15px;

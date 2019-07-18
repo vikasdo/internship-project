@@ -238,7 +238,17 @@ elseif(isset($_GET['log']))
 	}
 	require 'index.php';
 }
+elseif(isset($_GET['sending']))
+{
 
+$fromid=$_POST['from'];
+$toid=$_POST['to'];
+$tarea=$_POST['ta'];
+$qu="INSERT INTO mail(from_email,to_email,subject) VALUES('$fromid','$toid','$tarea')";
+$fire=mysqli_query($con,$qu);
+header('Location: db.php?msg=Message Sent');
+exit;
+}
 elseif(isset($_GET['vs']))
 {
 	require 'vs.php';
@@ -267,7 +277,7 @@ elseif(isset($_GET['chat']))
 {
 	require 'chat.php';
 }
-elseif(isset($_GET['compose']))
+elseif(isset($_GET['compose'])||isset($_GET['msg']))
 {
 	require 'compose.php';
 }
@@ -370,7 +380,7 @@ elseif(isset($_POST['login']))
 							       if($pas==$password)
 							       {
 							         $_SESSION['id']=$row['uid'];
-							        $_SESSION["email"]=$eml;
+							        $_SESSION['email']=$eml;
 							        $_SESSION['role']=$row['role'];
 									require 'profile.php';
 

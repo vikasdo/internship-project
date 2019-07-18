@@ -3,7 +3,7 @@
 	<?php
 	if(isset($_GET['compose']))
 	{
-	echo '<div class-"col-lg-6 col-lg-offset-4"><h1 class="text-center" style="color:#8a2be2"><strong>Compose Mail</strong></h1></div>';
+	echo '<div class-"col-lg-6 col-lg-offset-4"><h1 class="text-center" style="color:#8a2be2"><strong>COMPOSE MAIL</strong></h1></div>';
 	}
 	
 	?>
@@ -37,17 +37,18 @@
         }
 
         ?>
-        <form method="POST" class="form-group" action="db.php">
+<h4 class="text-center text-primary"><?php $y=isset($_GET['msg'])?$_GET['msg']:''; echo $y; ?></h4>
+        <form method="POST" class="form-group" action="db.php?sending=1">
          <label>From :</label>
-		 <input type="text" class="form-control x">       	
+		 <input type="text" class="form-control x" name="from" value="<?php $t=$_SESSION['email'];echo $t;?>">       	
 		<br>
 		 <label>To :</label>
-		 <input type="text" class="form-control x">       	
+		 <input type="text" class="form-control x" name="to">       	
 		<br>
 		<label>Subject :</label>
 		 <textarea class="form-control x" rows="4" name="ta"></textarea>
 		 <br>
-		 <a href="#" class="btn btn-lg btn-info x">Send</a>
+		 <input type="submit" class="btn btn-lg btn-info x">
 
         </form>
 	</div>

@@ -35,14 +35,6 @@
 	echo	'<img src="images/chatimg.jpg" class="img-responsive img-rounded " style=
 		"height:400px;">';
         }
-        else
-        {
-
-
-
-
-        }
-
         ?>
 	</div>
 		
