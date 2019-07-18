@@ -75,7 +75,7 @@
 {
 	display:block;
 	margin-top:auto;
-	margin-left:auto 30px;
+	margin-left:30px;
 	margin-right:auto;
 	height:150px;
 	width:150px;
