@@ -1,4 +1,4 @@
-<?php 
+	<?php 
 include 'header.php';
 ?>
 <div class="col-lg-6 col-lg-offset-3">
