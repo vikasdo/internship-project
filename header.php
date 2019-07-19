@@ -17,8 +17,8 @@
     display:block;
     margin-left:auto;
     margin-right:auto;
-	height:500px;
-	width:470px;
+	height:400px;
+	width:450px;
 }
 .answer
 {

@@ -45,7 +45,7 @@ include 'header.php';
 			$i=0;
 			while($row=mysqli_fetch_array($res))
 			{
-				if($i%3==0)
+				if($i%3==1)
 				{
 					echo '<div class="row container-fluid">';
 				}
@@ -68,11 +68,11 @@ include 'header.php';
 						</ul>
 					</div>
 				<?php
+				$i++;
 				if($i%3==0)
 				{
 					echo '</div>';
-				}
-				$i++;
+				}	
 			}
 		}
 		?>
@@ -93,8 +93,11 @@ include 'header.php';
 		?>
 	</div>
 	<br><br><br>
+	
 <?php
+
 include 'footer.php';
+
 ?>
 </body>
 </html>

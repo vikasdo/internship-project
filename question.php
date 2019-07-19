@@ -57,7 +57,10 @@
 									echo '<form class="form-vertical col-lg-10 col-md-2" action="db.php?replyto='.$rowd['uid'].'" method="post" style="float:right; margin-right:10px">';
 										echo '<textarea class="form-control reply_box" name="reply" required></textarea>';
 										echo '<br>';
-										echo '<input type="text" class="hidden" name="replyby" value="'.$_SESSION['id'].'">';
+										if(isset($_SESSION['id']))
+										{
+											echo '<input type="text" class="hidden" name="replyby" value="'.$_SESSION['id'].'">';
+										}
 										echo '<input type="text" class="hidden" name="qid" value="'.$row['qid'].'">';
 										echo '<button name="replyto" class="btn btn_web col-lg-1" style="float:right">Reply</button>'; 
 									echo '</form>';
