@@ -1,5 +1,7 @@
 <?php
+
 include 'header.php';
+
 ?>
 <title>We Host</title>
 <body>
