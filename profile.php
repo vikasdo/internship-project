@@ -9,9 +9,9 @@ $row=mysqli_fetch_array($res);
 
 ?>
 <style>
-	h3
+	.menu
 	{
-			color:white;
+		color:white;
 	}
 </style>
 <title>Profile</title>
@@ -19,16 +19,13 @@ $row=mysqli_fetch_array($res);
 <body>
 
 <div class="container-fluid">
-
-
-	<div  style="background-image: url(images/profile_bg.jpg); background-position: center; background-size: cover">
 	<div class="media">
 		<div class="media-left">
 			<img src="images/user.png" class="profile_image">
 		</div>
 		<div class="media-body">
-			<h2 style="text-transform: capitalize; color:white"><strong><?php echo $row['name'];?></strong></h2>
-			<h4 style="text-transform: capitalize; color: white"><?php echo $row['role'];?></h4>
+			<h2 style="text-transform:capitalize"><strong><?php echo $row['name'];?></strong></h2>
+			<h4 style="text-transform:capitalize"><?php echo $row['role'];?></h4>
 			<div class="row " style="margin-left:20px">
 				<div class="col-lg-2">
 					<a href="db.php?name=questions"><h3>QUESTIONS</h3></a>

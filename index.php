@@ -19,83 +19,87 @@ if($x=='1')
 		$msg1=$_GET['msg1'];
 	}
 	else
+	{
 		$msg1='';
-	echo '<h1 class="text-center" style="color:black"><strong>SIGN UP</strong></h1>'.
-		  '<h4 class="text-center">'.$msg1.'</h4>'
-		 .'<form class="form-vertical" action="db.php" method="post">
+		echo '<h1 class="text-center" style="color:black"><strong>SIGN UP</strong></h1>'.
+		'<h4 class="text-center">'.$msg1.'</h4>'
+		.'<form class="form-vertical" action="db.php" method="post">
+			<br>
+			<input type="text" class="form-control well1 if" name="name" placeholder="Enter Name" required>
+			<br><br>
+			<input type="text" class="form-control well1 if" name="email" placeholder="Enter Email" required>
+			<br><br>
+			<input type="text" class="form-control well1 if" name="mobile" placeholder="Enter Mobile" required>
+			<br><br>
+			<input type="password" class="form-control well1 if" name="pass" placeholder="Enter Password" required>
+			<br>
+			<label>Role :</label>
+			<br>
+			<label>Teacher  :</label>
+			<input type="radio" name="p" value="teacher">
+			<br>
+			<label>Student  :</label>
+			<input type="radio" name="p" value="student">
+			<br>
+			<div class="col-lg-6 col-lg-offset-4">
+				<input type="submit" class="btn btn_web btn-lg x" name="signup" value="Register">
 				<br>
-				<input type="text" class="form-control well1 if" name="name" placeholder="Enter Name" required>
-				<br><br>
-				<input type="text" class="form-control well1 if" name="email" placeholder="Enter Email" required>
-				<br><br>
-				<input type="text" class="form-control well1 if" name="mobile" placeholder="Enter Mobile" required>
-				<br><br>
-				<input type="password" class="form-control well1 if" name="pass" placeholder="Enter Password" required>
 				<br>
-				<label>Role :</label>
-				<br>
-				<label>Teacher  :</label>
-				<input type="radio" name="p" value="teacher">
-				<br>
-				<label>Student  :</label>
-				<input type="radio" name="p" value="student">
-				<br>
-				<div class="col-lg-6 col-lg-offset-4">
-					<input type="submit" class="btn btn_web btn-lg x" name="signup" value="Register">
-					<br>
-					<br>
-				</div>
-				<div class="col-lg-12">
-					<a href="index.php?signup=0" style="text-decoration:none" class="col-lg-offset-3">Already have an account?</a>
-				
-				</div>
-				
-				<br><br>
-			</form>';
+			</div>
+			<div class="col-lg-12">
+				<a href="index.php?signup=0" style="text-decoration:none" class="col-lg-offset-3">Already have an account?</a>			
+			</div>			
+		<br><br>
+		</form>';
+	}
 }
-elseif(isset($_GET['reset']))
+if(isset($_GET['reset']))
 {
 	if(isset($_GET['msg']))
-		{
-			$msg=$_GET['msg'];
-		}
-		else
-			$msg='';
-	echo '<h1 class="text-center" style="color:black"><strong>RESET PASSWORD</strong></h1>'.$msg.'
-			<form class="form-vertical"  action="db.php" method="post">
-				<input type="text" class="form-control well1 if" name="email" placeholder="Enter Email" required>
-				<br><br>
-				<div class="col-lg-6 col-lg-offset-2 ">
+	{
+		$msg=$_GET['msg'];
+	}
+	else
+	{
+		$msg='';
+		echo '<h1 class="text-center" style="color:black"><strong>RESET PASSWORD</strong></h1>'.$msg.'
+		<form class="form-vertical"  action="db.php" method="post">
+			<input type="text" class="form-control well1 if" name="email" placeholder="Enter Email" required>
+			<br><br>
+			<div class="col-lg-6 col-lg-offset-2 ">
 				<input type="submit" class="btn btn_web btn-lg x"  align="center" name="resetpass" value="Reset Password">
-				</div>
-			</form>';
+			</div>
+		</form>';
+	}
 }
-else
+if(!isset($_SESSION['id']) and $x!=1 and !isset($_GET['reset']))
 {
 		if(isset($_GET['msg']))
 		{
 			$msg=$_GET['msg'];
 		}
 		else
+		{
 			$msg='';
-echo '<h1 class="text-center" style="color:black"><strong>LOGIN</strong></h1>'.
+		}
+		echo '<h1 class="text-center" style="color:black"><strong>LOGIN</strong></h1>'.
 		'<h4 class="text-center">'.$msg.'</h4>'
-	 .'<form class="form-vertical" action="db.php" method="post">
-	  <br>
-		<input type="text" class="form-control well1 if" name="email" title="Email is required" placeholder="Enter Email" required>
-		<br><br>
-		<input type="password" class="form-control well1 if" name="pass" title="Password is required" placeholder="Enter Password" required>
-		<br>
-		<div class="col-lg-6 col-lg-offset-4">
-			<input type="submit" class="btn btn_web btn-lg" name="login" value="Login">
+		.'<form class="form-vertical" action="db.php" method="post">
 			<br>
+			<input type="text" class="form-control well1 if" name="email" title="Email is required" placeholder="Enter Email" required>
+			<br><br>
+			<input type="password" class="form-control well1 if" name="pass" title="Password is required" placeholder="Enter Password" required>
 			<br>
-		</div>
-		<div class="col-lg-12">
-			<a href="index.php?reset=1" style="text-decoration:none" class="col-lg-offset-3 text-center">Forgot password?</a>
-		</div>
-		<br><br>
-	  </form>';
+			<div class="col-lg-6 col-lg-offset-4">
+				<input type="submit" class="btn btn_web btn-lg" name="login" value="Login">
+				<br>
+				<br>
+			</div>
+			<div class="col-lg-12">
+				<a href="index.php?reset=1" style="text-decoration:none" class="col-lg-offset-3 text-center">Forgot password?</a>
+			</div>
+			<br><br>
+		</form>';
 }
 ?>
 </div>

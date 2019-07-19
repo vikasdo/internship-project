@@ -467,6 +467,7 @@ if(isset($_POST['answer_submit']))
 		$uid=$_SESSION['id'];
 		$data="INSERT INTO faq_comments (qid,uid,answer) VALUES ('$qid','$uid','$answer')";
 		$res=mysqli_query($con,$data);
+		require 'faq.php';
 	}
 	else
 		header("Location:index.php?msg=You Must Login To Answer");
