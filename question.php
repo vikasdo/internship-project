@@ -48,7 +48,7 @@
 						echo '<br>';
 						echo '<div class="container media">';
 								echo '<div class="media-left">';
-									echo '<img style="margin-right:3px" class="answer_img img-circle" src="images/blue.jpg">';
+									echo '<img style="margin-right:3px" class="answer_img img-circle" src="'.$rowd['profile_image'].'">';
 								echo '</div>';
 								echo '<div class="media-body">';
 									echo '<h3 class="mt-0">'.$rowd['name'].'</h3>';
@@ -57,7 +57,10 @@
 									echo '<form class="form-vertical col-lg-10 col-md-2" action="db.php?replyto='.$rowd['uid'].'" method="post" style="float:right; margin-right:10px">';
 										echo '<textarea class="form-control reply_box" name="reply" required></textarea>';
 										echo '<br>';
-										echo '<input type="text" class="hidden" name="replyby" value="'.$_SESSION['id'].'">';
+										if(isset($_SESSION['id']))
+										{
+											echo '<input type="text" class="hidden" name="replyby" value="'.$_SESSION['id'].'">';
+										}
 										echo '<input type="text" class="hidden" name="qid" value="'.$row['qid'].'">';
 										echo '<button name="replyto" class="btn btn_web col-lg-1" style="float:right">Reply</button>'; 
 									echo '</form>';

@@ -451,21 +451,32 @@ elseif(isset($_POST['paschng']))
 
 if(isset($_POST['replyto']))
 {
-	$replyto=$_GET['replyto'];
-	$replyby=$_POST['replyby'];
-	$qid=$_POST['qid'];
-	$reply=$_POST['reply'];
-	$data="INSERT INTO replies (qid,uid,reply_uid,reply) VALUES ('$qid','$replyto','$replyby','$reply')";
-	$res=mysqli_query($con,$data);
-	require 'faq.php';
+	if(isset($_SESSION['id']))
+	{
+		$replyto=$_GET['replyto'];
+		$replyby=$_POST['replyby'];
+		$qid=$_POST['qid'];
+		$reply=$_POST['reply'];
+		$data="INSERT INTO replies (qid,uid,reply_uid,reply) VALUES ('$qid','$replyto','$replyby','$reply')";
+		$res=mysqli_query($con,$data);
+		require 'faq.php';
+	}
+	else
+		header("Location:index.php?msg=You Must Login To Reply");
 }
 if(isset($_POST['answer_submit']))
 {
-	$qid=$_GET['answer_submit'];
-	$answer=$_POST['answer'];
-	$uid=$_SESSION['id'];
-	$data="INSERT INTO faq_comments (qid,uid,answer) VALUES ('$qid','$uid','$answer')";
-	$res=mysqli_query($con,$data);
+	if(isset($_SESSION['id']))
+	{
+		$qid=$_GET['answer_submit'];
+		$answer=$_POST['answer'];
+		$uid=$_SESSION['id'];
+		$data="INSERT INTO faq_comments (qid,uid,answer) VALUES ('$qid','$uid','$answer')";
+		$res=mysqli_query($con,$data);
+		require 'faq.php';
+	}
+	else
+		header("Location:index.php?msg=You Must Login To Answer");
 }
 
 if(isset($_GET['name']))
