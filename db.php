@@ -54,6 +54,12 @@ elseif (isset($_POST['compose'])) {
                         }
 
 }
+
+elseif(isset($_GET['art']))
+{
+require 'post_article.php';
+}
+
 elseif (isset($_POST['subscribe'])) {
 
 

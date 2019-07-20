@@ -81,6 +81,8 @@ body {
   <br>
   <li class="<?php $t=isset($_GET['chat'])?'active':''; echo $t ?>"><a href="db.php?chat=1"><i class="fa fa-comments" aria-hidden="true"></i>Chat</a></li>
   <br>
+  <li class="<?php $t=isset($_GET['art'])?'active':''; echo $t ?>"><a href="db.php?art=1"><i class="fa fa-comments" aria-hidden="true"></i>Post an Article</a></li>
+  <br>
   <li class="<?php $t=isset($_GET['acc'])?'active':''; echo $t ?>"><a href="db.php?acc=1"><i class="fa fa-id-card-o" aria-hidden="true"></i>My Account</a></li>
   <br>
   <li class="<?php $t=isset($_GET['log'])?'active':''; echo $t ?>"><a href="db.php?log=1"><i class="fa fa-sign-out" aria-hidden="true"></i>Log out</a></li>
