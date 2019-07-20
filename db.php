@@ -23,6 +23,22 @@ if(isset($_POST['file'])){
 
 						require 'notesindex.php';
 				}
+				elseif(isset($_GET['v']))
+				{
+					$r=$_POST['sub'];
+					$t=$_POST['cate'];
+					$y=$_POST['tarea'];
+					$ses=$_SESSION['role'];
+					$des='images/'.basename($_FILES['fp']['name']);
+						if(move_uploaded_file($_FILES['fp']['tmp_name'], $des))
+						{
+						$qu="INSERT INTO articles(posted,head,description,uid,category,articleimg) VALUES('$ses','$r','$y',17,'$t','$des')";
+						$fire=mysqli_query($con,$qu);
+						header('Location: post_article.php?msg=Posted Successfully');
+						exit;
+					}
+						
+				}
 
 /* php mailer */
 
