@@ -13,6 +13,15 @@ $row=mysqli_fetch_array($res);
 	{
 		color:white;
 	}
+	.question_of_list
+	{
+		text-transform:capitalize;
+		font-size:28px;
+	}
+	.menu_nav
+	{
+		font-family:Bahnschrift Light;
+	}
 </style>
 <title>Profile</title>
 
@@ -26,112 +35,108 @@ $row=mysqli_fetch_array($res);
 		<div class="media-body">
 			<h2 style="text-transform:capitalize"><strong><?php echo $row['name'];?></strong></h2>
 			<h4 style="text-transform:capitalize"><?php echo $row['role'];?></h4>
-			<div class="row " style="margin-left:20px">
+		</div>
+		<div class="row container-fluid" style="margin-left:90px">
 				<div class="col-lg-2">
-					<a href="db.php?name=questions"><h3>QUESTIONS</h3></a>
+					<a href="db.php?name=questions" class="menu_nav" style="text-decoration:none"><h3>QUESTIONS</h3></a>
 				</div>
 				<div class="col-lg-2">
-					<a href="db.php?name=community"><h3>COMMUNITY</h3></a>
+					<a href="db.php?name=community" class="menu_nav" style="text-decoration:none"><h3>COMMUNITY</h3></a>
 				</div>
 				<div class="col-lg-2">
-					<a href="db.php?name=mynotes"><h3>MY NOTES</h3></a>
+					<a href="db.php?name=mynotes" class="menu_nav" style="text-decoration:none"><h3>MY NOTES</h3></a>
 				</div>
 				<div class="col-lg-2">
-					<a href="db.php?name=followers"><h3>FOLLOWERS</h3></a>
+					<a href="db.php?name=followers" class="menu_nav" style="text-decoration:none"><h3>FOLLOWERS</h3></a>
 				</div>
 				<div class="col-lg-2">
-					<a href="db.php?name=trends"><h3>TRENDS</h3></a>
+					<a href="db.php?name=following" class="menu_nav" style="text-decoration:none"><h3>FOLLOWING</h3></a>
 				</div>
 				<div class="col-lg-2">
-					<a href="db.php?name=aboutus"><h3>ABOUT US</h3></a>
+					<a href="db.php?name=trends" class="menu_nav" style="text-decoration:none"><h3>TRENDS</h3></a>
 				</div>
 			</div>
-		</div>
 	</div>
 	<hr>
 	<!--<button class="profile_button btn btn-info">Change</button>-->
 </div>
-
-
-<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-
-
-
+<br><br><br><br>
 </div>
-
 <?php
-
 if(isset($_SESSION['name']))
 {
 	$page=$_SESSION['name'];
-if($page=='questions')
-{
-echo '<br>';
-echo '<div class="container-fluid">';
+	if($page=='questions')
+	{
+		echo '<div class="container" style="background-color:#ffffff">';
+			$sql="SELECT * FROM questions WHERE questionedby='hello'";
+			$res=mysqli_query($con,$sql);
+			echo '<h1 style="text-align:center">MY QUESTIONS</h1>'.'<hr>';
+			while($row=mysqli_fetch_array($res))
+			{
+				echo '<div class="col-lg-12 col-md-3">';
+					echo '<a href="http://localhost/internship-project/db.php?question='.$row['qid'].'" style="text-decoration:none">'.'<strong class="question_of_list">'.$row['question'].'</strong>'.'</a>'.'<br>';
+					echo '<div style="text-transform:capitalize">'.'Category :'.$row['qcat'].'</div>'.'<br>';
+					echo '<i class="fa fa-eye">683</i>'.'<i class="fa fa-thumbs-up"> 987 </i>'.'<i class="fa fa-thumbs-down"> 10 </i>';
+					echo '<br>'.'<hr>';
+				echo '</div>'.'<br>'.'<br>';
+			}
+		echo '</div>';
+	}
+	elseif($page=='community')
+	{
+		$uid=$_SESSION['id'];
+		$users="SELECT * FROM user WHERE uid!=$uid";
+		$res=mysqli_query($con,$users);
+		echo '<h4 style="text-align:center">DISCOVER PEOPLE AROUND YOU</h4>';
+		while($row=mysqli_fetch_array($res))
+		{
+		?>
+			<div class="media container col-lg-4">
+				<hr>
+				<div class="media-left">
+					<img src="<?php echo $row['profile_image'];?>" style="height:120px; width:120px">
+				</div>
+				<div class="media-body">
+					<h3><strong><?php echo $row['name'];?></strong></h3>
+					<h5 style="text-transform:capitalize"><?php echo $row['role'];?></h5>
+				</div>
+				<div class="media-right">
+					<br>
+					<a href="#" type="submit" class="btn btn-info" style="float:right" title="Follow <?php echo $row['name'];?>">Follow</a>
+				</div>
+			</div>
+		<?php
+		}
+	}
+	elseif($page=='mynotes')
+	{
+		echo '<h1 style="text-align:center">MY NOTES</h1>';
+	}
 
-echo '<div class="well container-fluid col-lg-2" style="float:right">';
+	elseif($page=='followers')
+	{
+		echo '<h1 style="text-align:center">FOLLOWERS</h1>';
+	}
 
+	elseif($page=='trends')
+	{
+		echo '<h1 style="text-align:center">TRENDS</h1>';
+	}
 
-
-$sql="SELECT * FROM questions WHERE questionedby='hello'";
-$res=mysqli_query($con,$sql);
-
-echo '<h2 style="text-align:center">My Questions</h2>';
-while($row=mysqli_fetch_array($res))
-{
-	echo '<div class="well ques col-lg-12 col-md-3">';
-		echo '<b style="text-transform:capitalize">'.$row['question'].'</b>'.'<br>';
-		echo 'Category: '.'<div style="text-transform:capitalize">'.$row['qcat'].'</div>'.'<br>';
-		echo '<a href="#"><i class="fa fa-eye"> 683 </i></a>'.'<i class="fa fa-thumbs-up"> 987 </i>'.'<i class="fa fa-thumbs-down"> 10 </i>';
-	echo '</div>';
-	echo '<br>';
-}
-
-
-echo '</div>'.'</div>';
-}
-
-elseif($page=='community')
-{
-	echo '<h1 style="text-align:center">COMMUNITY</h1>';
-}
-
-elseif($page=='mynotes')
-{
-	echo '<h1 style="text-align:center">MY NOTES</h1>';
-}
-
-elseif($page=='followers')
-{
-	echo '<h1 style="text-align:center">FOLLOWERS</h1>';
-}
-
-elseif($page=='trends')
-{
-	echo '<h1 style="text-align:center">TRENDS</h1>';
-}
-
-elseif($page=='aboutus')
-{
-	echo '<h1 style="text-align:center">ABOUT US</h1>';
-}
-
-
-
-
+	elseif($page=='aboutus')
+	{
+		echo '<h1 style="text-align:center">ABOUT US</h1>';
+	}
 }
 
 ?>
-
-
-
-<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 </body>
 
+<br><br><br><br><br>
+
 <?php
-
 include 'footer.php';
-
 ?>
 
 </html>

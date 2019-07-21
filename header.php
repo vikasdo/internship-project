@@ -105,28 +105,25 @@
 	background-size:cover;
 	background-position:center;
 }
-.x{
-		
-		transition: transform .2s;
-		
-	}
-	.x:hover
-	{
-		transform: scale(1.03); 
-	}	
+.x
+{
+	transition: transform .2s;	
+}
+.x:hover
+{
+	transform: scale(1.03); 
+}	
 .faq_image
 {
 	background-image:url(images/faq_back.png);
 	background-size:cover;
 	background-position:center;
 }
-}
 .article_img
 {
 	background-image:url(images/articlebg.jpg);
 	background-size:cover;
 	background-position:center;
-
 }
 .cont
 {
@@ -280,24 +277,15 @@
 	background-color:white;
 	color:#8a2be2;
 }
-.ques
+<!--.ques
 {
-	transition:transform .2s;
-}
-.ques a i
-{
-	color:black;
 	transition:transform .2s;
 }
 .ques:hover
 {
 	color:#8a2be2;
-	transform:scale(1.1);
-}
-.ques a:hover
-{
-	color:#8a2be2;
-}
+	
+}-->
 .reply_box
 {
 	resize:none;
