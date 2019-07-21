@@ -23,7 +23,7 @@ $row=mysqli_fetch_array($res);
 		font-family:Bahnschrift Light;
 	}
 </style>
-<title>Profile</title>
+<title>Profile | <?php echo $row['name'];?></title>
 
 <body>
 
@@ -68,8 +68,9 @@ if(isset($_SESSION['name']))
 	$page=$_SESSION['name'];
 	if($page=='questions')
 	{
+		$user=$row['name'];
 		echo '<div class="container" style="background-color:#ffffff">';
-			$sql="SELECT * FROM questions WHERE questionedby='hello'";
+			$sql="SELECT * FROM questions WHERE questionedby='$user'";
 			$res=mysqli_query($con,$sql);
 			echo '<h1 style="text-align:center">MY QUESTIONS</h1>'.'<hr>';
 			while($row=mysqli_fetch_array($res))

@@ -2,8 +2,9 @@
 	<div class="col-lg-12 cont">
 		<div class="row">
 			<div class="col-lg-3">
-				<h3 class="text-center text"><strong>About Us</strong></h3>
 				<br>
+				<h3 class="text-center text"><strong>About Us</strong></h3>
+				<hr>
 				<p class="text-justify text">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident"</p>
 			</div>
 			<div class="col-lg-3">
@@ -72,7 +73,7 @@
 					<form class="form-vertical" action="db.php" method="post">
 						<input type="email" name="emails" class="form-control" placeholder="Enter Your Email" required>
 						<br>
-						<input type="submit" class="btn btn_web form-control" value="subscribe" name="subscribe" onclick="r()">
+						<input type="submit" class="btn btn_web form-control" value="Sign Me Up" name="subscribe" onclick="r()">
 					</form>
 					<div class="text-center col-lg-12">
 						<h3 style="color:black">Follow Us On</h3>
