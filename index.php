@@ -3,6 +3,8 @@
 include 'header.php';
 
 ?>
+<meta name="google-signin-client_id" content="622737373928-51le5sshrtqgfjvb4u9lu69iqt0ck6s3.apps.googleusercontent.com">
+<script src="https://apis.google.com/js/platform.js" async defer></script>
 <title>We Host</title>
 <body>
 <div class="container-fluid" style="background-image:url(images/bg.gif); background-size:cover">
@@ -52,6 +54,7 @@ if($x=='1')
 				<a href="index.php?signup=0" style="text-decoration:none" class="col-lg-offset-3">Already have an account?</a>			
 			</div>			
 		<br><br>
+		
 		</form>';
 	}
 }
