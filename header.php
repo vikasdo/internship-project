@@ -318,7 +318,7 @@
 		</div>
 		<br>
 		<div class="navbar-header">
-			<p class="navbar-brand">OnlineConnect</p>
+			<p class="navbar-brand">NOTES E2E</p>
 		</div>
 		<ul class="nav navbar-nav">
 		  <li class="<?php $t=isset($_GET['home'])?'active':''; echo $t;?>"><a href="db.php?home=1" id='c'>Home</a></li>
