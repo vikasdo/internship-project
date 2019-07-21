@@ -38,7 +38,11 @@
          	<div class="col-lg-12" style="background-image: url('images/blue.jpg');">
              	<div class="col-lg-6 col-lg-offset-3 " >
              	  	<h2 class="text-center"><strong> Notes Section</strong></h2>
+
              	  	<br>
+             	  	
+             	  	<p  style="color: red;display: block;font-weight: bold;"><?php echo isset($_GET['var'])?$_GET['var']:'';?></p>
+             	 
 <div class="col-lg-12">
              	  	<div class="col-lg-6">
 						<label class=""><h4><strong>Category Of Notes     :</strong></h4></label>
@@ -59,7 +63,7 @@
 						</div>
 						<div class="col-lg-6">
 						 <select name="select1" id="exampleFormControlSelect1" class="form-control a">
-						  <option >Select Branch</option>
+						  <option value="0">Select Branch</option>
 						  <option value="cse">cse</option>
 						  <option value="ece">ece</option>
 						  <option value="it">it</option>

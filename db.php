@@ -1,27 +1,53 @@
 <?php
 session_start();
 $con=mysqli_connect('localhost','root','','uploadf');
-
-if(isset($_POST['file'])){    
+if(isset($_POST['file']))
+{
+		if($_POST['select2']!=0&&($_POST['select1'])!=0&&$_POST['select']!=0)
+		{    
 
 					$des='images/'.basename($_FILES['filew']['name']);
-					$imgtype = strtolower(pathinfo($des,PATHINFO_EXTENSION));
-					$cat=$_POST['select'];
+					              $imgtype = strtolower(pathinfo($des,PATHINFO_EXTENSION));
+					                   $cat=$_POST['select'];
 										$cat1=$_POST['select1'];
 										$cat2=$_POST['select2'];
-						if(1){
+						if(isset($_POST['select2'])&&isset($_POST['select1'])&&isset($_POST['select']))
+						{
 						move_uploaded_file($_FILES['filew']['tmp_name'], $des);
 						$sql1="insert into files(name,type,uid,category,ys,branch) values('$des','$imgtype',1,'$cat','$cat2','$cat1')";
 						$res1=mysqli_query($con,$sql1);
 						
 						require 'notesindex.php';
 						}
+						else
+							header("Location:notesindex.php?var=please select the category");
+			
 					}
+					else
+							header("Location:notesindex.php?var=PLEASE SELECT ALL THE CATEGORY**");
+
+			}
 
 				elseif(isset($_GET['notes'])){
 						
 
 						require 'notesindex.php';
+				}
+				elseif(isset($_GET['v']))
+				{
+					$r=$_POST['sub'];
+					$t=$_POST['cate'];
+					$y=$_POST['tarea'];
+					$ses=$_SESSION['role'];
+					$des='images/'.basename($_FILES['fp']['name']);
+						if(move_uploaded_file($_FILES['fp']['tmp_name'], $des))
+						{
+						$qu="INSERT INTO articles(posted,head,description,uid,category,articleimg) VALUES('$ses','$r','$y',17,'$t','$des')";
+						$fire=mysqli_query($con,$qu);
+						header('Location: post_article.php?msg=Posted Successfully');
+						exit;
+					}
+						
 				}
 
 /* php mailer */
