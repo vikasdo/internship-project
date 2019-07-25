@@ -131,6 +131,12 @@
 	background-size:cover;
 	background-position:center;
 }
+#showcontent
+{
+	height:100px;
+	width:100px;
+	background-color:orange;
+}
 .results_list
 {
 	text-decoration:none;
