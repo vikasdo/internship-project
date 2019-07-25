@@ -48,8 +48,8 @@
 						<label class=""><h4><strong>Category Of Notes     :</strong></h4></label>
 			        </div>
 			        <div class="col-lg-6">
-						<select name="select" id="exampleFormControlSelect1" class="form-control a">
-						  <option  value="0">Select Category type</option>
+						<select name="select12" id="exampleFormControlSelect1" class="form-control a">
+						  <option>Select Category type</option>
 		                  <option value="studymaterial">studymaterial(ppts)</option>
 						  <option value="notes">Notes</option>
 						  <option value="assignment">Assignment</option>
@@ -63,7 +63,7 @@
 						</div>
 						<div class="col-lg-6">
 						 <select name="select1" id="exampleFormControlSelect1" class="form-control a">
-						  <option value="0">Select Branch</option>
+						  <option>Select Branch</option>
 						  <option value="cse">cse</option>
 						  <option value="ece">ece</option>
 						  <option value="it">it</option>
@@ -77,7 +77,7 @@
 			         	</div>
 						<div class="col-lg-6">
 						 <select name="select2" id="exampleFormControlSelect1" class="form-control a">
-							<option value="0" >Select year and sem</option>
+							<option>Select year and sem</option>
 							<option value="1-1">1-1</option>
 					        <option value="1-2">1-2</option>
 							<option value="2-1">2-1</option>

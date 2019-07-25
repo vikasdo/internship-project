@@ -4,30 +4,28 @@ session_start();
 $con=mysqli_connect('localhost','root','','uploadf');
 if(isset($_POST['file']))
 {
-		if($_POST['select2']!=0&&($_POST['select1'])!=0&&$_POST['select']!=0)
+		if(isset($_POST['select2'])&&isset($_POST['select1'])&&isset($_POST['select12']))
 		{    
 
 					$des='images/'.basename($_FILES['filew']['name']);
 					              $imgtype = strtolower(pathinfo($des,PATHINFO_EXTENSION));
-					                   $cat=$_POST['select'];
+					                   $cat=$_POST['select12'];
 										$cat1=$_POST['select1'];
 										$cat2=$_POST['select2'];
-						if(isset($_POST['select2'])&&isset($_POST['select1'])&&isset($_POST['select']))
-						{
-						move_uploaded_file($_FILES['filew']['tmp_name'], $des);
-						$sql1="insert into files(name,type,uid,category,ys,branch) values('$des','$imgtype',1,'$cat','$cat2','$cat1')";
+				move_uploaded_file($_FILES['filew']['tmp_name'], $des);
+					$t=$_SESSION['id'];
+					$sql1="INSERT into files(name,type,uid,category,ys,branch) values('$des','$imgtype',$t,'$cat','$cat2','$cat1')";
 						$res1=mysqli_query($con,$sql1);
 						
 						require 'notesindex.php';
-						}
-						else
-							header("Location:notesindex.php?var=please select the category");
-			
+						
+					
 					}
-					else
+					else{
 							header("Location:notesindex.php?var=PLEASE SELECT ALL THE CATEGORY**");
+						}
 
-			}
+}
 
 				elseif(isset($_GET['notes'])){
 						
@@ -251,6 +249,7 @@ elseif(isset($_GET['a']))
 }
 elseif(isset($_GET['faq']))
 {
+
 	require 'faq.php';
 }
 elseif(isset($_GET['home']))
@@ -522,11 +521,11 @@ if(isset($_POST['answer_submit']))
 		header("Location:index.php?msg=You Must Login To Answer");
 }
 
-if(isset($_GET['name']))
+elseif(isset($_GET['name']))
 {
-	$_SESSION['name']=$_GET['name'];
-	require 'profile.php';
-}
+	$t=$_SESSION['id'];
+	require 'profile.php'; 
+}	
 
 
 ?>
