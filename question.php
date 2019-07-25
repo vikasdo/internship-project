@@ -7,8 +7,11 @@
 	$res=mysqli_query($con,$sql);
 	$row=mysqli_fetch_array($res);
 	$question=$row['question'];
-	$user=$row['questionedby'];
+	$user=$row['uid'];
 	$qcat=$row['qcat'];
+	$userdata="SELECT * FROM user WHERE uid=$user";
+	$res5=mysqli_query($con,$userdata);
+	$username=mysqli_fetch_array($res5);
 ?>
 <title><?php echo $qcat.' | '.$question;?></title>
 	<script>
@@ -28,7 +31,7 @@
 	<body style="background-color:#f8f8f9">
 		<div class="container-fluid"  style="background-color:white">
 			<h1 class="text-center question"><?php echo $question;?></h1>
-			<h4 class="text-right"><a href="#" style="text-decoration:none; color:#8a2be2"><i class="fa fa-user-circle-o" style="color:grey"></i> <?php echo $user;?></a>
+			<h4 class="text-right"><a href="#" style="text-decoration:none; color:#8a2be2"><i class="fa fa-user-circle-o" style="color:grey"></i> <?php echo $username['name'];?></a>
 			<a href="#" style="text-decoration:none; color:#8a2be2"><i class="fa fa-list-alt" style="color:grey"></i> <?php echo $qcat;?></a></h4>
 		</div>
 		<br>

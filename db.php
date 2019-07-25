@@ -1,32 +1,31 @@
+
 <?php
 session_start();
 $con=mysqli_connect('localhost','root','','uploadf');
 if(isset($_POST['file']))
 {
-		if($_POST['select2']!=0&&($_POST['select1'])!=0&&$_POST['select']!=0)
+		if(isset($_POST['select2'])&&isset($_POST['select1'])&&isset($_POST['select12']))
 		{    
 
 					$des='images/'.basename($_FILES['filew']['name']);
 					              $imgtype = strtolower(pathinfo($des,PATHINFO_EXTENSION));
-					                   $cat=$_POST['select'];
+					                   $cat=$_POST['select12'];
 										$cat1=$_POST['select1'];
 										$cat2=$_POST['select2'];
-						if(isset($_POST['select2'])&&isset($_POST['select1'])&&isset($_POST['select']))
-						{
-						move_uploaded_file($_FILES['filew']['tmp_name'], $des);
-						$sql1="insert into files(name,type,uid,category,ys,branch) values('$des','$imgtype',1,'$cat','$cat2','$cat1')";
+				move_uploaded_file($_FILES['filew']['tmp_name'], $des);
+					$t=$_SESSION['id'];
+					$sql1="INSERT into files(name,type,uid,category,ys,branch) values('$des','$imgtype',$t,'$cat','$cat2','$cat1')";
 						$res1=mysqli_query($con,$sql1);
 						
 						require 'notesindex.php';
-						}
-						else
-							header("Location:notesindex.php?var=please select the category");
-			
+						
+					
 					}
-					else
+					else{
 							header("Location:notesindex.php?var=PLEASE SELECT ALL THE CATEGORY**");
+						}
 
-			}
+}
 
 				elseif(isset($_GET['notes'])){
 						
@@ -250,16 +249,30 @@ elseif(isset($_GET['a']))
 }
 elseif(isset($_GET['faq']))
 {
+
 	require 'faq.php';
 }
 elseif(isset($_GET['home']))
 {
 	require 'index.php';
 }
+elseif(isset($_GET['notep']))
+{
+	header('Location:index.php?msg=Log in to View Notes');
+	exit;
+}
 elseif(isset($_GET['val']))
 {
-	$r=$_GET['val'];
-	require 'post.php';
+	if(isset($_SESSION['id']))
+	{
+		$r=$_GET['val'];
+	   require 'post.php';
+	}
+	else{
+		header('location:index.php?msg=You must login to View Articles');
+	    exit(0);
+	}
+
 }
 elseif(isset($_GET['log']))
 {
@@ -334,7 +347,8 @@ elseif(isset($_GET['sv']))
 
 $es=$_GET['sv'];
 $ta=$_POST['abc'];
-$query="INSERT INTO comments(uid,comment,aid) VALUES(17,'$ta',$es)";
+$sess=$_SESSION['id'];
+$query="INSERT INTO comments(uid,comment,aid) VALUES($sess,'$ta',$es)";
 $tire=mysqli_query($con,$query);
 		if($tire)
 		{
@@ -487,8 +501,10 @@ if(isset($_POST['replyto']))
 		$res=mysqli_query($con,$data);
 		require 'faq.php';
 	}
-	else
+	else{
 		header("Location:index.php?msg=You Must Login To Reply");
+		exit(0);
+	}
 }
 if(isset($_POST['answer_submit']))
 {
@@ -505,11 +521,11 @@ if(isset($_POST['answer_submit']))
 		header("Location:index.php?msg=You Must Login To Answer");
 }
 
-if(isset($_GET['name']))
+elseif(isset($_GET['name']))
 {
-	$_SESSION['name']=$_GET['name'];
-	require 'profile.php';
-}
+	$t=$_SESSION['id'];
+	require 'profile.php'; 
+}	
 
 
 ?>

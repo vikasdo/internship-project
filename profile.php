@@ -68,9 +68,9 @@ if(isset($_SESSION['name']))
 	$page=$_SESSION['name'];
 	if($page=='questions')
 	{
-		$user=$row['name'];
+		$user=$row['uid'];
 		echo '<div class="container" style="background-color:#ffffff">';
-			$sql="SELECT * FROM questions WHERE questionedby='$user'";
+			$sql="SELECT * FROM questions WHERE uid='$user'";
 			$res=mysqli_query($con,$sql);
 			echo '<h1 style="text-align:center">MY QUESTIONS</h1>'.'<hr>';
 			while($row=mysqli_fetch_array($res))
@@ -110,28 +110,30 @@ if(isset($_SESSION['name']))
 		<?php
 		}
 	}
-	elseif($page=='mynotes')
-	{
-		echo '<h1 style="text-align:center">MY NOTES</h1>';
-	}
-
-	elseif($page=='followers')
-	{
-		echo '<h1 style="text-align:center">FOLLOWERS</h1>';
-	}
-
-	elseif($page=='trends')
-	{
-		echo '<h1 style="text-align:center">TRENDS</h1>';
-	}
-
-	elseif($page=='aboutus')
-	{
-		echo '<h1 style="text-align:center">ABOUT US</h1>';
-	}
+	
 }
 
+elseif (isset($_GET['name'])) {
+        $t=$_SESSION['id'];
+		$qu="SELECT * FROM files where uid=$t";
+		$fire=mysqli_query($con,$qu);	
+		foreach($fire as $row)
+		{
+			?>
+	<div class="col-lg-4 well ">
+			  	<h4><strong>File Id   :</strong><?php echo $row['id'];?></h4>
+			  	<h4><strong>File Name  :</strong><?php echo $row['name'];?></h4>
+			  	<h4><strong>Uploaded on   :</strong><?php echo $row['date'];?></h4>
+			  	<h4><strong>Type   :</strong><?php echo $row['type'];?></h4>
+			  	<h4><strong>Category  :</strong><?php echo $row['category'];?></h4> 
+			  	<h4><strong>Year  :</strong><?php echo $row['ys'];?></h4>
+			  	<h4><strong>Branch  :</strong><?php echo $row['branch'];?></h4>  
+				</div>
+				<?php
+		}
+	}
 ?>
+
 </body>
 
 <br><br><br><br><br>

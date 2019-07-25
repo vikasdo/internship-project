@@ -67,7 +67,8 @@ $fire=mysqli_query($con,$qu);
         			<td><?php echo $row['mid'];?></td>
         			<td><?php echo $row['from_email'];?></td>
         			<td><?php echo $row['to_email'];?></td>
-        			<td><?php echo $row['time'];?></td><td><input class="btn btn-sm btn-success" name="view" value="View"></td>
+        			<td><?php echo $row['time'];?></td><td>
+                                        <a  href="#" class="btn btn-block btn-success" name="view" >View</a></td>
         		
         		<tr>
 
