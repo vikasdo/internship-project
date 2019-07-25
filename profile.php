@@ -68,9 +68,9 @@ if(isset($_SESSION['name']))
 	$page=$_SESSION['name'];
 	if($page=='questions')
 	{
-		$user=$row['name'];
+		$user=$row['uid'];
 		echo '<div class="container" style="background-color:#ffffff">';
-			$sql="SELECT * FROM questions WHERE questionedby='$user'";
+			$sql="SELECT * FROM questions WHERE uid='$user'";
 			$res=mysqli_query($con,$sql);
 			echo '<h1 style="text-align:center">MY QUESTIONS</h1>'.'<hr>';
 			while($row=mysqli_fetch_array($res))

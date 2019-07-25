@@ -257,10 +257,23 @@ elseif(isset($_GET['home']))
 {
 	require 'index.php';
 }
+elseif(isset($_GET['notep']))
+{
+	header('Location:index.php?msg=Log in to View Notes');
+	exit;
+}
 elseif(isset($_GET['val']))
 {
-	$r=$_GET['val'];
-	require 'post.php';
+	if(isset($_SESSION['id']))
+	{
+		$r=$_GET['val'];
+	   require 'post.php';
+	}
+	else{
+		header('location:index.php?msg=You must login to View Articles');
+	    exit(0);
+	}
+
 }
 elseif(isset($_GET['log']))
 {
@@ -489,8 +502,10 @@ if(isset($_POST['replyto']))
 		$res=mysqli_query($con,$data);
 		require 'faq.php';
 	}
-	else
+	else{
 		header("Location:index.php?msg=You Must Login To Reply");
+		exit(0);
+	}
 }
 if(isset($_POST['answer_submit']))
 {
