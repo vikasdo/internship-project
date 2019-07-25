@@ -488,7 +488,7 @@ if(isset($_POST['answer_submit']))
 }
 elseif(isset($_GET['name']))
 {
-	$t=$_SESSION['id'];
+	$_SESSION['name']=$_GET['name'];
 	require 'profile.php'; 
 }	
 ?>

@@ -1,12 +1,9 @@
 <?php 
-
-include 'header.php';
-
-$uid=$_SESSION['id'];
-$data="SELECT * FROM user WHERE uid='$uid'";
-$res=mysqli_query($con,$data);
-$row=mysqli_fetch_array($res);
-
+	include 'header.php';
+	$uid=$_SESSION['id'];
+	$data="SELECT * FROM user WHERE uid='$uid'";
+	$res=mysqli_query($con,$data);
+	$row=mysqli_fetch_array($res);
 ?>
 <style>
 	.menu
@@ -69,13 +66,13 @@ if(isset($_SESSION['name']))
 		$user=$row['uid'];
 		echo '<div class="container" style="background-color:#ffffff">';
 			$sql="SELECT * FROM questions WHERE uid='$user'";
-			$res=mysqli_query($con,$sql);
+			$resq=mysqli_query($con,$sql);
 			echo '<h1 style="text-align:center">MY QUESTIONS</h1>'.'<hr>';
-			while($row=mysqli_fetch_array($res))
+			while($rowd=mysqli_fetch_array($resq))
 			{
 				echo '<div class="col-lg-12 col-md-3">';
-					echo '<a href="http://localhost/internship-project/db.php?question='.$row['qid'].'" style="text-decoration:none">'.'<strong class="question_of_list">'.$row['question'].'</strong>'.'</a>'.'<br>';
-					echo '<div style="text-transform:capitalize">'.'Category :'.$row['qcat'].'</div>'.'<br>';
+					echo '<a href="http://localhost/internship-project/db.php?question='.$rowd['qid'].'" style="text-decoration:none">'.'<strong class="question_of_list">'.$rowd['question'].'</strong>'.'</a>'.'<br>';
+					echo '<div style="text-transform:capitalize">'.'Category :'.$rowd['qcat'].'</div>'.'<br>';
 					echo '<i class="fa fa-eye">683</i>'.'<i class="fa fa-thumbs-up"> 987 </i>'.'<i class="fa fa-thumbs-down"> 10 </i>';
 					echo '<br>'.'<hr>';
 				echo '</div>'.'<br>'.'<br>';
@@ -107,37 +104,38 @@ if(isset($_SESSION['name']))
 			</div>
 		<?php
 		}
+		echo '<br><br><br><br><br>';
 	}
-	
-}
-
-elseif (isset($_GET['name'])) {
-        $t=$_SESSION['id'];
+	elseif($page=='mynotes')
+	{
+		$t=$_SESSION['id'];
 		$qu="SELECT * FROM files where uid=$t";
-		$fire=mysqli_query($con,$qu);	
+		$fire=mysqli_query($con,$qu);
+		echo '<div class="container-fluid">';
 		foreach($fire as $row)
 		{
 			?>
-	<div class="col-lg-4 well ">
-			  	<h4><strong>File Id   :</strong><?php echo $row['id'];?></h4>
-			  	<h4><strong>File Name  :</strong><?php echo $row['name'];?></h4>
-			  	<h4><strong>Uploaded on   :</strong><?php echo $row['date'];?></h4>
-			  	<h4><strong>Type   :</strong><?php echo $row['type'];?></h4>
-			  	<h4><strong>Category  :</strong><?php echo $row['category'];?></h4> 
-			  	<h4><strong>Year  :</strong><?php echo $row['ys'];?></h4>
-			  	<h4><strong>Branch  :</strong><?php echo $row['branch'];?></h4>  
+				<div class="col-lg-4 well ">
+					<h4><strong>File Id   :</strong><?php echo $row['id'];?></h4>
+					<!--<h4><strong>File Name  :</strong><?php echo $row['name'];?></h4>-->
+					<h4><strong>Uploaded on   :</strong><?php echo $row['date'];?></h4>
+					<h4><strong>Type   :</strong><?php echo $row['type'];?></h4>
+					<h4><strong>Category  :</strong><?php echo $row['category'];?></h4> 
+					<h4><strong>Year  :</strong><?php echo $row['ys'];?></h4>
+					<h4><strong>Branch  :</strong><?php echo $row['branch'];?></h4>  
 				</div>
-				<?php
+			<?php
 		}
+		echo '</div>';
 	}
+}
 ?>
-
 </body>
 
 <br><br><br><br><br>
 
 <?php
-include 'footer.php';
+	include 'footer.php';
 ?>
 
 </html>
