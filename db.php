@@ -329,11 +329,11 @@ elseif(isset($_GET['sv']))
 	$sess=$_SESSION['id'];
 	$query="INSERT INTO comments(uid,comment,aid) VALUES($sess,'$ta',$es)";
 	$tire=mysqli_query($con,$query);
-		if($tire)
-		{
-			header('Location:db.php?val='.$es);
-			exit;
-		}
+	if($tire)
+	{
+		header('Location:db.php?val='.$es);
+		exit;
+	}
 }
 elseif (isset($_POST['resetpass'])) 
 {
@@ -347,20 +347,21 @@ elseif (isset($_POST['resetpass']))
 	$mail->addAddress($rec, 'weteam');
 	$h='Please reset your password through the link';
 	$mail->Subject = $h;				
-	$mail->Body=' <!DOCTYPE html>
-		<html>
-		<head>
-			<title></title>
-		</head>
-		<body>
-			<div style="background-image: url("images/secure.png");">
-			<h1>You will be directed to Reset password Page</h1>
-
-			<br> to change password<br>
-		</div>
-		</body>
-		</html>'.'Please click this link: http://localhost/internship-project/resetpass.php?token='.$token.'&email='.$rec;
+	$mail->Body='<!DOCTYPE html>
+				<html>
+					<head>
+						<title></title>
+					</head>
+					<body>
+						<div style="background-image: url("images/secure.png");">
+							<h1>You will be directed to Reset password Page</h1>
+							<br>to change password<br>
+						</div>
+					</body>
+				</html>'.'Please click this link: http://localhost/internship-project/resetpass.php?token='.$token.'&email='.$rec;
+				
 	//Replace the plain text body with one created manually
+	
 	$mail->AltBody = 'This is a plain-text message body';
 	if (!$mail->send())
 	{

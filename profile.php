@@ -24,9 +24,7 @@ $row=mysqli_fetch_array($res);
 	}
 </style>
 <title>Profile | <?php echo $row['name'];?></title>
-
 <body>
-
 <div class="container-fluid">
 	<div class="media">
 		<div class="media-left">
