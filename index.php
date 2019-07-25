@@ -8,8 +8,8 @@ include 'header.php';
 <title>We Host</title>
 <body>
 <div class="container-fluid" style="background-image:url(images/bg.gif); background-size:cover">
-<div class="col-lg-8">
-<p style="font-size:55px; font-family:Bahnschrift Light; color:black ;padding-top:40px"><strong>Take notes anywhere <br> Find information faster <br> Share ideas with anyone </strong></p>
+<div class="<?php $r=isset($_SESSION['id'])?'col-lg-12':'col-lg-8'; echo $r; ?>">
+<p style="font-size:55px; font-family:Bahnschrift Light; color:black ;padding-top:40px" class="<?php $t=isset($_SESSION['id'])?'text-center':''; echo $t;?>"><strong>Take notes anywhere <br> Find information faster <br> Share ideas with anyone </strong></p>
 </div>
 <div class="col-lg-3">
 

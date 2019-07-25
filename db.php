@@ -1,3 +1,4 @@
+
 <?php
 session_start();
 $con=mysqli_connect('localhost','root','','uploadf');
@@ -334,7 +335,8 @@ elseif(isset($_GET['sv']))
 
 $es=$_GET['sv'];
 $ta=$_POST['abc'];
-$query="INSERT INTO comments(uid,comment,aid) VALUES(17,'$ta',$es)";
+$sess=$_SESSION['id'];
+$query="INSERT INTO comments(uid,comment,aid) VALUES($sess,'$ta',$es)";
 $tire=mysqli_query($con,$query);
 		if($tire)
 		{
