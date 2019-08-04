@@ -5,7 +5,7 @@ include 'header.php';
 ?>
 <meta name="google-signin-client_id" content="622737373928-51le5sshrtqgfjvb4u9lu69iqt0ck6s3.apps.googleusercontent.com">
 <script src="https://apis.google.com/js/platform.js" async defer></script>
-<title>We Host</title>
+<title>C A N V A S</title>
 <body>
 <div class="container-fluid" style="background-image:url(images/bg.gif); background-size:cover">
 <div class="<?php $r=isset($_SESSION['id'])?'col-lg-12':'col-lg-8'; echo $r; ?>">
