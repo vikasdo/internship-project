@@ -80,6 +80,8 @@ body {
   <br>
   <li class="<?php $t=isset($_GET['nvt'])?'active':''; echo $t ?>"><a href="db.php?nvt=1"><i class="fa fa-user-o" aria-hidden="true"></i>Non Verified Teachers</a></li>
   <br>
+  <li class="<?php $t=isset($_GET['noteupload'])?'active':''; echo $t ?>"><a href="db.php?noteupload=1"><i class="fa fa-sticky-note-o" aria-hidden="true"></i>Notes Uploaded</a></li>
+  <br>
   <li class="<?php $t=isset($_GET['chat'])?'active':''; echo $t ?>"><a href="db.php?chat=1"><i class="fa fa-comments" aria-hidden="true"></i>Chat</a></li>
   <br>
    <li class="<?php $t=isset($_GET['art'])?'active':''; echo $t ?>"><a href="db.php?art=1"><i class="fa fa-comments" aria-hidden="true"></i>Post an Article</a></li>

@@ -23,6 +23,7 @@ include 'header.php'
 	{
 		color:black;
 	}
+	
 	.well1
 	{
 		box-shadow:2px 2px  grey;
