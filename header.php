@@ -325,19 +325,16 @@
 		  <li class="<?php $t=isset($_GET['a'])?'active':''; echo $t;?>"><a href="db.php?a=1" id='c'>Articles</a></li>
 		  <li class="<?php $t=isset($_GET['notes'])?'active right':'right'; echo $t;?>"><a href="<?php $e=isset($_SESSION['id'])?'db.php?notes=1':'db.php?notep=1'; echo $e;?>" id="c">Notes</a></li>
 		  <li class="<?php $t=isset($_GET['faq'])?'active':''; echo $t;?>"><a href="db.php?faq=1" id='c'>FAQ'S</a></li> 
-		  
-		  <?php
-		  if(!isset($_SESSION['id']))
-		  {
-		  
-		  $t=isset($_GET['signup'])?'active':'';
-		  echo '<li class="'. $t.'"><a href="index.php?signup=1" id="c">Sign Up</a></li>';	
-		  }
-			
-			else
-			{
-			//display none
-			}
+			<?php
+				if(!isset($_SESSION['id']))
+				{
+					$t=isset($_GET['signup'])?'active':'';
+					echo '<li class="'. $t.'"><a href="index.php?signup=1" id="c">Sign Up</a></li>';	
+				}
+				else
+				{
+					//display none
+				}
 			?>		
 		</ul>
 	  </div>

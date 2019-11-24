@@ -14,6 +14,29 @@
 	$username=mysqli_fetch_array($res5);
 ?>
 <title><?php echo $qcat.' | '.$question;?></title>
+	<head>
+		<style>
+			#showcontent
+			{
+				display:none;
+				font-family:Bahnschrift Light;
+			}
+		</style>
+	</head>
+	<script>
+		function showContent(source)
+		{
+			var x = document.getElementById("showcontent");
+			if(x.style.display==="none")
+			{
+				x.style.display="block";
+			}
+			else
+			{
+				x.style.display="none";
+			}
+		}
+	</script>
 	<body style="background-color:#f8f8f9">
 		<div class="container-fluid"  style="background-color:white">
 			<h1 class="text-center question"><?php echo $question;?></h1>
@@ -67,6 +90,15 @@
 										echo '<input type="text" class="hidden" name="qid" value="'.$row['qid'].'">';
 										echo '<button name="replyto" class="btn btn_web col-lg-1" style="float:right">Reply</button>'; 
 									echo '</form>';
+									echo '<button onclick="showContent()" class="btn btn_web col-lg-2">View all Replies</button>';
+								echo '</div>';
+								echo '<div id="showcontent">';
+										$replies="SELECT * FROM replies inner join user on replies.reply_uid=user.uid and replies.qid=$qid and replies.uid=$user";
+										$reply_res=mysqli_query($con,$replies);
+										while($reply_row=mysqli_fetch_array($reply_res))
+										{
+											echo '<h4>'.$reply_row['name'].'---->'.$reply_row['reply'].'</h4>';
+										}
 								echo '</div>';
 						echo '</div>';
 						echo '<hr>';
