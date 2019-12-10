@@ -4,7 +4,7 @@ $exe=mysqli_query($con,$qu);
 $fire=mysqli_fetch_array($exe);
 $s="SELECT * FROM articles where category='".$fire['category']."' and aid !=$r";
 $er=mysqli_query($con,$s);
-$comm="SELECT * FROM comments c inner join articles a on c.uid=a.uid and c.aid=a.aid and a.aid=$r";
+$comm="SELECT c.uid,comment FROM comments c inner join articles a on a.aid=c.aid where a.aid=$r";
 $res=mysqli_query($con,$comm);
 ?>
 <html lang="en">
@@ -117,10 +117,14 @@ h1,h4,h2,h3
 <br>
 <?php 
 foreach($res as $row)
-{?>
+{
+	$r=$row['uid'];
+	$d="SELECT name from user WHERE uid=$r";
+	$ra=mysqli_query($con,$d);
+?>
 <div class="row">
 	<div class="col-lg-3">
-	<p><strong><?php  echo $row['posted']; ?></strong></p>
+	<p><strong><?php  foreach($ra as $row1) echo $row1['name']; ?></strong></p>
 	</div>
 	<div class="col-lg-9">
 	<p><strong><?php  echo $row['comment']; ?></strong></p>

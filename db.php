@@ -31,10 +31,11 @@ elseif(isset($_GET['v']))
 	$t=$_POST['cate'];
 	$y=$_POST['tarea'];
 	$ses=$_SESSION['role'];
+	$tu=$_SESSION['id'];
 	$des='images/'.basename($_FILES['fp']['name']);
 	if(move_uploaded_file($_FILES['fp']['tmp_name'], $des))
 	{
-		$qu="INSERT INTO articles(posted,head,description,uid,category,articleimg) VALUES('$ses','$r','$y',17,'$t','$des')";
+		$qu="INSERT INTO articles(posted,head,description,uid,category,articleimg) VALUES('$ses','$r','$y','$tu','$t','$des')";
 		$fire=mysqli_query($con,$qu);
 		header('Location: post_article.php?msg=Posted Successfully');
 		exit;
