@@ -1,8 +1,7 @@
 ## internship-project
 
-                                                      
-https://bit.ly/3dU4WAk - automatic!
-[GitHub](https://bit.ly/3dU4WAk)
+
+** [well writtend doc](https://1drv.ms/w/s!AgjpkAWIFa73hKUtBup27SltKq7ULg) **
 
 ### College-Notes-Gallery And blogging system
 # Abstract
