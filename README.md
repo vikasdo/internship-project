@@ -5,8 +5,14 @@
 ### College-Notes-Gallery And blogging system
 # Abstract
 * About The System
-1. This project intends to provide the students with an environment where they can upload their notes online and Have a discussion forum along with teachers and any one can publish their blogs and articles also
-2. And these all features have made management of site easier as the user can change the content and setting any time he/she want rather than opening the whole source code and changing each line of codes. A clean and responsive dashboard is provided in the admin panel for the easy management of this project.
+1. Our product eliminates all the problems mentioned above and is a gift for the readers and explorers. With the help of our product we provide users the option to upload and download notes of respective interest. 
+
+2. We have also included a FAQ section, where users can post their question related to any category and get answers form other users of the community and clarify their doubts and this forum will help students mainly who read about latest technology.
+
+3. An article section is also added into our product, this was done because by reading articles students will get to know about the current trends that are going on in the industry and this will keep the students updated from time to time.
+You will get all of the above mentioned services all at one platform     “C A N V A S”
+
+4. And these all features have made management of site easier as the user can change the content and setting any time he/she want rather than opening the whole source code and changing each line of codes. A clean and responsive dashboard is provided in the admin panel for the easy management of this project.
 * This project in PHP helps in easy management of the notes and study materials for the students. Design of this project is pretty and responsive so that user won’t find it difficult to understand, use and navigate.
 
 Main Features
