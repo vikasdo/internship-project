@@ -1,7 +1,7 @@
 ## internship-project
 
 
-** [well writtend doc](https://1drv.ms/w/s!AgjpkAWIFa73hKUtBup27SltKq7ULg) **
+**[Read our Well written Doc along with screen Shots](https://1drv.ms/w/s!AgjpkAWIFa73hKUtBup27SltKq7ULg)**
 
 ### College-Notes-Gallery And blogging system
 # Abstract
