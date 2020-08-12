@@ -1,6 +1,8 @@
 ## internship-project
 
                                                       
+https://bit.ly/3dU4WAk - automatic!
+[GitHub](https://bit.ly/3dU4WAk)
 
 ### College-Notes-Gallery And blogging system
 # Abstract
