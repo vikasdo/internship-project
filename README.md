@@ -16,14 +16,14 @@ You will get all of the above mentioned services all at one platform     “C A 
 * This project in PHP helps in easy management of the notes and study materials for the students. Design of this project is pretty and responsive so that user won’t find it difficult to understand, use and navigate.
 
 Main Features
-> Multiple user access: Allows multiple type of users(teacher/student/admin) to login
-> Functional Admin panel: Allows admins to manage the whole system
->CRUD functionalities: Allows all users to create,read,update and delete their notes in a managed format
->Profile update option: Allows users to update their profile/account details
->Secure registration and login option for users
->Allows students and teachers to download/upload their course notes easily
->Allows users to recover their password using forgot password option
->blog  enables you to post your ideas online
+> * Multiple user access: Allows multiple type of users(teacher/student/admin) to login
+> * Functional Admin panel: Allows admins to manage the whole system
+> * CRUD functionalities: Allows all users to create,read,update and delete their notes in a managed format
+> * Profile update option: Allows users to update their profile/account details
+>* Secure registration and login option for users
+> * Allows students and teachers to download/upload their course notes easily
+>* Allows users to recover their password using forgot password option
+>* blog  enables you to post your ideas online
 # The Frontend
 >List of blog articles showing the title, body truncated to 100 characters, and date. It shows the latest 5 articles
 >Single blog article showing the title, full body, and the date
