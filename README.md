@@ -3,6 +3,11 @@
 
 **[Read our Well written Doc along with screen Shots](https://1drv.ms/w/s!AgjpkAWIFa73hKUtBup27SltKq7ULg)**
 
+
+# Demo 
+
+![ Demo](https://github.com/vikasdo/internship-project/blob/master/websitescreens.gif)
+
 # Abstract
 * About The System
 1. Our product eliminates all the problems mentioned above and is a gift for the readers and explorers. With the help of our product we provide users the option to upload and download notes of respective interest. 
