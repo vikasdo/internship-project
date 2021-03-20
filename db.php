@@ -1,6 +1,6 @@
 <?php
 session_start();
-$con=mysqli_connect('localhost','root','','uploadf');
+$con=mysqli_connect('freedb.tech','freedbtech_Electronix','E@8jKnCmka8HekR','freedbtech_uploadf');
 if(isset($_POST['file']))
 {
 	if(isset($_POST['select2'])&&isset($_POST['select1'])&&isset($_POST['select12']))

@@ -1,6 +1,6 @@
 <?php
 include 'header.php';
-$con=mysqli_connect('localhost','root','','uploadf');
+$con=mysqli_connect('freedb.tech','freedbtech_Electronix','E@8jKnCmka8HekR','freedbtech_uploadf');
 
 $tokenfromlink=$_GET['token'];
 $email=$_GET['email'];

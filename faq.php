@@ -1,5 +1,5 @@
 <?php
-$con=mysqli_connect('localhost','root','','uploadf');
+$con=mysqli_connect('freedb.tech','freedbtech_Electronix','E@8jKnCmka8HekR','freedbtech_uploadf');
 
 include 'header.php';
 ?>
