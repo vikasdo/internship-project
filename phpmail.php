@@ -11,9 +11,9 @@ $mail->Port =587 ;
 
 $mail->SMTPAuth = true;
 //Username to use for SMTP authentication
-		$mail->Username ="donthulavikas1999@gmail.com";
+$mail->Username ="donthulavikas1999@gmail.com";
 						//Password to use for SMTP authentication
-						$mail->Password = "16021999";
+$mail->Password = "2323423";
 //Set who the message is to be sent from
 
 $mail->setFrom('donthulavikas.com', 'hellot');
